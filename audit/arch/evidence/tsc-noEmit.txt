@@ -1,0 +1,87 @@
+src/api/routes/connectors.ts(368,62): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(input: string | URL | Request, init?: RequestInit | undefined): Promise<Response>', gave the following error.
+    Type 'R2SignedHeaders' is not assignable to type 'HeadersInit | undefined'.
+      Type 'R2SignedHeaders' is not assignable to type 'Record<string, string>'.
+        Index signature for type 'string' is missing in type 'R2SignedHeaders'.
+  Overload 2 of 2, '(input: URL | RequestInfo, init?: RequestInit | undefined): Promise<Response>', gave the following error.
+    Type 'R2SignedHeaders' is not assignable to type 'HeadersInit | undefined'.
+      Type 'R2SignedHeaders' is not assignable to type 'Record<string, string>'.
+        Index signature for type 'string' is missing in type 'R2SignedHeaders'.
+src/api/routes/encryption.test.ts(559,9): error TS2741: Property 'r2Poller' is missing in type '{ state: "unlocked"; dataDir: string; db: null; scheduler: null; _vaultKeyInMemory: null; }' but required in type 'ContainerContext'.
+src/api/routes/inbox.test.ts(187,69): error TS2322: Type 'null' is not assignable to type 'string | undefined'.
+src/api/routes/inbox.test.ts(192,74): error TS2322: Type 'null' is not assignable to type 'string | undefined'.
+src/api/routes/inbox.test.ts(234,5): error TS2322: Type 'null' is not assignable to type 'string | undefined'.
+src/api/routes/inbox.test.ts(243,5): error TS2322: Type 'null' is not assignable to type 'string | undefined'.
+src/api/routes/inbox.test.ts(268,50): error TS2322: Type 'null' is not assignable to type 'string | undefined'.
+src/api/routes/inbox.test.ts(273,50): error TS2322: Type 'null' is not assignable to type 'string | undefined'.
+src/api/routes/inbox.test.ts(312,5): error TS2322: Type 'null' is not assignable to type 'string | undefined'.
+src/api/routes/inbox.test.ts(329,5): error TS2322: Type 'null' is not assignable to type 'string | undefined'.
+src/api/routes/labels.test.ts(102,57): error TS2353: Object literal may only specify known properties, and 'email' does not exist in type 'Partial<{ name: string; imapHost: string; imapPort: number; imapUser: string; imapPass: string; }>'.
+src/api/routes/messages.test.ts(129,35): error TS2345: Argument of type 'Mock<Procedure | Constructable>' is not assignable to parameter of type 'ImapDeleteFn | undefined'.
+  Type 'MockInstance<Procedure | Constructable> & (new (...args: any[]) => any) & {}' is not assignable to type 'ImapDeleteFn | undefined'.
+src/api/routes/messages.test.ts(452,66): error TS2353: Object literal may only specify known properties, and 'email' does not exist in type 'Partial<{ name: string; imapHost: string; imapPort: number; imapUser: string; imapPass: string; }>'.
+src/api/routes/messages.test.ts(453,66): error TS2353: Object literal may only specify known properties, and 'email' does not exist in type 'Partial<{ name: string; imapHost: string; imapPort: number; imapUser: string; imapPass: string; }>'.
+src/api/routes/messages.test.ts(774,39): error TS2345: Argument of type 'Mock<Procedure | Constructable>' is not assignable to parameter of type 'ImapDeleteFn | undefined'.
+  Type 'MockInstance<Procedure | Constructable> & (new (...args: any[]) => any) & {}' is not assignable to type 'ImapDeleteFn | undefined'.
+src/api/routes/webhook.test.ts(272,9): error TS2741: Property 'r2Poller' is missing in type '{ state: "locked"; dataDir: string; db: null; scheduler: null; _vaultKeyInMemory: null; }' but required in type 'ContainerContext'.
+src/connectors/ses.test.ts(204,28): error TS2307: Cannot find module '@aws-sdk/client-sesv2' or its corresponding type declarations.
+src/connectors/ses.test.ts(206,3): error TS2578: Unused '@ts-expect-error' directive.
+src/connectors/ses.ts(47,29): error TS2307: Cannot find module '@aws-sdk/client-sesv2' or its corresponding type declarations.
+src/connectors/ses.ts(68,28): error TS2307: Cannot find module '@aws-sdk/client-sesv2' or its corresponding type declarations.
+src/connectors/ses.ts(90,29): error TS2307: Cannot find module '@aws-sdk/client-sesv2' or its corresponding type declarations.
+src/crypto/lifecycle.test.ts(198,3): error TS2741: Property 'r2Poller' is missing in type '{ state: "locked"; dataDir: string; db: null; scheduler: null; _vaultKeyInMemory: null; }' but required in type 'ContainerContext'.
+src/crypto/lifecycle.test.ts(215,4): error TS2353: Object literal may only specify known properties, and 'aborted' does not exist in type '{ totalNew: number; totalErrors: number; }'.
+src/crypto/lifecycle.test.ts(259,4): error TS2353: Object literal may only specify known properties, and 'aborted' does not exist in type '{ totalNew: number; totalErrors: number; }'.
+src/crypto/lifecycle.test.ts(301,66): error TS2353: Object literal may only specify known properties, and 'aborted' does not exist in type '{ totalNew: number; totalErrors: number; }'.
+src/demo/demo-mode.test.ts(141,29): error TS2345: Argument of type '{ state: "unlocked"; dataDir: string; db: BetterSqlite3MultipleCiphers.Database; scheduler: null; _vaultKeyInMemory: null; }' is not assignable to parameter of type 'ContainerContext'.
+  Property 'r2Poller' is missing in type '{ state: "unlocked"; dataDir: string; db: BetterSqlite3MultipleCiphers.Database; scheduler: null; _vaultKeyInMemory: null; }' but required in type 'ContainerContext'.
+src/index.ts(25,27): error TS2345: Argument of type '{ state: "unlocked"; dataDir: string; db: BetterSqlite3MultipleCiphers.Database; scheduler: null; _vaultKeyInMemory: null; }' is not assignable to parameter of type 'ContainerContext'.
+  Property 'r2Poller' is missing in type '{ state: "unlocked"; dataDir: string; db: BetterSqlite3MultipleCiphers.Database; scheduler: null; _vaultKeyInMemory: null; }' but required in type 'ContainerContext'.
+src/sync/connection-pool-advanced.test.ts(280,56): error TS2353: Object literal may only specify known properties, and 'maxPerIdentity' does not exist in type 'ConnectionPoolOptions'.
+src/sync/connection-pool-advanced.test.ts(348,41): error TS2353: Object literal may only specify known properties, and 'maxPerIdentity' does not exist in type 'ConnectionPoolOptions'.
+src/sync/connection-pool-advanced.test.ts(358,22): error TS2353: Object literal may only specify known properties, and 'identityId' does not exist in type 'PooledConnection'.
+src/sync/connection-pool-advanced.test.ts(371,41): error TS2353: Object literal may only specify known properties, and 'maxPerIdentity' does not exist in type 'ConnectionPoolOptions'.
+src/sync/connection-pool-advanced.test.ts(386,23): error TS2353: Object literal may only specify known properties, and 'identityId' does not exist in type 'PooledConnection'.
+src/sync/connection-pool-advanced.test.ts(389,23): error TS2353: Object literal may only specify known properties, and 'identityId' does not exist in type 'PooledConnection'.
+src/sync/connection-pool-advanced.test.ts(437,43): error TS2353: Object literal may only specify known properties, and 'identityId' does not exist in type 'PooledConnection'.
+src/sync/connection-pool-advanced.test.ts(455,45): error TS2353: Object literal may only specify known properties, and 'identityId' does not exist in type 'PooledConnection'.
+src/sync/connection-pool-advanced.test.ts(457,45): error TS2353: Object literal may only specify known properties, and 'identityId' does not exist in type 'PooledConnection'.
+src/sync/connection-pool-advanced.test.ts(477,22): error TS2353: Object literal may only specify known properties, and 'identityId' does not exist in type 'PooledConnection'.
+src/sync/connection-pool-advanced.test.ts(478,22): error TS2353: Object literal may only specify known properties, and 'identityId' does not exist in type 'PooledConnection'.
+src/sync/connection-pool-advanced.test.ts(496,42): error TS2353: Object literal may only specify known properties, and 'identityId' does not exist in type 'PooledConnection'.
+src/sync/connection-pool.test.ts(28,35): error TS2353: Object literal may only specify known properties, and 'maxPerIdentity' does not exist in type 'ConnectionPoolOptions'.
+src/sync/connection-pool.test.ts(34,35): error TS2353: Object literal may only specify known properties, and 'maxPerIdentity' does not exist in type 'ConnectionPoolOptions'.
+src/sync/connection-pool.test.ts(41,35): error TS2353: Object literal may only specify known properties, and 'maxPerIdentity' does not exist in type 'ConnectionPoolOptions'.
+src/sync/r2-poller.test.ts(205,10): error TS18048: 'deletedCall' is possibly 'undefined'.
+src/sync/r2-poller.ts(288,60): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(input: string | URL | Request, init?: RequestInit | undefined): Promise<Response>', gave the following error.
+    Type 'R2SignedHeaders' is not assignable to type 'HeadersInit | undefined'.
+      Type 'R2SignedHeaders' is not assignable to type 'Record<string, string>'.
+        Index signature for type 'string' is missing in type 'R2SignedHeaders'.
+  Overload 2 of 2, '(input: URL | RequestInfo, init?: RequestInit | undefined): Promise<Response>', gave the following error.
+    Type 'R2SignedHeaders' is not assignable to type 'HeadersInit | undefined'.
+      Type 'R2SignedHeaders' is not assignable to type 'Record<string, string>'.
+        Index signature for type 'string' is missing in type 'R2SignedHeaders'.
+src/sync/r2-poller.ts(313,63): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(input: string | URL | Request, init?: RequestInit | undefined): Promise<Response>', gave the following error.
+    Type 'R2SignedHeaders' is not assignable to type 'HeadersInit | undefined'.
+      Type 'R2SignedHeaders' is not assignable to type 'Record<string, string>'.
+        Index signature for type 'string' is missing in type 'R2SignedHeaders'.
+  Overload 2 of 2, '(input: URL | RequestInfo, init?: RequestInit | undefined): Promise<Response>', gave the following error.
+    Type 'R2SignedHeaders' is not assignable to type 'HeadersInit | undefined'.
+      Type 'R2SignedHeaders' is not assignable to type 'Record<string, string>'.
+        Index signature for type 'string' is missing in type 'R2SignedHeaders'.
+src/sync/r2-poller.ts(363,63): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(input: string | URL | Request, init?: RequestInit | undefined): Promise<Response>', gave the following error.
+    Type 'R2SignedHeaders' is not assignable to type 'HeadersInit | undefined'.
+      Type 'R2SignedHeaders' is not assignable to type 'Record<string, string>'.
+        Index signature for type 'string' is missing in type 'R2SignedHeaders'.
+  Overload 2 of 2, '(input: URL | RequestInfo, init?: RequestInit | undefined): Promise<Response>', gave the following error.
+    Type 'R2SignedHeaders' is not assignable to type 'HeadersInit | undefined'.
+      Type 'R2SignedHeaders' is not assignable to type 'Record<string, string>'.
+        Index signature for type 'string' is missing in type 'R2SignedHeaders'.
+src/sync/sync-scheduler.test.ts(71,25): error TS2345: Argument of type '{ identityId: number; imapConfig: { host: string; port: number; secure: boolean; auth: { user: string; pass: string; }; }; }' is not assignable to parameter of type 'ConnectorSyncConfig'.
+  Property 'inboundConnectorId' is missing in type '{ identityId: number; imapConfig: { host: string; port: number; secure: boolean; auth: { user: string; pass: string; }; }; }' but required in type 'ConnectorSyncConfig'.
+src/sync/sync-scheduler.test.ts(72,38): error TS2345: Argument of type '{ identityId: number; imapConfig: { host: string; port: number; secure: boolean; auth: { user: string; pass: string; }; }; }' is not assignable to parameter of type 'ConnectorSyncConfig'.
+  Property 'inboundConnectorId' is missing in type '{ identityId: number; imapConfig: { host: string; port: number; secure: boolean; auth: { user: string; pass: string; }; }; }' but required in type 'ConnectorSyncConfig'.
+tests/e2e/start-encryption-test-server.ts(20,7): error TS2741: Property 'r2Poller' is missing in type '{ state: "setup"; dataDir: string; db: null; scheduler: null; _vaultKeyInMemory: null; }' but required in type 'ContainerContext'.

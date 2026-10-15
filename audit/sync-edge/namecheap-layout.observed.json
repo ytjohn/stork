@@ -1,0 +1,92 @@
+{
+  "slashFolderCreated": false,
+  "capabilities": [
+    "IMAP4rev1",
+    "SASL-IR",
+    "LOGIN-REFERRALS",
+    "ID",
+    "ENABLE",
+    "IDLE",
+    "SORT",
+    "SORT=DISPLAY",
+    "THREAD=REFERENCES",
+    "THREAD=REFS",
+    "THREAD=ORDEREDSUBJECT",
+    "MULTIAPPEND",
+    "URL-PARTIAL",
+    "CATENATE",
+    "UNSELECT",
+    "CHILDREN",
+    "NAMESPACE",
+    "UIDPLUS",
+    "LIST-EXTENDED",
+    "I18NLEVEL=1",
+    "CONDSTORE",
+    "QRESYNC",
+    "ESEARCH",
+    "ESORT",
+    "SEARCHRES",
+    "WITHIN",
+    "CONTEXT=SEARCH",
+    "LIST-STATUS",
+    "BINARY",
+    "MOVE",
+    "LITERAL+"
+  ],
+  "folders": [
+    {
+      "path": "INBOX",
+      "name": "INBOX",
+      "delimiter": ".",
+      "special_use": "\\Inbox"
+    },
+    {
+      "path": "INBOX.Archive",
+      "name": "Archive",
+      "delimiter": ".",
+      "special_use": "\\Archive"
+    },
+    {
+      "path": "INBOX.Drafts",
+      "name": "Drafts",
+      "delimiter": ".",
+      "special_use": "\\Drafts"
+    },
+    {
+      "path": "INBOX.Sent",
+      "name": "Sent",
+      "delimiter": ".",
+      "special_use": "\\Sent"
+    },
+    {
+      "path": "INBOX.Sent Items",
+      "name": "Sent Items",
+      "delimiter": ".",
+      "special_use": null
+    },
+    {
+      "path": "INBOX.Spam",
+      "name": "Spam",
+      "delimiter": ".",
+      "special_use": "\\Junk"
+    },
+    {
+      "path": "INBOX.Trash",
+      "name": "Trash",
+      "delimiter": ".",
+      "special_use": "\\Trash"
+    },
+    {
+      "path": "INBOX.Work",
+      "name": "Work",
+      "delimiter": ".",
+      "special_use": null
+    },
+    {
+      "path": "INBOX.Work.Clients",
+      "name": "Clients",
+      "delimiter": ".",
+      "special_use": null
+    }
+  ]
+}

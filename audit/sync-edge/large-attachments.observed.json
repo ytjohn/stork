@@ -1,0 +1,48 @@
+{
+  "case25x2": {
+    "syncMs": 6673,
+    "newMessages": 2,
+    "errors": [],
+    "baselineRssMB": 103,
+    "peakRssDuringSyncMB": 444,
+    "peakRssIncludingDownloadMB": 444,
+    "maxRssKernelMB": 469,
+    "blobRows": 1,
+    "blobBytes": 26222411,
+    "attachmentRows": 2,
+    "downloads": [
+      {
+        "subject": "big dup25-a",
+        "filename": "dup25-a.bin",
+        "size": 26214400,
+        "downloadedBytes": 26214400
+      },
+      {
+        "subject": "big dup25-b",
+        "filename": "dup25-b.bin",
+        "size": 26214400,
+        "downloadedBytes": 26214400
+      }
+    ]
+  },
+  "case100": {
+    "syncMs": 19518,
+    "newMessages": 1,
+    "errors": [],
+    "baselineRssMB": 99,
+    "peakRssDuringSyncMB": 959,
+    "peakRssIncludingDownloadMB": 959,
+    "maxRssKernelMB": 1092,
+    "blobRows": 1,
+    "blobBytes": 104889611,
+    "attachmentRows": 1,
+    "downloads": [
+      {
+        "subject": "big big100",
+        "filename": "big100.bin",
+        "size": 104857600,
+        "downloadedBytes": 104857600
+      }
+    ]
+  }
+}

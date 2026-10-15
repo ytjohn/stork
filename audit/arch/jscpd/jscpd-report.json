@@ -1,0 +1,2375 @@
+{
+  "duplicates": [
+    {
+      "firstFile": {
+        "end": 119,
+        "endLoc": {
+          "column": 16,
+          "line": 119,
+          "position": 3365
+        },
+        "name": "api.ts",
+        "start": 104,
+        "startLoc": {
+          "column": 5,
+          "line": 104,
+          "position": 3003
+        }
+      },
+      "format": "typescript",
+      "fragment": "\ttype: IngestConnectorType;\n\timap_host?: string;\n\timap_port?: number;\n\timap_tls?: number;\n\timap_user?: string;\n\timap_pass?: string;\n\tsync_delete_from_server?: number;\n\tcf_r2_account_id?: string;\n\tcf_r2_bucket_name?: string;\n\tcf_r2_access_key_id?: string;\n\tcf_r2_secret_access_key?: string;\n\tcf_r2_prefix?: string;\n\tcf_r2_poll_interval_ms?: number;\n}\n\nexport interface UpdateInboundConnectorRequest {",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 16,
+      "secondFile": {
+        "end": 136,
+        "endLoc": {
+          "column": 16,
+          "line": 136,
+          "position": 3782
+        },
+        "name": "api.ts",
+        "start": 121,
+        "startLoc": {
+          "column": 6,
+          "line": 121,
+          "position": 3420
+        }
+      },
+      "tokens": 66
+    },
+    {
+      "firstFile": {
+        "end": 294,
+        "endLoc": {
+          "column": 6,
+          "line": 294,
+          "position": 7124
+        },
+        "name": "api.ts",
+        "start": 277,
+        "startLoc": {
+          "column": 23,
+          "line": 277,
+          "position": 6749
+        }
+      },
+      "format": "typescript",
+      "fragment": "export interface Draft {\n\tid: number;\n\tidentity_id: number;\n\tto_addresses: string | null;\n\tcc_addresses: string | null;\n\tbcc_addresses: string | null;\n\tsubject: string | null;\n\ttext_body: string | null;\n\thtml_body: string | null;\n\tin_reply_to: string | null;\n\treferences: string | null;\n\toriginal_message_id: number | null;\n\tcompose_mode: string;\n\tcreated_at: string;\n\tupdated_at: string;\n}\n\nexport interface TrustedSender {",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 18,
+      "secondFile": {
+        "end": 22,
+        "endLoc": {
+          "column": 6,
+          "line": 22,
+          "position": 535
+        },
+        "name": "api/routes/drafts.ts",
+        "start": 5,
+        "startLoc": {
+          "column": 19,
+          "line": 5,
+          "position": 160
+        }
+      },
+      "tokens": 77
+    },
+    {
+      "firstFile": {
+        "end": 511,
+        "endLoc": {
+          "column": 39,
+          "line": 511,
+          "position": 14795
+        },
+        "name": "api.ts",
+        "start": 506,
+        "startLoc": {
+          "column": 9,
+          "line": 506,
+          "position": 14524
+        }
+      },
+      "format": "typescript",
+      "fragment": "\t\tunified: {\n\t\t\tlist: (opts?: { limit?: number; offset?: number }) => {\n\t\t\t\tconst params = new URLSearchParams();\n\t\t\t\tif (opts?.limit) params.set(\"limit\", String(opts.limit));\n\t\t\t\tif (opts?.offset) params.set(\"offset\", String(opts.offset));\n\t\t\t\treturn fetchJSON<MessageSummary[]>(`/inbox/unified?${params}`);",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 6,
+      "secondFile": {
+        "end": 520,
+        "endLoc": {
+          "column": 39,
+          "line": 520,
+          "position": 15205
+        },
+        "name": "api.ts",
+        "start": 515,
+        "startLoc": {
+          "column": 13,
+          "line": 515,
+          "position": 14934
+        }
+      },
+      "tokens": 78
+    },
+    {
+      "firstFile": {
+        "end": 511,
+        "endLoc": {
+          "column": 39,
+          "line": 511,
+          "position": 14795
+        },
+        "name": "api.ts",
+        "start": 506,
+        "startLoc": {
+          "column": 9,
+          "line": 506,
+          "position": 14524
+        }
+      },
+      "format": "typescript",
+      "fragment": "\t\tunified: {\n\t\t\tlist: (opts?: { limit?: number; offset?: number }) => {\n\t\t\t\tconst params = new URLSearchParams();\n\t\t\t\tif (opts?.limit) params.set(\"limit\", String(opts.limit));\n\t\t\t\tif (opts?.offset) params.set(\"offset\", String(opts.offset));\n\t\t\t\treturn fetchJSON<MessageSummary[]>(`/inbox/unified?${params}`);",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 6,
+      "secondFile": {
+        "end": 529,
+        "endLoc": {
+          "column": 39,
+          "line": 529,
+          "position": 15628
+        },
+        "name": "api.ts",
+        "start": 524,
+        "startLoc": {
+          "column": 16,
+          "line": 524,
+          "position": 15357
+        }
+      },
+      "tokens": 78
+    },
+    {
+      "firstFile": {
+        "end": 609,
+        "endLoc": {
+          "column": 2,
+          "line": 609,
+          "position": 18719
+        },
+        "name": "api.ts",
+        "start": 598,
+        "startLoc": {
+          "column": 14,
+          "line": 598,
+          "position": 18443
+        }
+      },
+      "format": "typescript",
+      "fragment": "\tsend: (data: {\n\t\tidentity_id: number;\n\t\tto: string[];\n\t\tcc?: string[];\n\t\tbcc?: string[];\n\t\tsubject: string;\n\t\ttext_body?: string;\n\t\thtml_body?: string;\n\t\tin_reply_to?: string;\n\t\treferences?: string[];\n\t\tattachments?: { filename: string; content_type: string; content_base64: string }[];\n\t}) =>",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 12,
+      "secondFile": {
+        "end": 59,
+        "endLoc": {
+          "column": 3,
+          "line": 59,
+          "position": 1597
+        },
+        "name": "api/routes/send.ts",
+        "start": 48,
+        "startLoc": {
+          "column": 14,
+          "line": 48,
+          "position": 1310
+        }
+      },
+      "tokens": 71
+    },
+    {
+      "firstFile": {
+        "end": 45,
+        "endLoc": {
+          "column": 20,
+          "line": 45,
+          "position": 1172
+        },
+        "name": "components/BulkActionsBar.tsx",
+        "start": 31,
+        "startLoc": {
+          "column": 22,
+          "line": 31,
+          "position": 677
+        }
+      },
+      "format": "tsx",
+      "fragment": "}: BulkActionsBarProps) {\n\tconst [showMoveMenu, setShowMoveMenu] = useState(false);\n\tconst moveMenuRef = useRef<HTMLDivElement>(null);\n\n\t// Close move menu on outside click\n\tuseEffect(() => {\n\t\tif (!showMoveMenu) return;\n\t\tconst handler = (e: MouseEvent) => {\n\t\t\tif (moveMenuRef.current && !moveMenuRef.current.contains(e.target as Node)) {\n\t\t\t\tsetShowMoveMenu(false);\n\t\t\t}\n\t\t};\n\t\tdocument.addEventListener(\"mousedown\", handler);\n\t\treturn () => document.removeEventListener(\"mousedown\", handler);\n\t}, [showMoveMenu]);",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 15,
+      "secondFile": {
+        "end": 43,
+        "endLoc": {
+          "column": 20,
+          "line": 43,
+          "position": 1427
+        },
+        "name": "components/MessageHeaderActions.tsx",
+        "start": 29,
+        "startLoc": {
+          "column": 28,
+          "line": 29,
+          "position": 932
+        }
+      },
+      "tokens": 106
+    },
+    {
+      "firstFile": {
+        "end": 146,
+        "endLoc": {
+          "column": 21,
+          "line": 146,
+          "position": 4003
+        },
+        "name": "components/LabelManager.tsx",
+        "start": 137,
+        "startLoc": {
+          "column": 25,
+          "line": 137,
+          "position": 3818
+        }
+      },
+      "format": "tsx",
+      "fragment": "\t\tinputRef.current?.focus();\n\t}, []);\n\n\tconst handleSubmit = useCallback(\n\t\tasync (e: React.FormEvent) => {\n\t\t\te.preventDefault();\n\t\t\tif (!name.trim()) return;\n\t\t\tsetSaving(true);\n\t\t\ttry {\n\t\t\t\tawait api.labels.create({",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 10,
+      "secondFile": {
+        "end": 221,
+        "endLoc": {
+          "column": 21,
+          "line": 221,
+          "position": 6120
+        },
+        "name": "components/LabelManager.tsx",
+        "start": 212,
+        "startLoc": {
+          "column": 26,
+          "line": 212,
+          "position": 5935
+        }
+      },
+      "tokens": 53
+    },
+    {
+      "firstFile": {
+        "end": 191,
+        "endLoc": {
+          "column": 13,
+          "line": 191,
+          "position": 5356
+        },
+        "name": "components/LabelManager.tsx",
+        "start": 160,
+        "startLoc": {
+          "column": 31,
+          "line": 160,
+          "position": 4344
+        }
+      },
+      "format": "tsx",
+      "fragment": "\t\t[name, color, icon, onCreated, onClose],\n\t);\n\n\treturn (\n\t\t<form onSubmit={handleSubmit} className=\"p-3 space-y-2\">\n\t\t\t<div className=\"flex items-center gap-2\">\n\t\t\t\t<input\n\t\t\t\t\tref={inputRef}\n\t\t\t\t\ttype=\"text\"\n\t\t\t\t\tvalue={name}\n\t\t\t\t\tonChange={(e) => setName(e.target.value)}\n\t\t\t\t\tplaceholder=\"Label name\"\n\t\t\t\t\taria-label=\"Label name\"\n\t\t\t\t\tclassName=\"flex-1 text-sm bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded px-2 py-1 outline-none focus:border-stork-500\"\n\t\t\t\t/>\n\t\t\t\t<button\n\t\t\t\t\ttype=\"button\"\n\t\t\t\t\tonClick={onClose}\n\t\t\t\t\tclassName=\"text-gray-400 hover:text-gray-600 dark:hover:text-gray-200\"\n\t\t\t\t\ttitle=\"Cancel\"\n\t\t\t\t>\n\t\t\t\t\t<XIcon className=\"w-3.5 h-3.5\" />\n\t\t\t\t</button>\n\t\t\t</div>\n\t\t\t<ColorPicker value={color} onChange={setColor} />\n\t\t\t<IconPicker value={icon} onChange={setIcon} />\n\t\t\t<button\n\t\t\t\ttype=\"submit\"\n\t\t\t\tdisabled={!name.trim() || saving}\n\t\t\t\tclassName=\"w-full text-xs py-1.5 bg-stork-600 hover:bg-stork-700 disabled:opacity-50 text-white rounded font-medium transition-colors\"\n\t\t\t>\n\t\t\t\t{saving ? \"Creating…\" : \"Create label\"}",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 32,
+      "secondFile": {
+        "end": 266,
+        "endLoc": {
+          "column": 13,
+          "line": 266,
+          "position": 7476
+        },
+        "name": "components/LabelManager.tsx",
+        "start": 235,
+        "startLoc": {
+          "column": 41,
+          "line": 235,
+          "position": 6464
+        }
+      },
+      "tokens": 161
+    },
+    {
+      "firstFile": {
+        "end": 44,
+        "endLoc": {
+          "column": 8,
+          "line": 44,
+          "position": 1116
+        },
+        "name": "components/OutboundConnectorSetupModal.tsx",
+        "start": 27,
+        "startLoc": {
+          "column": 20,
+          "line": 27,
+          "position": 706
+        }
+      },
+      "format": "tsx",
+      "fragment": "function defaultForm(): OutboundFormData {\n\treturn {\n\t\tname: \"\",\n\t\ttype: \"smtp\",\n\t\tsmtp_host: \"\",\n\t\tsmtp_port: 587,\n\t\tsmtp_tls: 1,\n\t\tsmtp_user: \"\",\n\t\tsmtp_pass: \"\",\n\t\tses_region: \"\",\n\t\tses_access_key_id: \"\",\n\t\tses_secret_access_key: \"\",\n\t};\n}\n\n// ── Step 1: Create Connector ───────────────────────────────────────────────\n\nfunction ConnectorStep({ onCreated, onCancel }: { onCreated: () => void; onCancel: () => void }) {",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 18,
+      "secondFile": {
+        "end": 496,
+        "endLoc": {
+          "column": 8,
+          "line": 496,
+          "position": 16472
+        },
+        "name": "components/settings/ConnectorsTab.tsx",
+        "start": 481,
+        "startLoc": {
+          "column": 28,
+          "line": 481,
+          "position": 16240
+        }
+      },
+      "tokens": 51
+    },
+    {
+      "firstFile": {
+        "end": 54,
+        "endLoc": {
+          "column": 16,
+          "line": 54,
+          "position": 1514
+        },
+        "name": "components/OutboundConnectorSetupModal.tsx",
+        "start": 45,
+        "startLoc": {
+          "column": 65,
+          "line": 45,
+          "position": 1272
+        }
+      },
+      "format": "tsx",
+      "fragment": "\tconst [form, setForm] = useState<OutboundFormData>(defaultForm());\n\tconst [saving, setSaving] = useState(false);\n\tconst [error, setError] = useState<string | null>(null);\n\n\tasync function handleSubmit(e: React.FormEvent) {\n\t\te.preventDefault();\n\t\tsetSaving(true);\n\t\tsetError(null);\n\t\ttry {\n\t\t\tconst payload =",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 10,
+      "secondFile": {
+        "end": 529,
+        "endLoc": {
+          "column": 16,
+          "line": 529,
+          "position": 17310
+        },
+        "name": "components/settings/ConnectorsTab.tsx",
+        "start": 520,
+        "startLoc": {
+          "column": 1,
+          "line": 520,
+          "position": 17068
+        }
+      },
+      "tokens": 62
+    },
+    {
+      "firstFile": {
+        "end": 123,
+        "endLoc": {
+          "column": 21,
+          "line": 123,
+          "position": 3342
+        },
+        "name": "components/OutboundConnectorSetupModal.tsx",
+        "start": 114,
+        "startLoc": {
+          "column": 4,
+          "line": 114,
+          "position": 3164
+        }
+      },
+      "format": "tsx",
+      "fragment": "\t\t\t\t>\n\t\t\t\t\t<option value=\"smtp\">SMTP</option>\n\t\t\t\t\t<option value=\"ses\">AWS SES</option>\n\t\t\t\t</select>\n\t\t\t</div>\n\n\t\t\t{form.type === \"smtp\" && (\n\t\t\t\t<>\n\t\t\t\t\t<div>\n\t\t\t\t\t\t<label htmlFor=\"obs-smtp-host\" className={labelClass}>",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 10,
+      "secondFile": {
+        "end": 602,
+        "endLoc": {
+          "column": 15,
+          "line": 602,
+          "position": 19276
+        },
+        "name": "components/settings/ConnectorsTab.tsx",
+        "start": 592,
+        "startLoc": {
+          "column": 4,
+          "line": 592,
+          "position": 19091
+        }
+      },
+      "tokens": 55
+    },
+    {
+      "firstFile": {
+        "end": 247,
+        "endLoc": {
+          "column": 28,
+          "line": 247,
+          "position": 6621
+        },
+        "name": "components/OutboundConnectorSetupModal.tsx",
+        "start": 234,
+        "startLoc": {
+          "column": 6,
+          "line": 234,
+          "position": 6279
+        }
+      },
+      "format": "tsx",
+      "fragment": "\t\t\t\t\t\t/>\n\t\t\t\t\t</div>\n\t\t\t\t</>\n\t\t\t)}\n\n\t\t\t{error && <p className=\"text-sm text-red-600 dark:text-red-400\">{error}</p>}\n\n\t\t\t<div className=\"flex gap-2 pt-1\">\n\t\t\t\t<button\n\t\t\t\t\ttype=\"submit\"\n\t\t\t\t\tdisabled={saving}\n\t\t\t\t\tclassName=\"px-4 py-1.5 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 disabled:opacity-50\"\n\t\t\t\t>\n\t\t\t\t\t{saving ? \"Saving…\" : \"Save connector\"}",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 14,
+      "secondFile": {
+        "end": 438,
+        "endLoc": {
+          "column": 28,
+          "line": 438,
+          "position": 15109
+        },
+        "name": "components/settings/ConnectorsTab.tsx",
+        "start": 425,
+        "startLoc": {
+          "column": 6,
+          "line": 425,
+          "position": 14767
+        }
+      },
+      "tokens": 59
+    },
+    {
+      "firstFile": {
+        "end": 217,
+        "endLoc": {
+          "column": 6,
+          "line": 217,
+          "position": 6207
+        },
+        "name": "components/SearchPanel.tsx",
+        "start": 207,
+        "startLoc": {
+          "column": 40,
+          "line": 207,
+          "position": 5955
+        }
+      },
+      "format": "tsx",
+      "fragment": "\t\t\t\t\t: [...prev, { type, value, label }];\n\t\t\t\t// Trigger search with updated filters\n\t\t\t\tif (debounceRef.current) clearTimeout(debounceRef.current);\n\t\t\t\tdebounceRef.current = setTimeout(() => triggerSearch(query, next), 150);\n\t\t\t\treturn next;\n\t\t\t});\n\t\t},\n\t\t[query, triggerSearch],\n\t);\n\n\tconst removeFilter = useCallback(",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 11,
+      "secondFile": {
+        "end": 229,
+        "endLoc": {
+          "column": 6,
+          "line": 229,
+          "position": 6578
+        },
+        "name": "components/SearchPanel.tsx",
+        "start": 220,
+        "startLoc": {
+          "column": 71,
+          "line": 220,
+          "position": 6369
+        }
+      },
+      "tokens": 50
+    },
+    {
+      "firstFile": {
+        "end": 37,
+        "endLoc": {
+          "column": 18,
+          "line": 37,
+          "position": 1272
+        },
+        "name": "components/Settings.tsx",
+        "start": 26,
+        "startLoc": {
+          "column": 3,
+          "line": 26,
+          "position": 863
+        }
+      },
+      "format": "tsx",
+      "fragment": "\t\t\tonClick={(e) => {\n\t\t\t\t// Close when clicking the backdrop (outside the modal panel)\n\t\t\t\tif (e.target === e.currentTarget) onClose();\n\t\t\t}}\n\t\t\tonKeyDown={(e) => {\n\t\t\t\t// useFocusTrap keeps focus inside the dialog, so this handler\n\t\t\t\t// fires even when inputs are focused (unlike the app-level\n\t\t\t\t// useKeyboardShortcuts which skips inputs).\n\t\t\t\tif (e.key === \"Escape\") onClose();\n\t\t\t}}\n\t\t>\n\t\t\t<div className=\"bg-white dark:bg-gray-900 rounded-xl shadow-2xl w-full max-w-[800px] h-[85vh] mx-4 flex flex-col overflow-hidden\">",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 12,
+      "secondFile": {
+        "end": 46,
+        "endLoc": {
+          "column": 18,
+          "line": 46,
+          "position": 1325
+        },
+        "name": "components/ShortcutsHelp.tsx",
+        "start": 39,
+        "startLoc": {
+          "column": 3,
+          "line": 39,
+          "position": 1162
+        }
+      },
+      "tokens": 52
+    },
+    {
+      "firstFile": {
+        "end": 66,
+        "endLoc": {
+          "column": 12,
+          "line": 66,
+          "position": 1876
+        },
+        "name": "components/SetupScreen.tsx",
+        "start": 38,
+        "startLoc": {
+          "column": 21,
+          "line": 38,
+          "position": 1204
+        }
+      },
+      "format": "tsx",
+      "fragment": "\t\t\tsetStep(\"mnemonic\");\n\t\t} catch (err) {\n\t\t\tsetError((err as Error).message);\n\t\t} finally {\n\t\t\tsetLoading(false);\n\t\t}\n\t};\n\n\treturn (\n\t\t<div className=\"h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-950 px-4\">\n\t\t\t{/* Dark mode toggle */}\n\t\t\t<button\n\t\t\t\ttype=\"button\"\n\t\t\t\tonClick={onToggleDark}\n\t\t\t\tclassName=\"absolute top-4 right-4 text-sm text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors flex items-center gap-1.5\"\n\t\t\t\ttitle=\"Toggle dark mode\"\n\t\t\t>\n\t\t\t\t{dark ? (\n\t\t\t\t\t<>\n\t\t\t\t\t\t<SunIcon className=\"w-3.5 h-3.5\" /> Light\n\t\t\t\t\t</>\n\t\t\t\t) : (\n\t\t\t\t\t<>\n\t\t\t\t\t\t<MoonIcon className=\"w-3.5 h-3.5\" /> Dark\n\t\t\t\t\t</>\n\t\t\t\t)}\n\t\t\t</button>\n\n\t\t\t{step === \"password\" ? (",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 29,
+      "secondFile": {
+        "end": 138,
+        "endLoc": {
+          "column": 12,
+          "line": 138,
+          "position": 3748
+        },
+        "name": "components/Welcome.tsx",
+        "start": 110,
+        "startLoc": {
+          "column": 19,
+          "line": 110,
+          "position": 3076
+        }
+      },
+      "tokens": 106
+    },
+    {
+      "firstFile": {
+        "end": 66,
+        "endLoc": {
+          "column": 3,
+          "line": 66,
+          "position": 1867
+        },
+        "name": "components/SetupScreen.tsx",
+        "start": 41,
+        "startLoc": {
+          "column": 2,
+          "line": 41,
+          "position": 1264
+        }
+      },
+      "format": "tsx",
+      "fragment": "\t\t} finally {\n\t\t\tsetLoading(false);\n\t\t}\n\t};\n\n\treturn (\n\t\t<div className=\"h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-950 px-4\">\n\t\t\t{/* Dark mode toggle */}\n\t\t\t<button\n\t\t\t\ttype=\"button\"\n\t\t\t\tonClick={onToggleDark}\n\t\t\t\tclassName=\"absolute top-4 right-4 text-sm text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors flex items-center gap-1.5\"\n\t\t\t\ttitle=\"Toggle dark mode\"\n\t\t\t>\n\t\t\t\t{dark ? (\n\t\t\t\t\t<>\n\t\t\t\t\t\t<SunIcon className=\"w-3.5 h-3.5\" /> Light\n\t\t\t\t\t</>\n\t\t\t\t) : (\n\t\t\t\t\t<>\n\t\t\t\t\t\t<MoonIcon className=\"w-3.5 h-3.5\" /> Dark\n\t\t\t\t\t</>\n\t\t\t\t)}\n\t\t\t</button>\n\n\t\t\t{step === \"password\" ? (",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 26,
+      "secondFile": {
+        "end": 96,
+        "endLoc": {
+          "column": 3,
+          "line": 96,
+          "position": 2906
+        },
+        "name": "components/UnlockScreen.tsx",
+        "start": 71,
+        "startLoc": {
+          "column": 2,
+          "line": 71,
+          "position": 2303
+        }
+      },
+      "tokens": 84
+    },
+    {
+      "firstFile": {
+        "end": 373,
+        "endLoc": {
+          "column": 23,
+          "line": 373,
+          "position": 11222
+        },
+        "name": "components/Welcome.tsx",
+        "start": 363,
+        "startLoc": {
+          "column": 10,
+          "line": 363,
+          "position": 10935
+        }
+      },
+      "format": "tsx",
+      "fragment": "\tautoFocus?: boolean;\n}) {\n\treturn (\n\t\t<label className=\"block\">\n\t\t\t<span className=\"block text-xs text-gray-500 dark:text-gray-400 mb-1\">{label}</span>\n\t\t\t<input\n\t\t\t\ttype={type}\n\t\t\t\tvalue={value}\n\t\t\t\tonChange={(e) => onChange(e.target.value)}\n\t\t\t\tplaceholder={placeholder}\n\t\t\t\trequired={required}",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 11,
+      "secondFile": {
+        "end": 24,
+        "endLoc": {
+          "column": 23,
+          "line": 24,
+          "position": 508
+        },
+        "name": "components/settings/FormField.tsx",
+        "start": 14,
+        "startLoc": {
+          "column": 9,
+          "line": 14,
+          "position": 221
+        }
+      },
+      "tokens": 68
+    },
+    {
+      "firstFile": {
+        "end": 36,
+        "endLoc": {
+          "column": 1,
+          "line": 36,
+          "position": 927
+        },
+        "name": "components/settings/AccountSetupWizard.tsx",
+        "start": 23,
+        "startLoc": {
+          "column": 14,
+          "line": 23,
+          "position": 608
+        }
+      },
+      "format": "tsx",
+      "fragment": "\tconnectorName: string;\n\ttype: \"imap\" | \"cloudflare-r2\";\n\timap_host: string;\n\timap_port: number;\n\timap_tls: number;\n\timap_user: string;\n\timap_pass: string;\n\tsync_delete_from_server: number;\n\tcf_r2_account_id: string;\n\tcf_r2_bucket_name: string;\n\tcf_r2_access_key_id: string;\n\tcf_r2_secret_access_key: string;\n\tcf_r2_prefix: string;\n}",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 14,
+      "secondFile": {
+        "end": 30,
+        "endLoc": {
+          "column": 1,
+          "line": 30,
+          "position": 931
+        },
+        "name": "components/settings/ConnectorsTab.tsx",
+        "start": 17,
+        "startLoc": {
+          "column": 5,
+          "line": 17,
+          "position": 612
+        }
+      },
+      "tokens": 54
+    },
+    {
+      "firstFile": {
+        "end": 74,
+        "endLoc": {
+          "column": 8,
+          "line": 74,
+          "position": 1735
+        },
+        "name": "components/settings/AccountSetupWizard.tsx",
+        "start": 58,
+        "startLoc": {
+          "column": 15,
+          "line": 58,
+          "position": 1449
+        }
+      },
+      "format": "tsx",
+      "fragment": "\t\tconnectorName: \"\",\n\t\ttype: \"imap\",\n\t\timap_host: \"\",\n\t\timap_port: 993,\n\t\timap_tls: 1,\n\t\timap_user: \"\",\n\t\timap_pass: \"\",\n\t\tsync_delete_from_server: 0,\n\t\tcf_r2_account_id: \"\",\n\t\tcf_r2_bucket_name: \"\",\n\t\tcf_r2_access_key_id: \"\",\n\t\tcf_r2_secret_access_key: \"\",\n\t\tcf_r2_prefix: \"pending/\",\n\t};\n}\n\nfunction defaultOutbound(existing: OutboundConnector[]): OutboundData {",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 17,
+      "secondFile": {
+        "end": 50,
+        "endLoc": {
+          "column": 8,
+          "line": 50,
+          "position": 1284
+        },
+        "name": "components/settings/ConnectorsTab.tsx",
+        "start": 34,
+        "startLoc": {
+          "column": 6,
+          "line": 34,
+          "position": 998
+        }
+      },
+      "tokens": 55
+    },
+    {
+      "firstFile": {
+        "end": 276,
+        "endLoc": {
+          "column": 6,
+          "line": 276,
+          "position": 7538
+        },
+        "name": "components/settings/AccountSetupWizard.tsx",
+        "start": 264,
+        "startLoc": {
+          "column": 30,
+          "line": 264,
+          "position": 7179
+        }
+      },
+      "format": "tsx",
+      "fragment": "\t\t\t<div className=\"flex gap-3\">\n\t\t\t\t{existingConnectors.length > 0 && (\n\t\t\t\t\t<ModeButton\n\t\t\t\t\t\tactive={data.mode === \"existing\"}\n\t\t\t\t\t\tonClick={() => onChange({ ...data, mode: \"existing\" })}\n\t\t\t\t\t\tlabel=\"Use existing connector\"\n\t\t\t\t\t/>\n\t\t\t\t)}\n\t\t\t\t<ModeButton\n\t\t\t\t\tactive={data.mode === \"new\"}\n\t\t\t\t\tonClick={() => onChange({ ...data, mode: \"new\" })}\n\t\t\t\t\tlabel=\"Create new connector\"\n\t\t\t\t/>",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 13,
+      "secondFile": {
+        "end": 564,
+        "endLoc": {
+          "column": 6,
+          "line": 564,
+          "position": 17483
+        },
+        "name": "components/settings/AccountSetupWizard.tsx",
+        "start": 552,
+        "startLoc": {
+          "column": 40,
+          "line": 552,
+          "position": 17124
+        }
+      },
+      "tokens": 81
+    },
+    {
+      "firstFile": {
+        "end": 294,
+        "endLoc": {
+          "column": 19,
+          "line": 294,
+          "position": 8096
+        },
+        "name": "components/settings/AccountSetupWizard.tsx",
+        "start": 283,
+        "startLoc": {
+          "column": 6,
+          "line": 283,
+          "position": 7731
+        }
+      },
+      "format": "tsx",
+      "fragment": "\t\t\t\t\t\tvalue={data.existingId ?? \"\"}\n\t\t\t\t\t\tonChange={(e) =>\n\t\t\t\t\t\t\tonChange({ ...data, existingId: e.target.value ? Number(e.target.value) : null })\n\t\t\t\t\t\t}\n\t\t\t\t\t\trequired\n\t\t\t\t\t\tclassName={inputCls}\n\t\t\t\t\t>\n\t\t\t\t\t\t<option value=\"\">Select…</option>\n\t\t\t\t\t\t{existingConnectors.map((c) => (\n\t\t\t\t\t\t\t<option key={c.id} value={c.id}>\n\t\t\t\t\t\t\t\t{c.name} —{\" \"}\n\t\t\t\t\t\t\t\t{c.type === \"imap\" ? `${c.imap_user}@${c.imap_host}` : \"Cloudflare Email\"}",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 12,
+      "secondFile": {
+        "end": 587,
+        "endLoc": {
+          "column": 19,
+          "line": 587,
+          "position": 18190
+        },
+        "name": "components/settings/AccountSetupWizard.tsx",
+        "start": 576,
+        "startLoc": {
+          "column": 6,
+          "line": 576,
+          "position": 17825
+        }
+      },
+      "tokens": 106
+    },
+    {
+      "firstFile": {
+        "end": 397,
+        "endLoc": {
+          "column": 34,
+          "line": 397,
+          "position": 11922
+        },
+        "name": "components/settings/AccountSetupWizard.tsx",
+        "start": 389,
+        "startLoc": {
+          "column": 55,
+          "line": 389,
+          "position": 11676
+        }
+      },
+      "format": "tsx",
+      "fragment": "\t\t\t\t\t\t\t\t\t\tonChange={(e) => onChange({ ...data, imap_tls: Number(e.target.value) })}\n\t\t\t\t\t\t\t\t\t\tclassName={inputCls}\n\t\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\t<option value={1}>Enabled</option>\n\t\t\t\t\t\t\t\t\t\t<option value={0}>Disabled</option>\n\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t</Field>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<Field label=\"Username\" id=\"wiz-ib-user\" required>",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 9,
+      "secondFile": {
+        "end": 655,
+        "endLoc": {
+          "column": 34,
+          "line": 655,
+          "position": 20287
+        },
+        "name": "components/settings/AccountSetupWizard.tsx",
+        "start": 647,
+        "startLoc": {
+          "column": 55,
+          "line": 647,
+          "position": 20041
+        }
+      },
+      "tokens": 69
+    },
+    {
+      "firstFile": {
+        "end": 145,
+        "endLoc": {
+          "column": 13,
+          "line": 145,
+          "position": 4231
+        },
+        "name": "components/settings/ConnectorsTab.tsx",
+        "start": 131,
+        "startLoc": {
+          "column": 32,
+          "line": 131,
+          "position": 3973
+        }
+      },
+      "format": "tsx",
+      "fragment": "\t\t\t\tawait api.connectors.inbound.create(payload);\n\t\t\t}\n\t\t\tonSave();\n\t\t} catch (err) {\n\t\t\tsetError(err instanceof Error ? err.message : String(err));\n\t\t} finally {\n\t\t\tsetSaving(false);\n\t\t}\n\t}\n\n\treturn (\n\t\t<form onSubmit={handleSubmit} className=\"space-y-3\">\n\t\t\t<div>\n\t\t\t\t<label\n\t\t\t\t\thtmlFor=\"ib-name\"",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 15,
+      "secondFile": {
+        "end": 565,
+        "endLoc": {
+          "column": 13,
+          "line": 565,
+          "position": 18246
+        },
+        "name": "components/settings/ConnectorsTab.tsx",
+        "start": 551,
+        "startLoc": {
+          "column": 33,
+          "line": 551,
+          "position": 17988
+        }
+      },
+      "tokens": 65
+    },
+    {
+      "firstFile": {
+        "end": 142,
+        "endLoc": {
+          "column": 42,
+          "line": 142,
+          "position": 4185
+        },
+        "name": "components/settings/ConnectorsTab.tsx",
+        "start": 131,
+        "startLoc": {
+          "column": 47,
+          "line": 131,
+          "position": 3988
+        }
+      },
+      "format": "tsx",
+      "fragment": "\t\t\t\tawait api.connectors.inbound.create(payload);\n\t\t\t}\n\t\t\tonSave();\n\t\t} catch (err) {\n\t\t\tsetError(err instanceof Error ? err.message : String(err));\n\t\t} finally {\n\t\t\tsetSaving(false);\n\t\t}\n\t}\n\n\treturn (\n\t\t<form onSubmit={handleSubmit} className=\"space-y-3\">",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 12,
+      "secondFile": {
+        "end": 828,
+        "endLoc": {
+          "column": 13,
+          "line": 828,
+          "position": 26067
+        },
+        "name": "components/settings/ConnectorsTab.tsx",
+        "start": 815,
+        "startLoc": {
+          "column": 5,
+          "line": 815,
+          "position": 25864
+        }
+      },
+      "tokens": 50
+    },
+    {
+      "firstFile": {
+        "end": 162,
+        "endLoc": {
+          "column": 13,
+          "line": 162,
+          "position": 4683
+        },
+        "name": "components/settings/ConnectorsTab.tsx",
+        "start": 152,
+        "startLoc": {
+          "column": 5,
+          "line": 152,
+          "position": 4385
+        }
+      },
+      "format": "tsx",
+      "fragment": "\t\t\t\t\ttype=\"text\"\n\t\t\t\t\trequired\n\t\t\t\t\tvalue={form.name}\n\t\t\t\t\tonChange={(e) => setForm({ ...form, name: e.target.value })}\n\t\t\t\t\tclassName=\"w-full rounded border border-gray-300 dark:border-gray-600 px-3 py-1.5 text-sm dark:bg-gray-800 dark:text-gray-100\"\n\t\t\t\t/>\n\t\t\t</div>\n\n\t\t\t<div>\n\t\t\t\t<label\n\t\t\t\t\thtmlFor=\"ib-type\"",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 11,
+      "secondFile": {
+        "end": 582,
+        "endLoc": {
+          "column": 13,
+          "line": 582,
+          "position": 18698
+        },
+        "name": "components/settings/ConnectorsTab.tsx",
+        "start": 572,
+        "startLoc": {
+          "column": 5,
+          "line": 572,
+          "position": 18400
+        }
+      },
+      "tokens": 53
+    },
+    {
+      "firstFile": {
+        "end": 234,
+        "endLoc": {
+          "column": 15,
+          "line": 234,
+          "position": 7046
+        },
+        "name": "components/settings/ConnectorsTab.tsx",
+        "start": 224,
+        "startLoc": {
+          "column": 52,
+          "line": 224,
+          "position": 6705
+        }
+      },
+      "format": "tsx",
+      "fragment": "\t\t\t\t\t\t\t\tonChange={(e) => setForm({ ...form, imap_tls: Number(e.target.value) })}\n\t\t\t\t\t\t\t\tclassName=\"w-full rounded border border-gray-300 dark:border-gray-600 px-3 py-1.5 text-sm dark:bg-gray-800 dark:text-gray-100\"\n\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t<option value={1}>Enabled</option>\n\t\t\t\t\t\t\t\t<option value={0}>Disabled</option>\n\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div>\n\t\t\t\t\t\t<label\n\t\t\t\t\t\t\thtmlFor=\"ib-imap-user\"",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 11,
+      "secondFile": {
+        "end": 652,
+        "endLoc": {
+          "column": 15,
+          "line": 652,
+          "position": 20943
+        },
+        "name": "components/settings/ConnectorsTab.tsx",
+        "start": 642,
+        "startLoc": {
+          "column": 52,
+          "line": 642,
+          "position": 20602
+        }
+      },
+      "tokens": 68
+    },
+    {
+      "firstFile": {
+        "end": 447,
+        "endLoc": {
+          "column": 9,
+          "line": 447,
+          "position": 15343
+        },
+        "name": "components/settings/ConnectorsTab.tsx",
+        "start": 424,
+        "startLoc": {
+          "column": 7,
+          "line": 424,
+          "position": 14634
+        }
+      },
+      "format": "tsx",
+      "fragment": "\t\t\t\t\t\t\tclassName=\"w-full rounded border border-gray-300 dark:border-gray-600 px-3 py-1.5 text-sm dark:bg-gray-800 dark:text-gray-100\"\n\t\t\t\t\t\t/>\n\t\t\t\t\t</div>\n\t\t\t\t</>\n\t\t\t)}\n\n\t\t\t{error && <p className=\"text-sm text-red-600 dark:text-red-400\">{error}</p>}\n\n\t\t\t<div className=\"flex gap-2 pt-1\">\n\t\t\t\t<button\n\t\t\t\t\ttype=\"submit\"\n\t\t\t\t\tdisabled={saving}\n\t\t\t\t\tclassName=\"px-4 py-1.5 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 disabled:opacity-50\"\n\t\t\t\t>\n\t\t\t\t\t{saving ? \"Saving…\" : \"Save\"}\n\t\t\t\t</button>\n\t\t\t\t<button\n\t\t\t\t\ttype=\"button\"\n\t\t\t\t\tonClick={onCancel}\n\t\t\t\t\tclassName=\"px-4 py-1.5 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100\"\n\t\t\t\t>\n\t\t\t\t\tCancel\n\t\t\t\t</button>\n\t\t\t</div>",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 24,
+      "secondFile": {
+        "end": 754,
+        "endLoc": {
+          "column": 9,
+          "line": 754,
+          "position": 24266
+        },
+        "name": "components/settings/ConnectorsTab.tsx",
+        "start": 731,
+        "startLoc": {
+          "column": 7,
+          "line": 731,
+          "position": 23557
+        }
+      },
+      "tokens": 94
+    },
+    {
+      "firstFile": {
+        "end": 447,
+        "endLoc": {
+          "column": 9,
+          "line": 447,
+          "position": 15343
+        },
+        "name": "components/settings/ConnectorsTab.tsx",
+        "start": 432,
+        "startLoc": {
+          "column": 35,
+          "line": 432,
+          "position": 14913
+        }
+      },
+      "format": "tsx",
+      "fragment": "\t\t\t<div className=\"flex gap-2 pt-1\">\n\t\t\t\t<button\n\t\t\t\t\ttype=\"submit\"\n\t\t\t\t\tdisabled={saving}\n\t\t\t\t\tclassName=\"px-4 py-1.5 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 disabled:opacity-50\"\n\t\t\t\t>\n\t\t\t\t\t{saving ? \"Saving…\" : \"Save\"}\n\t\t\t\t</button>\n\t\t\t\t<button\n\t\t\t\t\ttype=\"button\"\n\t\t\t\t\tonClick={onCancel}\n\t\t\t\t\tclassName=\"px-4 py-1.5 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100\"\n\t\t\t\t>\n\t\t\t\t\tCancel\n\t\t\t\t</button>\n\t\t\t</div>",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 16,
+      "secondFile": {
+        "end": 880,
+        "endLoc": {
+          "column": 9,
+          "line": 880,
+          "position": 27664
+        },
+        "name": "components/settings/ConnectorsTab.tsx",
+        "start": 865,
+        "startLoc": {
+          "column": 30,
+          "line": 865,
+          "position": 27234
+        }
+      },
+      "tokens": 54
+    },
+    {
+      "firstFile": {
+        "end": 761,
+        "endLoc": {
+          "column": 8,
+          "line": 761,
+          "position": 24492
+        },
+        "name": "components/settings/ConnectorsTab.tsx",
+        "start": 741,
+        "startLoc": {
+          "column": 9,
+          "line": 741,
+          "position": 23859
+        }
+      },
+      "format": "tsx",
+      "fragment": "\t\t\t\t\ttype=\"submit\"\n\t\t\t\t\tdisabled={saving}\n\t\t\t\t\tclassName=\"px-4 py-1.5 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 disabled:opacity-50\"\n\t\t\t\t>\n\t\t\t\t\t{saving ? \"Saving…\" : \"Save\"}\n\t\t\t\t</button>\n\t\t\t\t<button\n\t\t\t\t\ttype=\"button\"\n\t\t\t\t\tonClick={onCancel}\n\t\t\t\t\tclassName=\"px-4 py-1.5 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100\"\n\t\t\t\t>\n\t\t\t\t\tCancel\n\t\t\t\t</button>\n\t\t\t</div>\n\t\t</form>\n\t);\n}\n\n// ── Identity Form ──────────────────────────────────────────────────────────\n\nfunction IdentityForm({",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 21,
+      "secondFile": {
+        "end": 887,
+        "endLoc": {
+          "column": 8,
+          "line": 887,
+          "position": 27878
+        },
+        "name": "components/settings/ConnectorsTab.tsx",
+        "start": 867,
+        "startLoc": {
+          "column": 9,
+          "line": 867,
+          "position": 27257
+        }
+      },
+      "tokens": 58
+    },
+    {
+      "firstFile": {
+        "end": 923,
+        "endLoc": {
+          "column": 8,
+          "line": 923,
+          "position": 29226
+        },
+        "name": "components/settings/ConnectorsTab.tsx",
+        "start": 918,
+        "startLoc": {
+          "column": 41,
+          "line": 918,
+          "position": 29003
+        }
+      },
+      "format": "tsx",
+      "fragment": "\tconst [editingInbound, setEditingInbound] = useState<number | \"new\" | null>(null);\n\tconst [testResult, setTestResult] = useState<{ id: number; ok: boolean; msg: string } | null>(\n\t\tnull,\n\t);\n\tconst [deleting, setDeleting] = useState<number | null>(null);\n\tconst [syncStatusConnectorId, setSyncStatusConnectorId] = useState<number | null>(null);",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 6,
+      "secondFile": {
+        "end": 1178,
+        "endLoc": {
+          "column": 8,
+          "line": 1178,
+          "position": 38012
+        },
+        "name": "components/settings/ConnectorsTab.tsx",
+        "start": 1173,
+        "startLoc": {
+          "column": 43,
+          "line": 1173,
+          "position": 37789
+        }
+      },
+      "tokens": 63
+    },
+    {
+      "firstFile": {
+        "end": 101,
+        "endLoc": {
+          "column": 14,
+          "line": 101,
+          "position": 3056
+        },
+        "name": "api/routes/connectors.ts",
+        "start": 94,
+        "startLoc": {
+          "column": 25,
+          "line": 94,
+          "position": 2881
+        }
+      },
+      "format": "typescript",
+      "fragment": "\t\tif (!VALID_INGEST_TYPES.includes(type)) {\n\t\t\treturn c.json({ error: `Invalid type: ${type}` }, 400);\n\t\t}\n\t\tif (!body.name) {\n\t\t\treturn c.json({ error: \"name is required\" }, 400);\n\t\t}\n\n\t\tif (type === \"imap\") {",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 8,
+      "secondFile": {
+        "end": 522,
+        "endLoc": {
+          "column": 14,
+          "line": 522,
+          "position": 17159
+        },
+        "name": "api/routes/connectors.ts",
+        "start": 515,
+        "startLoc": {
+          "column": 23,
+          "line": 515,
+          "position": 16984
+        }
+      },
+      "tokens": 51
+    },
+    {
+      "firstFile": {
+        "end": 113,
+        "endLoc": {
+          "column": 4,
+          "line": 113,
+          "position": 3469
+        },
+        "name": "api/routes/connectors.ts",
+        "start": 106,
+        "startLoc": {
+          "column": 4,
+          "line": 106,
+          "position": 3245
+        }
+      },
+      "format": "typescript",
+      "fragment": "\t\t\t\t);\n\t\t\t}\n\t\t\tif (body.imap_port != null) {\n\t\t\t\tconst port = body.imap_port;\n\t\t\t\tif (!Number.isInteger(port) || port < 1 || port > 65535) {\n\t\t\t\t\treturn c.json({ error: \"imap_port must be between 1 and 65535\" }, 400);\n\t\t\t\t}\n\t\t\t}",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 8,
+      "secondFile": {
+        "end": 215,
+        "endLoc": {
+          "column": 3,
+          "line": 215,
+          "position": 6886
+        },
+        "name": "api/routes/connectors.ts",
+        "start": 208,
+        "startLoc": {
+          "column": 61,
+          "line": 208,
+          "position": 6669
+        }
+      },
+      "tokens": 54
+    },
+    {
+      "firstFile": {
+        "end": 204,
+        "endLoc": {
+          "column": 30,
+          "line": 204,
+          "position": 6390
+        },
+        "name": "api/routes/connectors.ts",
+        "start": 198,
+        "startLoc": {
+          "column": 32,
+          "line": 198,
+          "position": 6143
+        }
+      },
+      "format": "typescript",
+      "fragment": "\tapi.put(\"/inbound/:connectorId\", async (c) => {\n\t\tconst db = getDb();\n\t\tconst connectorId = parseIntParam(c, \"connectorId\", c.req.param(\"connectorId\"));\n\t\tif (connectorId instanceof Response) return connectorId;\n\t\tconst body = await c.req.json();\n\n\t\tconst existing = db.prepare(\"SELECT id FROM inbound_connectors WHERE id = ?\").get(connectorId);",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 7,
+      "secondFile": {
+        "end": 586,
+        "endLoc": {
+          "column": 30,
+          "line": 586,
+          "position": 19126
+        },
+        "name": "api/routes/connectors.ts",
+        "start": 580,
+        "startLoc": {
+          "column": 33,
+          "line": 580,
+          "position": 18879
+        }
+      },
+      "tokens": 61
+    },
+    {
+      "firstFile": {
+        "end": 246,
+        "endLoc": {
+          "column": 13,
+          "line": 246,
+          "position": 7634
+        },
+        "name": "api/routes/connectors.ts",
+        "start": 232,
+        "startLoc": {
+          "column": 27,
+          "line": 232,
+          "position": 7224
+        }
+      },
+      "format": "typescript",
+      "fragment": "\t\t\t\"cf_r2_poll_interval_ms\",\n\t\t];\n\t\tconst sets: string[] = [];\n\t\tconst values: (string | number | null)[] = [];\n\t\tfor (const field of allowedFields) {\n\t\t\tif (field in body) {\n\t\t\t\tsets.push(`${field} = ?`);\n\t\t\t\tvalues.push(body[field] as string | number | null);\n\t\t\t}\n\t\t}\n\t\tif (sets.length === 0) return c.json({ error: \"No fields to update\" }, 400);\n\n\t\tsets.push(\"updated_at = datetime('now')\");\n\t\tvalues.push(connectorId);\n\t\tdb.prepare(`UPDATE inbound_connectors SET ${sets.join(\", \")} WHERE id = ?`).run(",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 15,
+      "secondFile": {
+        "end": 623,
+        "endLoc": {
+          "column": 13,
+          "line": 623,
+          "position": 20228
+        },
+        "name": "api/routes/connectors.ts",
+        "start": 609,
+        "startLoc": {
+          "column": 26,
+          "line": 609,
+          "position": 19818
+        }
+      },
+      "tokens": 111
+    },
+    {
+      "firstFile": {
+        "end": 238,
+        "endLoc": {
+          "column": 22,
+          "line": 238,
+          "position": 7394
+        },
+        "name": "api/routes/connectors.ts",
+        "start": 232,
+        "startLoc": {
+          "column": 27,
+          "line": 232,
+          "position": 7224
+        }
+      },
+      "format": "typescript",
+      "fragment": "\t\t\t\"cf_r2_poll_interval_ms\",\n\t\t];\n\t\tconst sets: string[] = [];\n\t\tconst values: (string | number | null)[] = [];\n\t\tfor (const field of allowedFields) {\n\t\t\tif (field in body) {\n\t\t\t\tsets.push(`${field} = ?`);",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 7,
+      "secondFile": {
+        "end": 108,
+        "endLoc": {
+          "column": 22,
+          "line": 108,
+          "position": 3283
+        },
+        "name": "api/routes/drafts.ts",
+        "start": 102,
+        "startLoc": {
+          "column": 17,
+          "line": 102,
+          "position": 3113
+        }
+      },
+      "tokens": 50
+    },
+    {
+      "firstFile": {
+        "end": 245,
+        "endLoc": {
+          "column": 14,
+          "line": 245,
+          "position": 7607
+        },
+        "name": "api/routes/connectors.ts",
+        "start": 233,
+        "startLoc": {
+          "column": 2,
+          "line": 233,
+          "position": 7228
+        }
+      },
+      "format": "typescript",
+      "fragment": "\t\t];\n\t\tconst sets: string[] = [];\n\t\tconst values: (string | number | null)[] = [];\n\t\tfor (const field of allowedFields) {\n\t\t\tif (field in body) {\n\t\t\t\tsets.push(`${field} = ?`);\n\t\t\t\tvalues.push(body[field] as string | number | null);\n\t\t\t}\n\t\t}\n\t\tif (sets.length === 0) return c.json({ error: \"No fields to update\" }, 400);\n\n\t\tsets.push(\"updated_at = datetime('now')\");\n\t\tvalues.push(connectorId);",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 13,
+      "secondFile": {
+        "end": 114,
+        "endLoc": {
+          "column": 14,
+          "line": 114,
+          "position": 3625
+        },
+        "name": "api/routes/identities.ts",
+        "start": 101,
+        "startLoc": {
+          "column": 81,
+          "line": 101,
+          "position": 3245
+        }
+      },
+      "tokens": 103
+    },
+    {
+      "firstFile": {
+        "end": 245,
+        "endLoc": {
+          "column": 14,
+          "line": 245,
+          "position": 7607
+        },
+        "name": "api/routes/connectors.ts",
+        "start": 238,
+        "startLoc": {
+          "column": 17,
+          "line": 238,
+          "position": 7389
+        }
+      },
+      "format": "typescript",
+      "fragment": "\t\t\t\tsets.push(`${field} = ?`);\n\t\t\t\tvalues.push(body[field] as string | number | null);\n\t\t\t}\n\t\t}\n\t\tif (sets.length === 0) return c.json({ error: \"No fields to update\" }, 400);\n\n\t\tsets.push(\"updated_at = datetime('now')\");\n\t\tvalues.push(connectorId);",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 8,
+      "secondFile": {
+        "end": 115,
+        "endLoc": {
+          "column": 14,
+          "line": 115,
+          "position": 3538
+        },
+        "name": "api/routes/drafts.ts",
+        "start": 108,
+        "startLoc": {
+          "column": 59,
+          "line": 108,
+          "position": 3320
+        }
+      },
+      "tokens": 55
+    },
+    {
+      "firstFile": {
+        "end": 371,
+        "endLoc": {
+          "column": 11,
+          "line": 371,
+          "position": 11781
+        },
+        "name": "api/routes/connectors.ts",
+        "start": 366,
+        "startLoc": {
+          "column": 55,
+          "line": 366,
+          "position": 11616
+        }
+      },
+      "format": "typescript",
+      "fragment": "\t\t\t\t\tsecretAccessKey: connector.cf_r2_secret_access_key,\n\t\t\t\t});\n\t\t\t\tconst res = await fetch(url.toString(), { method: \"GET\", headers });\n\t\t\t\tif (!res.ok) {\n\t\t\t\t\tconst body = await res.text().catch(() => \"\");\n\t\t\t\t\treturn c.json({ ok: false, error: `R2 returned ${res.status}: ${body}` });",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 6,
+      "secondFile": {
+        "end": 291,
+        "endLoc": {
+          "column": 8,
+          "line": 291,
+          "position": 9013
+        },
+        "name": "sync/r2-poller.ts",
+        "start": 285,
+        "startLoc": {
+          "column": 41,
+          "line": 285,
+          "position": 8858
+        }
+      },
+      "tokens": 51
+    },
+    {
+      "firstFile": {
+        "end": 414,
+        "endLoc": {
+          "column": 25,
+          "line": 414,
+          "position": 13436
+        },
+        "name": "api/routes/connectors.ts",
+        "start": 404,
+        "startLoc": {
+          "column": 46,
+          "line": 404,
+          "position": 12999
+        }
+      },
+      "format": "typescript",
+      "fragment": "\tapi.post(\"/inbound/:connectorId/clean-server\", async (c) => {\n\t\tconst connectorId = parseIntParam(c, \"connectorId\", c.req.param(\"connectorId\"));\n\t\tif (connectorId instanceof Response) return connectorId;\n\n\t\tconst connector = getDb()\n\t\t\t.prepare(\"SELECT type FROM inbound_connectors WHERE id = ?\")\n\t\t\t.get(connectorId) as { type: string } | undefined;\n\n\t\tif (!connector) return c.json({ error: \"Connector not found\" }, 404);\n\t\tif (connector.type !== \"imap\")\n\t\t\treturn c.json({ error: \"Only IMAP connectors support server-side deletion\" }, 400);",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 11,
+      "secondFile": {
+        "end": 435,
+        "endLoc": {
+          "column": 25,
+          "line": 435,
+          "position": 14232
+        },
+        "name": "api/routes/connectors.ts",
+        "start": 425,
+        "startLoc": {
+          "column": 54,
+          "line": 425,
+          "position": 13795
+        }
+      },
+      "tokens": 95
+    },
+    {
+      "firstFile": {
+        "end": 425,
+        "endLoc": {
+          "column": 10,
+          "line": 425,
+          "position": 13751
+        },
+        "name": "api/routes/connectors.ts",
+        "start": 417,
+        "startLoc": {
+          "column": 53,
+          "line": 417,
+          "position": 13560
+        }
+      },
+      "format": "typescript",
+      "fragment": "\t\t\tconst result = await getScheduler().cleanServerNow(connectorId);\n\t\t\treturn c.json(result);\n\t\t} catch (err) {\n\t\t\tconst message = err instanceof Error ? err.message : String(err);\n\t\t\treturn c.json({ error: message }, 500);\n\t\t}\n\t});\n\n\tapi.post(\"/inbound/:connectorId/re-label-from-server\", async (c) => {",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 9,
+      "secondFile": {
+        "end": 446,
+        "endLoc": {
+          "column": 10,
+          "line": 446,
+          "position": 14556
+        },
+        "name": "api/routes/connectors.ts",
+        "start": 438,
+        "startLoc": {
+          "column": 59,
+          "line": 438,
+          "position": 14365
+        }
+      },
+      "tokens": 56
+    },
+    {
+      "firstFile": {
+        "end": 425,
+        "endLoc": {
+          "column": 5,
+          "line": 425,
+          "position": 13746
+        },
+        "name": "api/routes/connectors.ts",
+        "start": 417,
+        "startLoc": {
+          "column": 53,
+          "line": 417,
+          "position": 13560
+        }
+      },
+      "format": "typescript",
+      "fragment": "\t\t\tconst result = await getScheduler().cleanServerNow(connectorId);\n\t\t\treturn c.json(result);\n\t\t} catch (err) {\n\t\t\tconst message = err instanceof Error ? err.message : String(err);\n\t\t\treturn c.json({ error: message }, 500);\n\t\t}\n\t});\n\n\tapi.post(\"/inbound/:connectorId/re-label-from-server\", async (c) => {",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 9,
+      "secondFile": {
+        "end": 458,
+        "endLoc": {
+          "column": 5,
+          "line": 458,
+          "position": 14983
+        },
+        "name": "api/routes/connectors.ts",
+        "start": 450,
+        "startLoc": {
+          "column": 46,
+          "line": 450,
+          "position": 14797
+        }
+      },
+      "tokens": 54
+    },
+    {
+      "firstFile": {
+        "end": 483,
+        "endLoc": {
+          "column": 12,
+          "line": 483,
+          "position": 15944
+        },
+        "name": "api/routes/connectors.ts",
+        "start": 476,
+        "startLoc": {
+          "column": 2,
+          "line": 476,
+          "position": 15641
+        }
+      },
+      "format": "typescript",
+      "fragment": "\t\tconst folderId = parseIntParam(c, \"folderId\", c.req.param(\"folderId\"));\n\t\tif (folderId instanceof Response) return folderId;\n\t\tconst pagination = parsePagination(c);\n\t\tif (pagination instanceof Response) return pagination;\n\t\tconst { limit, offset } = pagination;\n\n\t\tconst messages = getDb()\n\t\t\t.prepare(",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 8,
+      "secondFile": {
+        "end": 138,
+        "endLoc": {
+          "column": 12,
+          "line": 138,
+          "position": 4581
+        },
+        "name": "api/routes/identities.ts",
+        "start": 131,
+        "startLoc": {
+          "column": 2,
+          "line": 131,
+          "position": 4278
+        }
+      },
+      "tokens": 63
+    },
+    {
+      "firstFile": {
+        "end": 534,
+        "endLoc": {
+          "column": 4,
+          "line": 534,
+          "position": 17572
+        },
+        "name": "api/routes/connectors.ts",
+        "start": 527,
+        "startLoc": {
+          "column": 4,
+          "line": 527,
+          "position": 17348
+        }
+      },
+      "format": "typescript",
+      "fragment": "\t\t\t\t);\n\t\t\t}\n\t\t\tif (body.smtp_port != null) {\n\t\t\t\tconst port = body.smtp_port;\n\t\t\t\tif (!Number.isInteger(port) || port < 1 || port > 65535) {\n\t\t\t\t\treturn c.json({ error: \"smtp_port must be between 1 and 65535\" }, 400);\n\t\t\t\t}\n\t\t\t}",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 8,
+      "secondFile": {
+        "end": 597,
+        "endLoc": {
+          "column": 3,
+          "line": 597,
+          "position": 19622
+        },
+        "name": "api/routes/connectors.ts",
+        "start": 590,
+        "startLoc": {
+          "column": 61,
+          "line": 590,
+          "position": 19405
+        }
+      },
+      "tokens": 54
+    },
+    {
+      "firstFile": {
+        "end": 630,
+        "endLoc": {
+          "column": 12,
+          "line": 630,
+          "position": 20432
+        },
+        "name": "api/routes/connectors.ts",
+        "start": 623,
+        "startLoc": {
+          "column": 47,
+          "line": 623,
+          "position": 20262
+        }
+      },
+      "format": "typescript",
+      "fragment": "\t\tdb.prepare(`UPDATE outbound_connectors SET ${sets.join(\", \")} WHERE id = ?`).run(\n\t\t\t...(values as [string | number | null, ...Array<string | number | null>]),\n\t\t);\n\n\t\treturn c.json({ ok: true });\n\t});\n\n\tapi.delete(\"/outbound/:connectorId\", (c) => {",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 8,
+      "secondFile": {
+        "end": 122,
+        "endLoc": {
+          "column": 12,
+          "line": 122,
+          "position": 3846
+        },
+        "name": "api/routes/identities.ts",
+        "start": 115,
+        "startLoc": {
+          "column": 38,
+          "line": 115,
+          "position": 3676
+        }
+      },
+      "tokens": 55
+    },
+    {
+      "firstFile": {
+        "end": 105,
+        "endLoc": {
+          "column": 12,
+          "line": 105,
+          "position": 3466
+        },
+        "name": "api/routes/encryption.ts",
+        "start": 100,
+        "startLoc": {
+          "column": 28,
+          "line": 100,
+          "position": 3281
+        }
+      },
+      "format": "typescript",
+      "fragment": "\tapi.post(\"/change-password\", async (c) => {\n\t\tif (context.state !== \"unlocked\") {\n\t\t\treturn c.json({ error: \"Container is locked\", state: context.state }, 423);\n\t\t}\n\t\tconst body = await c.req.json();\n\t\tif (!body.currentPassword || !body.newPassword) {",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 6,
+      "secondFile": {
+        "end": 124,
+        "endLoc": {
+          "column": 12,
+          "line": 124,
+          "position": 4133
+        },
+        "name": "api/routes/encryption.ts",
+        "start": 119,
+        "startLoc": {
+          "column": 32,
+          "line": 119,
+          "position": 3948
+        }
+      },
+      "tokens": 54
+    },
+    {
+      "firstFile": {
+        "end": 105,
+        "endLoc": {
+          "column": 12,
+          "line": 105,
+          "position": 3466
+        },
+        "name": "api/routes/encryption.ts",
+        "start": 100,
+        "startLoc": {
+          "column": 28,
+          "line": 100,
+          "position": 3281
+        }
+      },
+      "format": "typescript",
+      "fragment": "\tapi.post(\"/change-password\", async (c) => {\n\t\tif (context.state !== \"unlocked\") {\n\t\t\treturn c.json({ error: \"Container is locked\", state: context.state }, 423);\n\t\t}\n\t\tconst body = await c.req.json();\n\t\tif (!body.currentPassword || !body.newPassword) {",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 6,
+      "secondFile": {
+        "end": 140,
+        "endLoc": {
+          "column": 12,
+          "line": 140,
+          "position": 4705
+        },
+        "name": "api/routes/encryption.ts",
+        "start": 135,
+        "startLoc": {
+          "column": 38,
+          "line": 135,
+          "position": 4520
+        }
+      },
+      "tokens": 54
+    },
+    {
+      "firstFile": {
+        "end": 125,
+        "endLoc": {
+          "column": 25,
+          "line": 125,
+          "position": 4170
+        },
+        "name": "api/routes/encryption.ts",
+        "start": 119,
+        "startLoc": {
+          "column": 44,
+          "line": 119,
+          "position": 3960
+        }
+      },
+      "format": "typescript",
+      "fragment": "\tapi.post(\"/rotate-recovery-key\", async (c) => {\n\t\tif (context.state !== \"unlocked\") {\n\t\t\treturn c.json({ error: \"Container is locked\", state: context.state }, 423);\n\t\t}\n\t\tconst body = await c.req.json();\n\t\tif (!body.password) {\n\t\t\treturn c.json({ error: \"password is required to authorize recovery key rotation\" }, 400);",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 7,
+      "secondFile": {
+        "end": 141,
+        "endLoc": {
+          "column": 25,
+          "line": 141,
+          "position": 4742
+        },
+        "name": "api/routes/encryption.ts",
+        "start": 135,
+        "startLoc": {
+          "column": 50,
+          "line": 135,
+          "position": 4532
+        }
+      },
+      "tokens": 60
+    },
+    {
+      "firstFile": {
+        "end": 187,
+        "endLoc": {
+          "column": 5,
+          "line": 187,
+          "position": 6296
+        },
+        "name": "api/routes/identities.ts",
+        "start": 177,
+        "startLoc": {
+          "column": 31,
+          "line": 177,
+          "position": 6037
+        }
+      },
+      "format": "typescript",
+      "fragment": "\t\t\t\t.run(body.name, body.color ?? null, body.source ?? \"user\");\n\t\t\treturn c.json({ id: Number(result.lastInsertRowid) }, 201);\n\t\t} catch (err) {\n\t\t\tif (String(err).includes(\"UNIQUE constraint\")) {\n\t\t\t\treturn c.json({ error: \"Label already exists\" }, 409);\n\t\t\t}\n\t\t\tthrow err;\n\t\t}\n\t});\n\n\tapi.post(\"/test-connection\", async (c) => {",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 11,
+      "secondFile": {
+        "end": 35,
+        "endLoc": {
+          "column": 5,
+          "line": 35,
+          "position": 1165
+        },
+        "name": "api/routes/labels.ts",
+        "start": 25,
+        "startLoc": {
+          "column": 50,
+          "line": 25,
+          "position": 906
+        }
+      },
+      "tokens": 72
+    },
+    {
+      "firstFile": {
+        "end": 84,
+        "endLoc": {
+          "column": 7,
+          "line": 84,
+          "position": 2952
+        },
+        "name": "api/routes/labels.ts",
+        "start": 75,
+        "startLoc": {
+          "column": 18,
+          "line": 75,
+          "position": 2593
+        }
+      },
+      "format": "typescript",
+      "fragment": "\tapi.get(\"/filter\", (c) => {\n\t\tconst idsParam = c.req.query(\"ids\");\n\t\tif (!idsParam) return c.json({ error: \"ids query parameter is required\" }, 400);\n\t\tconst ids = idsParam\n\t\t\t.split(\",\")\n\t\t\t.map((s) => Number(s.trim()))\n\t\t\t.filter((n) => Number.isInteger(n) && n > 0);\n\t\tif (ids.length === 0) return c.json({ error: \"At least one valid label ID is required\" }, 400);\n\n\t\tconst pagination = parsePagination(c);",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 10,
+      "secondFile": {
+        "end": 125,
+        "endLoc": {
+          "column": 7,
+          "line": 125,
+          "position": 4559
+        },
+        "name": "api/routes/labels.ts",
+        "start": 115,
+        "startLoc": {
+          "column": 24,
+          "line": 115,
+          "position": 4138
+        }
+      },
+      "tokens": 104
+    },
+    {
+      "firstFile": {
+        "end": 84,
+        "endLoc": {
+          "column": 7,
+          "line": 84,
+          "position": 2952
+        },
+        "name": "api/routes/labels.ts",
+        "start": 75,
+        "startLoc": {
+          "column": 18,
+          "line": 75,
+          "position": 2593
+        }
+      },
+      "format": "typescript",
+      "fragment": "\tapi.get(\"/filter\", (c) => {\n\t\tconst idsParam = c.req.query(\"ids\");\n\t\tif (!idsParam) return c.json({ error: \"ids query parameter is required\" }, 400);\n\t\tconst ids = idsParam\n\t\t\t.split(\",\")\n\t\t\t.map((s) => Number(s.trim()))\n\t\t\t.filter((n) => Number.isInteger(n) && n > 0);\n\t\tif (ids.length === 0) return c.json({ error: \"At least one valid label ID is required\" }, 400);\n\n\t\tconst pagination = parsePagination(c);",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 10,
+      "secondFile": {
+        "end": 158,
+        "endLoc": {
+          "column": 7,
+          "line": 158,
+          "position": 5979
+        },
+        "name": "api/routes/labels.ts",
+        "start": 150,
+        "startLoc": {
+          "column": 26,
+          "line": 150,
+          "position": 5621
+        }
+      },
+      "tokens": 104
+    },
+    {
+      "firstFile": {
+        "end": 139,
+        "endLoc": {
+          "column": 7,
+          "line": 139,
+          "position": 4435
+        },
+        "name": "api/routes/messages.ts",
+        "start": 134,
+        "startLoc": {
+          "column": 30,
+          "line": 134,
+          "position": 4222
+        }
+      },
+      "format": "typescript",
+      "fragment": "\tapi.patch(\"/:messageId/flags\", async (c) => {\n\t\tconst db = getDb();\n\t\tconst messageId = parseIntParam(c, \"messageId\", c.req.param(\"messageId\"));\n\t\tif (messageId instanceof Response) return messageId;\n\t\tconst body = await c.req.json();\n\t\tconst { add, remove } = body as { add?: string[]; remove?: string[] };",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 6,
+      "secondFile": {
+        "end": 160,
+        "endLoc": {
+          "column": 7,
+          "line": 160,
+          "position": 5305
+        },
+        "name": "api/routes/messages.ts",
+        "start": 155,
+        "startLoc": {
+          "column": 28,
+          "line": 155,
+          "position": 5092
+        }
+      },
+      "tokens": 55
+    },
+    {
+      "firstFile": {
+        "end": 139,
+        "endLoc": {
+          "column": 7,
+          "line": 139,
+          "position": 4435
+        },
+        "name": "api/routes/messages.ts",
+        "start": 134,
+        "startLoc": {
+          "column": 30,
+          "line": 134,
+          "position": 4222
+        }
+      },
+      "format": "typescript",
+      "fragment": "\tapi.patch(\"/:messageId/flags\", async (c) => {\n\t\tconst db = getDb();\n\t\tconst messageId = parseIntParam(c, \"messageId\", c.req.param(\"messageId\"));\n\t\tif (messageId instanceof Response) return messageId;\n\t\tconst body = await c.req.json();\n\t\tconst { add, remove } = body as { add?: string[]; remove?: string[] };",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 6,
+      "secondFile": {
+        "end": 360,
+        "endLoc": {
+          "column": 7,
+          "line": 360,
+          "position": 12678
+        },
+        "name": "api/routes/messages.ts",
+        "start": 355,
+        "startLoc": {
+          "column": 30,
+          "line": 355,
+          "position": 12465
+        }
+      },
+      "tokens": 55
+    },
+    {
+      "firstFile": {
+        "end": 149,
+        "endLoc": {
+          "column": 4,
+          "line": 149,
+          "position": 4491
+        },
+        "name": "connectors/cloudflare-email.ts",
+        "start": 140,
+        "startLoc": {
+          "column": 4,
+          "line": 140,
+          "position": 4125
+        }
+      },
+      "format": "typescript",
+      "fragment": "\t\t\t\t.filter((att) => att.content != null)\n\t\t\t\t.map((att) => ({\n\t\t\t\t\tfilename: att.filename ?? undefined,\n\t\t\t\t\tcontentType:\n\t\t\t\t\t\ttypeof att.contentType === \"string\" ? att.contentType : \"application/octet-stream\",\n\t\t\t\t\tsize: typeof att.size === \"number\" ? att.size : att.content.length,\n\t\t\t\t\tcontentId: att.contentId ?? undefined,\n\t\t\t\t\tcontent: att.content,\n\t\t\t\t})),\n\t\t};",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 10,
+      "secondFile": {
+        "end": 152,
+        "endLoc": {
+          "column": 6,
+          "line": 152,
+          "position": 4267
+        },
+        "name": "connectors/imap.ts",
+        "start": 143,
+        "startLoc": {
+          "column": 6,
+          "line": 143,
+          "position": 3883
+        }
+      },
+      "tokens": 84
+    },
+    {
+      "firstFile": {
+        "end": 203,
+        "endLoc": {
+          "column": 60,
+          "line": 203,
+          "position": 5391
+        },
+        "name": "connectors/imap.ts",
+        "start": 194,
+        "startLoc": {
+          "column": 0,
+          "line": 194,
+          "position": 5133
+        }
+      },
+      "format": "typescript",
+      "fragment": "}\n\nfunction suppressImapFlowErrors(client: ImapFlow): void {\n\tconst noop = () => {};\n\tif (!client.listenerCount(\"error\")) {\n\t\tclient.on(\"error\", noop);\n\t}\n\tconst socket = (\n\t\tclient as unknown as {\n\t\t\tsocket?: { on?: (event: string, fn: () => void) => void };",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 10,
+      "secondFile": {
+        "end": 1477,
+        "endLoc": {
+          "column": 82,
+          "line": 1477,
+          "position": 48332
+        },
+        "name": "sync/imap-sync.ts",
+        "start": 1456,
+        "startLoc": {
+          "column": 0,
+          "line": 1456,
+          "position": 47369
+        }
+      },
+      "tokens": 72
+    },
+    {
+      "firstFile": {
+        "end": 227,
+        "endLoc": {
+          "column": 63,
+          "line": 227,
+          "position": 5935
+        },
+        "name": "connectors/imap.ts",
+        "start": 207,
+        "startLoc": {
+          "column": 25,
+          "line": 207,
+          "position": 5483
+        }
+      },
+      "format": "typescript",
+      "fragment": "\t\tsocket.on(\"error\", noop);\n\t}\n}\n\nasync function withRetry<T>(\n\tfn: () => Promise<T>,\n\tlabel: string,\n\tretries = MAX_RETRIES,\n): Promise<T> {\n\tlet lastError: unknown;\n\tfor (let attempt = 1; attempt <= retries; attempt++) {\n\t\ttry {\n\t\t\treturn await fn();\n\t\t} catch (err) {\n\t\t\tlastError = err;\n\t\t\tif (attempt < retries) {\n\t\t\t\tawait new Promise((resolve) => setTimeout(resolve, RETRY_DELAY_MS * attempt));\n\t\t\t}\n\t\t}\n\t}\n\tthrow new Error(`${label} failed after ${retries} attempts: ${lastError}`);",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 21,
+      "secondFile": {
+        "end": 1519,
+        "endLoc": {
+          "column": 63,
+          "line": 1519,
+          "position": 49444
+        },
+        "name": "sync/imap-sync.ts",
+        "start": 1496,
+        "startLoc": {
+          "column": 29,
+          "line": 1496,
+          "position": 48933
+        }
+      },
+      "tokens": 111
+    },
+    {
+      "firstFile": {
+        "end": 136,
+        "endLoc": {
+          "column": 7,
+          "line": 136,
+          "position": 3861
+        },
+        "name": "connectors/ses.ts",
+        "start": 119,
+        "startLoc": {
+          "column": 22,
+          "line": 119,
+          "position": 3421
+        }
+      },
+      "format": "typescript",
+      "fragment": "\tconst result = await transport.sendMail({\n\t\tfrom: message.from,\n\t\tto: message.to.join(\", \"),\n\t\tcc: message.cc?.join(\", \"),\n\t\tbcc: message.bcc?.join(\", \"),\n\t\tsubject: message.subject,\n\t\ttext: message.textBody,\n\t\thtml: message.htmlBody,\n\t\tinReplyTo: message.inReplyTo,\n\t\treferences: message.references?.join(\" \"),\n\t\tattachments: message.attachments?.map((a) => ({\n\t\t\tfilename: a.filename,\n\t\t\tcontentType: a.contentType,\n\t\t\tcontent: a.content,\n\t\t})),\n\t});\n\n\treturn result.message as Uint8Array;",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 18,
+      "secondFile": {
+        "end": 56,
+        "endLoc": {
+          "column": 8,
+          "line": 56,
+          "position": 1647
+        },
+        "name": "connectors/smtp.ts",
+        "start": 39,
+        "startLoc": {
+          "column": 28,
+          "line": 39,
+          "position": 1191
+        }
+      },
+      "tokens": 119
+    },
+    {
+      "firstFile": {
+        "end": 243,
+        "endLoc": {
+          "column": 20,
+          "line": 243,
+          "position": 8104
+        },
+        "name": "crypto/keys.ts",
+        "start": 233,
+        "startLoc": {
+          "column": 1,
+          "line": 233,
+          "position": 7801
+        }
+      },
+      "format": "typescript",
+      "fragment": "\tconst keysData = readKeysFile(dataDir);\n\n\tconst newSalt = randomBytes(KEY_BYTES);\n\tconst newKek = deriveKEK(newPassword, newSalt);\n\n\tkeysData.kdf.salt = newSalt.toString(\"base64\");\n\tkeysData.wrappedMasterKey.password = wrapKey(vaultKey, newKek);\n\n\twriteKeysFile(dataDir, keysData);\n\n\tzeroBuffer(newKek);",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 11,
+      "secondFile": {
+        "end": 360,
+        "endLoc": {
+          "column": 20,
+          "line": 360,
+          "position": 11719
+        },
+        "name": "crypto/keys.ts",
+        "start": 350,
+        "startLoc": {
+          "column": 1,
+          "line": 350,
+          "position": 11416
+        }
+      },
+      "tokens": 64
+    },
+    {
+      "firstFile": {
+        "end": 263,
+        "endLoc": {
+          "column": 27,
+          "line": 263,
+          "position": 8815
+        },
+        "name": "crypto/keys.ts",
+        "start": 256,
+        "startLoc": {
+          "column": 42,
+          "line": 256,
+          "position": 8524
+        }
+      },
+      "format": "typescript",
+      "fragment": "export function prepareRecoveryKeyRotation(dataDir: string, currentPassword: string): string {\n\tconst vaultKey = unlockWithPassword(dataDir, currentPassword);\n\tconst keysData = readKeysFile(dataDir);\n\n\tconst newMnemonic = generateMnemonic(256);\n\tconst newRecoveryKey = recoveryMnemonicToKey(newMnemonic);\n\n\tkeysData.wrappedMasterKey.pendingRecovery = wrapKey(vaultKey, newRecoveryKey);",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 8,
+      "secondFile": {
+        "end": 331,
+        "endLoc": {
+          "column": 27,
+          "line": 331,
+          "position": 10995
+        },
+        "name": "crypto/keys.ts",
+        "start": 324,
+        "startLoc": {
+          "column": 33,
+          "line": 324,
+          "position": 10704
+        }
+      },
+      "tokens": 50
+    },
+    {
+      "firstFile": {
+        "end": 676,
+        "endLoc": {
+          "column": 8,
+          "line": 676,
+          "position": 29697
+        },
+        "name": "demo/seed.ts",
+        "start": 657,
+        "startLoc": {
+          "column": 12,
+          "line": 657,
+          "position": 29320
+        }
+      },
+      "format": "typescript",
+      "fragment": "\t\t\t\tfolderId,\n\t\t\t\ti + 1, // UID\n\t\t\t\tmsg.message_id,\n\t\t\t\tmsg.in_reply_to ?? null,\n\t\t\t\tmsg.references ?? null,\n\t\t\t\tmsg.subject,\n\t\t\t\tmsg.from_address,\n\t\t\t\tmsg.from_name,\n\t\t\t\tmsg.to_addresses,\n\t\t\t\tmsg.cc_addresses ?? null,\n\t\t\t\tmsg.date,\n\t\t\t\tmsg.text_body,\n\t\t\t\tmsg.html_body,\n\t\t\t\tmsg.flags,\n\t\t\t\tmsg.has_attachments ?? 0,\n\t\t\t\tsize,\n\t\t\t);\n\n\t\t\t// Assign labels (including connector label)\n\t\t\tconst messageId = result.lastInsertRowid as number;",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 20,
+      "secondFile": {
+        "end": 781,
+        "endLoc": {
+          "column": 8,
+          "line": 781,
+          "position": 33310
+        },
+        "name": "demo/seed.ts",
+        "start": 764,
+        "startLoc": {
+          "column": 13,
+          "line": 764,
+          "position": 32989
+        }
+      },
+      "tokens": 70
+    },
+    {
+      "firstFile": {
+        "end": 231,
+        "endLoc": {
+          "column": 15,
+          "line": 231,
+          "position": 8655
+        },
+        "name": "storage/db.ts",
+        "start": 221,
+        "startLoc": {
+          "column": 80,
+          "line": 221,
+          "position": 8295
+        }
+      },
+      "format": "typescript",
+      "fragment": "\t\tconst updateText = db.prepare(\"UPDATE messages SET text_body = ? WHERE id = ?\");\n\n\t\tconst txn = db.transaction((batch: typeof rows) => {\n\t\t\tfor (const row of batch) {\n\t\t\t\t// Decompress html_body if it's a Buffer (compressed), otherwise use string directly\n\t\t\t\tconst html =\n\t\t\t\t\ttypeof row.html_body === \"string\"\n\t\t\t\t\t\t? row.html_body\n\t\t\t\t\t\t: inflateSync(row.html_body).toString(\"utf-8\");\n\t\t\t\tconst text = htmlToText(html);\n\t\t\t\tif (text) {",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 11,
+      "secondFile": {
+        "end": 265,
+        "endLoc": {
+          "column": 15,
+          "line": 265,
+          "position": 9683
+        },
+        "name": "storage/db.ts",
+        "start": 256,
+        "startLoc": {
+          "column": 89,
+          "line": 256,
+          "position": 9412
+        }
+      },
+      "tokens": 64
+    },
+    {
+      "firstFile": {
+        "end": 240,
+        "endLoc": {
+          "column": 3,
+          "line": 240,
+          "position": 8809
+        },
+        "name": "storage/db.ts",
+        "start": 232,
+        "startLoc": {
+          "column": 15,
+          "line": 232,
+          "position": 8671
+        }
+      },
+      "format": "typescript",
+      "fragment": "\t\t\t\t\tupdateText.run(text, row.id);\n\t\t\t\t}\n\t\t\t}\n\t\t});\n\n\t\tfor (let i = 0; i < rows.length; i += BATCH_SIZE) {\n\t\t\ttxn(rows.slice(i, i + BATCH_SIZE));\n\t\t}\n\t},",
+      "isNew": false,
+      "kind": "exact",
+      "lines": 9,
+      "secondFile": {
+        "end": 274,
+        "endLoc": {
+          "column": 3,
+          "line": 274,
+          "position": 9841
+        },
+        "name": "storage/db.ts",
+        "start": 266,
+        "startLoc": {
+          "column": 19,
+          "line": 266,
+          "position": 9703
+        }
+      },
+      "tokens": 50
+    }
+  ],
+  "statistics": {
+    "detectionDate": "2026-10-15T11:06:52.935Z",
+    "formats": {
+      "css": {
+        "clones": 0,
+        "duplicatedLines": 0,
+        "duplicatedTokens": 0,
+        "lines": 85,
+        "newClones": 0,
+        "newDuplicatedLines": 0,
+        "percentage": 0.0,
+        "percentageTokens": 0.0,
+        "sources": 1,
+        "tokens": 664
+      },
+      "tsx": {
+        "clones": 25,
+        "duplicatedLines": 379,
+        "duplicatedTokens": 1777,
+        "lines": 11287,
+        "newClones": 0,
+        "newDuplicatedLines": 0,
+        "percentage": 3.3578453087622933,
+        "percentageTokens": 3.0706225916262033,
+        "sources": 35,
+        "tokens": 57871
+      },
+      "typescript": {
+        "clones": 36,
+        "duplicatedLines": 363,
+        "duplicatedTokens": 2525,
+        "lines": 12249,
+        "newClones": 0,
+        "newDuplicatedLines": 0,
+        "percentage": 2.9635072250795984,
+        "percentageTokens": 4.557844004404411,
+        "sources": 46,
+        "tokens": 55399
+      }
+    },
+    "total": {
+      "clones": 61,
+      "duplicatedLines": 742,
+      "duplicatedTokens": 4302,
+      "lines": 23621,
+      "newClones": 0,
+      "newDuplicatedLines": 0,
+      "percentage": 3.1412725964184416,
+      "percentageTokens": 3.7758702406656486,
+      "sources": 82,
+      "tokens": 113934
+    }
+  }
+}

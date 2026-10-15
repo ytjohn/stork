@@ -1,0 +1,320 @@
+{
+  "syncMs": 2624,
+  "errors": [
+    {
+      "folderPath": "INBOX",
+      "uid": 12,
+      "errorType": "message",
+      "message": "UID 12: no source available",
+      "retriable": true
+    }
+  ],
+  "report": [
+    {
+      "fixture": "no-message-id",
+      "uid": 1,
+      "stored": true,
+      "subject": "fixture no-message-id",
+      "from": "a@example.com",
+      "date": "2026-10-06T12:00:00.000Z",
+      "msgid": null,
+      "body": "no id here\n",
+      "atts": 0
+    },
+    {
+      "fixture": "dup-msgid-a",
+      "uid": 2,
+      "stored": true,
+      "subject": "fixture dup-a",
+      "from": "sender@example.com",
+      "date": "2026-10-06T12:00:00.000Z",
+      "msgid": "<dup@fixtures.example>",
+      "body": "first distinct content alpha\n",
+      "atts": 0
+    },
+    {
+      "fixture": "dup-msgid-b",
+      "uid": 3,
+      "stored": true,
+      "subject": "fixture dup-b",
+      "from": "sender@example.com",
+      "date": "2026-10-06T12:00:00.000Z",
+      "msgid": "<dup@fixtures.example>",
+      "body": "second distinct content beta\n",
+      "atts": 0
+    },
+    {
+      "fixture": "broken-boundary",
+      "uid": 4,
+      "stored": true,
+      "subject": "fixture broken-boundary",
+      "from": "sender@example.com",
+      "date": "2026-10-06T12:00:00.000Z",
+      "msgid": "<broken-boundary@fixtures.example>",
+      "body": null,
+      "atts": 0
+    },
+    {
+      "fixture": "invalid-charset",
+      "uid": 5,
+      "stored": true,
+      "subject": "fixture invalid-charset",
+      "from": "sender@example.com",
+      "date": "2026-10-06T12:00:00.000Z",
+      "msgid": "<invalid-charset@fixtures.example>",
+      "body": null,
+      "atts": 0
+    },
+    {
+      "fixture": "8bit-headers",
+      "uid": 6,
+      "stored": true,
+      "subject": "fixture 8bit-headers caf� latin1",
+      "from": "jm@example.com",
+      "date": "2026-10-06T12:00:00.000Z",
+      "msgid": "<8bit-headers@fixtures.example>",
+      "body": "body\n",
+      "atts": 0
+    },
+    {
+      "fixture": "rfc2047-garbage",
+      "uid": 7,
+      "stored": true,
+      "subject": "fixture rfc2047-garbage �t�=ZZ",
+      "from": "sender@example.com",
+      "date": "2026-10-06T12:00:00.000Z",
+      "msgid": "<rfc2047-garbage@fixtures.example>",
+      "body": "x\n",
+      "atts": 0
+    },
+    {
+      "fixture": "deep-nesting-20",
+      "uid": 8,
+      "stored": true,
+      "subject": "fixture deep-nesting-20",
+      "from": "deep@example.com",
+      "date": "2026-10-06T12:00:00.000Z",
+      "msgid": "<deep-nesting-20@fixtures.example>",
+      "body": "deepleafdeep-nesting-20",
+      "atts": 0
+    },
+    {
+      "fixture": "deep-nesting-21",
+      "uid": 9,
+      "stored": false,
+      "atts": null
+    },
+    {
+      "fixture": "deep-nesting-200",
+      "uid": 10,
+      "stored": false,
+      "atts": null
+    },
+    {
+      "fixture": "deep-nesting-2000",
+      "uid": 11,
+      "stored": false,
+      "atts": null
+    },
+    {
+      "fixture": "zero-byte",
+      "uid": 12,
+      "stored": false,
+      "atts": null
+    },
+    {
+      "fixture": "header-only",
+      "uid": 13,
+      "stored": true,
+      "subject": "fixture header-only",
+      "from": "h@example.com",
+      "date": null,
+      "msgid": "<header-only@fixtures.example>",
+      "body": null,
+      "atts": 0
+    },
+    {
+      "fixture": "missing-date-from",
+      "uid": 14,
+      "stored": true,
+      "subject": "fixture missing-date-from",
+      "from": null,
+      "date": null,
+      "msgid": "<missing-date-from@fixtures.example>",
+      "body": "no date no from\n",
+      "atts": 0
+    },
+    {
+      "fixture": "huge-subject-1mb",
+      "uid": 15,
+      "stored": true,
+      "subject": "fixture huge-subject-1mb AAAAAAAAAAAAAAA…(1048601)",
+      "from": "sender@example.com",
+      "date": "2026-10-06T12:00:00.000Z",
+      "msgid": "<huge-subject-1mb@fixtures.example>",
+      "body": null,
+      "atts": 0
+    },
+    {
+      "fixture": "huge-header-1mb",
+      "uid": 16,
+      "stored": true,
+      "subject": "fixture huge-header-1mb",
+      "from": "sender@example.com",
+      "date": "2026-10-06T12:00:00.000Z",
+      "msgid": "<huge-header-1mb@fixtures.example>",
+      "body": null,
+      "atts": 0
+    },
+    {
+      "fixture": "10k-recipients",
+      "uid": 17,
+      "stored": true,
+      "subject": "fixture 10k-recipients",
+      "from": "sender@example.com",
+      "date": "2026-10-06T12:00:00.000Z",
+      "msgid": "<10k-recipients@fixtures.example>",
+      "body": "many recipients\n",
+      "atts": 0
+    },
+    {
+      "fixture": "path-traversal-filename",
+      "uid": 18,
+      "stored": true,
+      "subject": "fixture path-traversal-filename",
+      "from": "att@example.com",
+      "date": "2026-10-06T12:00:00.000Z",
+      "msgid": "<path-traversal-filename@fixtures.example>",
+      "body": "body of path-traversal-filenam",
+      "atts": 1
+    },
+    {
+      "fixture": "null-byte-filename",
+      "uid": 19,
+      "stored": true,
+      "subject": "fixture null-byte-filename",
+      "from": "att@example.com",
+      "date": "2026-10-06T12:00:00.000Z",
+      "msgid": "<null-byte-filename@fixtures.example>",
+      "body": "body of null-byte-filename",
+      "atts": 1
+    },
+    {
+      "fixture": "rfc2231-nul-filename",
+      "uid": 20,
+      "stored": true,
+      "subject": "fixture rfc2231-nul-filename",
+      "from": "att@example.com",
+      "date": "2026-10-06T12:00:00.000Z",
+      "msgid": "<rfc2231-nul-filename@fixtures.example>",
+      "body": "body of rfc2231-nul-filename",
+      "atts": 1
+    },
+    {
+      "fixture": "tnef-winmail",
+      "uid": 21,
+      "stored": true,
+      "subject": "fixture tnef-winmail",
+      "from": "att@example.com",
+      "date": "2026-10-06T12:00:00.000Z",
+      "msgid": "<tnef-winmail@fixtures.example>",
+      "body": "body of tnef-winmail",
+      "atts": 1
+    },
+    {
+      "fixture": "calendar-invite",
+      "uid": 22,
+      "stored": true,
+      "subject": "fixture calendar-invite",
+      "from": "sender@example.com",
+      "date": "2026-10-06T12:00:00.000Z",
+      "msgid": "<calendar-invite@fixtures.example>",
+      "body": "You are invited",
+      "atts": 1
+    },
+    {
+      "fixture": "pgp-mime-signed",
+      "uid": 23,
+      "stored": true,
+      "subject": "fixture pgp-mime-signed",
+      "from": "pgp@example.com",
+      "date": "2026-10-06T12:00:00.000Z",
+      "msgid": "<pgp-mime-signed@fixtures.example>",
+      "body": "PGP signed body pgp-mime-signe",
+      "atts": 1
+    },
+    {
+      "fixture": "nul-in-body",
+      "uid": 24,
+      "stored": true,
+      "subject": "fixture nul-in-body",
+      "from": "sender@example.com",
+      "date": "2026-10-06T12:00:00.000Z",
+      "msgid": "<nul-in-body@fixtures.example>",
+      "body": "before��A�after\n",
+      "atts": 0
+    },
+    {
+      "fixture": "bad-base64-body",
+      "uid": 25,
+      "stored": true,
+      "subject": "fixture bad-base64-body",
+      "from": "sender@example.com",
+      "date": "2026-10-06T12:00:00.000Z",
+      "msgid": "<bad-base64-body@fixtures.example>",
+      "body": "��[jǺ�Z�",
+      "atts": 0
+    },
+    {
+      "fixture": "smime-signed",
+      "uid": 26,
+      "stored": true,
+      "subject": "fixture smime-signed",
+      "from": "audit@example.com",
+      "date": "2026-10-06T12:00:00.000Z",
+      "msgid": "<smime-signed@fixtures.example>",
+      "body": "Signed content smime-signed\nSe",
+      "atts": 1
+    },
+    {
+      "fixture": "sentinel-last",
+      "uid": 27,
+      "stored": true,
+      "subject": "fixture sentinel-last",
+      "from": "sender@example.com",
+      "date": "2026-10-06T12:00:00.000Z",
+      "msgid": "<sentinel-last@fixtures.example>",
+      "body": "sentinel ok\n",
+      "atts": 0
+    },
+    {
+      "nulFilenameStored": "\"evil.txt.exe\"",
+      "nulDisposition": "attachment; filename=\"evil_.txt.exe\"; filename*=UTF-8''evil%C2%80.txt.exe"
+    },
+    {
+      "calendarAttachments": [
+        {
+          "filename": null,
+          "content_type": "text/calendar"
+        }
+      ]
+    },
+    {
+      "smimeAttachments": [
+        {
+          "filename": "smime.p7s",
+          "content_type": "application/x-pkcs7-signature"
+        }
+      ]
+    },
+    {
+      "pgpAttachments": [
+        {
+          "filename": "signature.asc",
+          "content_type": "application/pgp-signature"
+        }
+      ],
+      "pgpBody": "\"PGP signed body pgp-mime-signed   \\ntrailing whitespace above is significant for verification\""
+    }
+  ]
+}
