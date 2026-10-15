@@ -1,0 +1,90 @@
+{
+ "res": {
+  "stork-ingest-gmail": {
+   "files": 7219,
+   "inserted": 5000,
+   "copies": 2219,
+   "flagChanges": 0,
+   "moves": 0,
+   "removed": 0,
+   "deletedMsgs": 0,
+   "hackMsgIdDedupe": 0,
+   "ms": 58820
+  },
+  "stork-ingest-namecheap": {
+   "files": 5000,
+   "inserted": 5000,
+   "copies": 0,
+   "flagChanges": 0,
+   "moves": 0,
+   "removed": 0,
+   "deletedMsgs": 0,
+   "hackMsgIdDedupe": 0,
+   "ms": 66597
+  },
+  "stork-rescan-noop-ms": 276,
+  "notmuch-new-initial-ms": 222119,
+  "notmuch-new-noop-ms": 44,
+  "notmuch-db-bytes": 450281601,
+  "process-spawn-ms": 20.5
+ },
+ "rows": [
+  {
+   "query": "xylorarium",
+   "storkHits": 10,
+   "storkP50ms": 4.21,
+   "notmuchHits": 10,
+   "notmuchCountP50ms": 37.43,
+   "notmuchSearch50ms": 32.5
+  },
+  {
+   "query": "xylomedianta",
+   "storkHits": 100,
+   "storkP50ms": 19.16,
+   "notmuchHits": 100,
+   "notmuchCountP50ms": 29.68,
+   "notmuchSearch50ms": 33.2
+  },
+  {
+   "query": "xylocommona",
+   "storkHits": 2977,
+   "storkP50ms": 544.89,
+   "notmuchHits": 2977,
+   "notmuchCountP50ms": 31.99,
+   "notmuchSearch50ms": 39.5
+  },
+  {
+   "query": "\"quantum harvest\"",
+   "storkHits": 50,
+   "storkP50ms": 11.61,
+   "notmuchHits": 50,
+   "notmuchCountP50ms": 29.8,
+   "notmuchSearch50ms": 33
+  },
+  {
+   "query": "zqprefix*",
+   "storkHits": 200,
+   "storkP50ms": 38.21,
+   "notmuchHits": 200,
+   "notmuchCountP50ms": 31.63,
+   "notmuchSearch50ms": 33.2
+  },
+  {
+   "query": "from:needle.sender@known-corp.example",
+   "storkHits": 200,
+   "storkP50ms": 27.05,
+   "notmuchHits": 200,
+   "notmuchCountP50ms": 33.35,
+   "notmuchSearch50ms": 36.4
+  },
+  {
+   "query": "subject:Invoice",
+   "storkHits": 306,
+   "storkP50ms": 25,
+   "notmuchHits": 306,
+   "notmuchCountP50ms": 31.16,
+   "notmuchSearch50ms": 42.5
+  }
+ ],
+ "at": "2026-10-15T11:39:26.943Z"
+}
