@@ -1,0 +1,125 @@
+{
+  "env": {
+    "at": "2026-10-15T11:33:26.687Z",
+    "nproc": 4,
+    "cpuModel": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+    "memTotalGB": 15.7,
+    "memFreeGB": 14.5,
+    "freeG": "Mem:              15           1          10           0           4          14",
+    "node": "v22.22.0",
+    "disk": "/dev/vda        252G   13G   27G  34% /",
+    "loadavg": [
+      3.28,
+      2.59,
+      2.21
+    ],
+    "uptime": "11:33:26 up 43 min,  0 user,  load average: 3.28, 2.59, 2.21"
+  },
+  "n": 100000,
+  "seed": 1,
+  "path": "direct INSERT (same SQL as ImapSync.fetchUidBatch), txn batches of 1000",
+  "insertMs": 314527,
+  "generatorMs": 36542,
+  "insertRowsPerSec": 360,
+  "approxRawMB": 4228.77,
+  "labelTimings": {
+    "ensureLabelsForFoldersMs": 1,
+    "applyFolderLabelsToMessagesMs": 3307,
+    "ensureIdentityLabelMs": 1,
+    "applyIdentityLabelToMessagesMs": 1619,
+    "refreshLabelCountsMs": 13432,
+    "applyFolderLabelsToMessages_noopMs": 1301,
+    "applyIdentityLabelToMessages_noopMs": 98,
+    "refreshLabelCounts_secondMs": 12610
+  },
+  "walBeforeCheckpointMB": 116.37,
+  "checkpointMs": 138,
+  "filesMB": {
+    "main": 1649.65,
+    "mainWal": 0,
+    "blobs": 30.4,
+    "blobsWal": 0
+  },
+  "dbstat": {
+    "totalMB": 1649.65,
+    "bucketsMB": {
+      "messages_table": 1109.59,
+      "fts": 483.2,
+      "message_labels": 29.86,
+      "messages_indexes": 25.86,
+      "other": 1.15
+    },
+    "ftsShare": 0.293,
+    "objectsMB": {
+      "messages": 1109.59,
+      "messages_fts_data": 480.89,
+      "message_labels": 11.17,
+      "idx_message_labels_label_date": 10.44,
+      "idx_messages_inbound_connector_date": 6.55,
+      "idx_messages_date": 6.33,
+      "idx_messages_message_id": 4.93,
+      "sqlite_autoindex_message_labels_1": 4.11,
+      "idx_messages_in_reply_to": 2.54,
+      "idx_message_labels_label_v15": 2.07,
+      "idx_message_labels_label": 2.07,
+      "messages_fts_docsize": 1.55,
+      "sqlite_autoindex_messages_1": 1.4,
+      "idx_messages_pending_archive": 1.16,
+      "idx_messages_folder": 1.04,
+      "idx_messages_inbound_connector": 0.96,
+      "idx_messages_identity": 0.96,
+      "messages_fts_idx": 0.74,
+      "attachments": 0.57,
+      "idx_attachments_content_hash": 0.41,
+      "idx_attachments_message": 0.06,
+      "sqlite_schema": 0.02,
+      "sync_state": 0,
+      "sync_errors": 0,
+      "sqlite_sequence": 0
+    }
+  },
+  "labels": [
+    {
+      "id": 1,
+      "name": "Archive",
+      "source": "imap",
+      "message_count": 54731,
+      "unread_count": 7560
+    },
+    {
+      "id": 2,
+      "name": "INBOX",
+      "source": "imap",
+      "message_count": 25733,
+      "unread_count": 3524
+    },
+    {
+      "id": 3,
+      "name": "Lists/dev",
+      "source": "imap",
+      "message_count": 4930,
+      "unread_count": 658
+    },
+    {
+      "id": 4,
+      "name": "Sent",
+      "source": "imap",
+      "message_count": 11647,
+      "unread_count": 0
+    },
+    {
+      "id": 5,
+      "name": "Trash",
+      "source": "imap",
+      "message_count": 2959,
+      "unread_count": 397
+    },
+    {
+      "id": 6,
+      "name": "perf-bulk",
+      "source": "connector",
+      "message_count": 100000,
+      "unread_count": 12139
+    }
+  ]
+}

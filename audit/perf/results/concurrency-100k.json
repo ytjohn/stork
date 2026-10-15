@@ -1,0 +1,1109 @@
+{
+  "env": {
+    "at": "2026-10-15T14:39:25.141Z",
+    "nproc": 4,
+    "cpuModel": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+    "memTotalGB": 15.7,
+    "memFreeGB": 14.5,
+    "freeG": "Mem:              15           1           2           0          12          14",
+    "node": "v22.22.0",
+    "disk": "/dev/vda        252G   27G   13G  68% /",
+    "loadavg": [
+      0.9,
+      1.07,
+      1.1
+    ],
+    "uptime": "14:39:25 up  3:49,  0 user,  load average: 0.90, 1.07, 1.10"
+  },
+  "inplace": false,
+  "size": "100k",
+  "messagesBefore": 100000,
+  "rate": 8,
+  "ready": {
+    "ready": true,
+    "openMs": 6.114022000000091,
+    "rssMB": 117.41
+  },
+  "phases": [
+    {
+      "phase": "baseline",
+      "durationMs": 30057,
+      "loadavgAtStart": [
+        0.93,
+        1.04,
+        1.11
+      ],
+      "server": {
+        "eventLoopDelayMs": {
+          "p50": 5.238783,
+          "p90": 5.533695,
+          "p99": 10.313727,
+          "max": 46.727167,
+          "mean": 5.411739314964884
+        },
+        "rssMB": {
+          "peak": 132.2,
+          "last": 111.05,
+          "min": 107.68,
+          "peakAnon": 76.96,
+          "peakFileBacked": 55.62
+        }
+      }
+    },
+    {
+      "phase": "initial-sync-10k",
+      "durationMs": 136115,
+      "loadavgAtStart": [
+        0.71,
+        0.98,
+        1.08
+      ],
+      "server": {
+        "eventLoopDelayMs": {
+          "p50": 5.226495,
+          "p90": 11.649023,
+          "p99": 126.287871,
+          "max": 13950.255103,
+          "mean": 10.805272224180362
+        },
+        "rssMB": {
+          "peak": 1943.53,
+          "last": 1943.53,
+          "min": 111.3,
+          "peakAnon": 419.03,
+          "peakFileBacked": 1535.51
+        }
+      },
+      "id": 4,
+      "syncMs": 136050.111392,
+      "totalNew": 10000,
+      "errors": 0,
+      "updatedFlags": 0,
+      "refreshLabelCountsMs": 13794,
+      "maintenanceMs": {
+        "applyFolderLabelsToMessages": [
+          7,
+          6,
+          11,
+          11,
+          8,
+          51,
+          13,
+          13,
+          7,
+          10,
+          48,
+          13,
+          13,
+          18,
+          13,
+          73,
+          15,
+          15,
+          21,
+          22,
+          24,
+          18,
+          12
+        ],
+        "applyIdentityLabelToMessages": [
+          114
+        ],
+        "refreshLabelCounts": [
+          13794
+        ]
+      }
+    },
+    {
+      "phase": "resync-0",
+      "durationMs": 14792,
+      "loadavgAtStart": [
+        1.3,
+        1.13,
+        1.12
+      ],
+      "server": {
+        "eventLoopDelayMs": {
+          "p50": 6.385663,
+          "p90": 9.527295,
+          "p99": 23.642111,
+          "max": 13178.503167,
+          "mean": 66.005824
+        },
+        "rssMB": {
+          "peak": 1944.41,
+          "last": 1944.41,
+          "min": 1943.78,
+          "peakAnon": 408.96,
+          "peakFileBacked": 1535.82
+        }
+      },
+      "id": 7,
+      "syncMs": 14727.807281999994,
+      "totalNew": 5,
+      "errors": 0,
+      "updatedFlags": 0,
+      "refreshLabelCountsMs": 13124,
+      "maintenanceMs": {
+        "applyFolderLabelsToMessages": [
+          18,
+          15,
+          16,
+          15,
+          15,
+          15
+        ],
+        "applyIdentityLabelToMessages": [
+          9
+        ],
+        "refreshLabelCounts": [
+          13124
+        ]
+      }
+    },
+    {
+      "phase": "resync-1",
+      "durationMs": 14413,
+      "loadavgAtStart": [
+        1.23,
+        1.12,
+        1.12
+      ],
+      "server": {
+        "eventLoopDelayMs": {
+          "p50": 6.586367,
+          "p90": 11.116543,
+          "p99": 20.152319,
+          "max": 13061.062655,
+          "mean": 77.03958314438502
+        },
+        "rssMB": {
+          "peak": 1947.03,
+          "last": 1947.03,
+          "min": 1944.41,
+          "peakAnon": 411.61,
+          "peakFileBacked": 1535.82
+        }
+      },
+      "id": 10,
+      "syncMs": 14349.485824000003,
+      "totalNew": 5,
+      "errors": 0,
+      "updatedFlags": 0,
+      "refreshLabelCountsMs": 13020,
+      "maintenanceMs": {
+        "applyFolderLabelsToMessages": [
+          20,
+          12,
+          13,
+          13,
+          11,
+          11
+        ],
+        "applyIdentityLabelToMessages": [
+          6
+        ],
+        "refreshLabelCounts": [
+          13020
+        ]
+      }
+    },
+    {
+      "phase": "resync-2",
+      "durationMs": 14466,
+      "loadavgAtStart": [
+        1.26,
+        1.13,
+        1.12
+      ],
+      "server": {
+        "eventLoopDelayMs": {
+          "p50": 6.561791,
+          "p90": 10.575871,
+          "p99": 20.217855,
+          "max": 13002.342399,
+          "mean": 72.22145024
+        },
+        "rssMB": {
+          "peak": 1948.15,
+          "last": 1948.15,
+          "min": 1947.28,
+          "peakAnon": 412.71,
+          "peakFileBacked": 1535.82
+        }
+      },
+      "id": 13,
+      "syncMs": 14390.862254000007,
+      "totalNew": 5,
+      "errors": 0,
+      "updatedFlags": 0,
+      "refreshLabelCountsMs": 12966,
+      "maintenanceMs": {
+        "applyFolderLabelsToMessages": [
+          17,
+          14,
+          17,
+          13,
+          11,
+          11
+        ],
+        "applyIdentityLabelToMessages": [
+          6
+        ],
+        "refreshLabelCounts": [
+          12966
+        ]
+      }
+    },
+    {
+      "phase": "resync-3",
+      "durationMs": 15252,
+      "loadavgAtStart": [
+        1.27,
+        1.14,
+        1.13
+      ],
+      "server": {
+        "eventLoopDelayMs": {
+          "p50": 6.082559,
+          "p90": 10.092543,
+          "p99": 22.724607,
+          "max": 13673.431039,
+          "mean": 67.76233984000001
+        },
+        "rssMB": {
+          "peak": 1948.9,
+          "last": 1949.03,
+          "min": 1948.15,
+          "peakAnon": 413.69,
+          "peakFileBacked": 1535.82
+        }
+      },
+      "id": 16,
+      "syncMs": 15184.438679999992,
+      "totalNew": 5,
+      "errors": 0,
+      "updatedFlags": 0,
+      "refreshLabelCountsMs": 13623,
+      "maintenanceMs": {
+        "applyFolderLabelsToMessages": [
+          15,
+          13,
+          15,
+          17,
+          16,
+          15
+        ],
+        "applyIdentityLabelToMessages": [
+          9
+        ],
+        "refreshLabelCounts": [
+          13623
+        ]
+      }
+    },
+    {
+      "phase": "resync-4",
+      "durationMs": 14121,
+      "loadavgAtStart": [
+        1.21,
+        1.14,
+        1.12
+      ],
+      "server": {
+        "eventLoopDelayMs": {
+          "p50": 6.766591,
+          "p90": 11.501567,
+          "p99": 23.478271,
+          "max": 12591.300607,
+          "mean": 69.56497592118227
+        },
+        "rssMB": {
+          "peak": 1949.65,
+          "last": 1949.65,
+          "min": 1949.03,
+          "peakAnon": 414.21,
+          "peakFileBacked": 1535.82
+        }
+      },
+      "id": 19,
+      "syncMs": 14054.66361400002,
+      "totalNew": 5,
+      "errors": 0,
+      "updatedFlags": 0,
+      "refreshLabelCountsMs": 12546,
+      "maintenanceMs": {
+        "applyFolderLabelsToMessages": [
+          16,
+          15,
+          15,
+          11,
+          12,
+          12
+        ],
+        "applyIdentityLabelToMessages": [
+          7
+        ],
+        "refreshLabelCounts": [
+          12546
+        ]
+      }
+    },
+    {
+      "phase": "post",
+      "durationMs": 20059,
+      "loadavgAtStart": [
+        1.16,
+        1.13,
+        1.12
+      ],
+      "server": {
+        "eventLoopDelayMs": {
+          "p50": 5.226495,
+          "p90": 5.447679,
+          "p99": 10.289151,
+          "max": 47.316991,
+          "mean": 5.393190696073158
+        },
+        "rssMB": {
+          "peak": 1949.78,
+          "last": 1949.78,
+          "min": 1949.65,
+          "peakAnon": 414.32,
+          "peakFileBacked": 1535.82
+        }
+      }
+    }
+  ],
+  "latencyByPhase": {
+    "warmup": {
+      "requests": 25,
+      "errors": 0,
+      "over100ms": 1,
+      "over1s": 0,
+      "all": {
+        "n": 25,
+        "min": 2.939,
+        "median": 5.413,
+        "p95": 18.345,
+        "max": 113.023,
+        "mean": 11.343
+      },
+      "perEndpoint": {
+        "search medium": {
+          "n": 4,
+          "min": 9.694,
+          "median": 12.693,
+          "p95": 113.023,
+          "max": 113.023,
+          "mean": 37.026
+        },
+        "unified inbox p1": {
+          "n": 3,
+          "min": 5.413,
+          "median": 6.039,
+          "p95": 13.116,
+          "max": 13.116,
+          "mean": 8.189
+        },
+        "label Archive p1": {
+          "n": 3,
+          "min": 5.16,
+          "median": 5.208,
+          "p95": 10.218,
+          "max": 10.218,
+          "mean": 6.862
+        },
+        "search rare": {
+          "n": 3,
+          "min": 6.197,
+          "median": 6.843,
+          "p95": 18.345,
+          "max": 18.345,
+          "mean": 10.461
+        },
+        "message open": {
+          "n": 3,
+          "min": 3.599,
+          "median": 5.384,
+          "p95": 7.33,
+          "max": 7.33,
+          "mean": 5.438
+        },
+        "labels list": {
+          "n": 3,
+          "min": 2.939,
+          "median": 3.207,
+          "p95": 5.195,
+          "max": 5.195,
+          "mean": 3.78
+        },
+        "unified count": {
+          "n": 3,
+          "min": 3.513,
+          "median": 3.573,
+          "p95": 5.071,
+          "max": 5.071,
+          "mean": 4.052
+        },
+        "unified inbox p2": {
+          "n": 3,
+          "min": 3.485,
+          "median": 5.403,
+          "p95": 10.239,
+          "max": 10.239,
+          "mean": 6.376
+        }
+      }
+    },
+    "baseline": {
+      "requests": 240,
+      "errors": 0,
+      "over100ms": 0,
+      "over1s": 0,
+      "all": {
+        "n": 240,
+        "min": 2.413,
+        "median": 4.398,
+        "p95": 11.807,
+        "max": 17.881,
+        "mean": 5.463
+      },
+      "perEndpoint": {
+        "search medium": {
+          "n": 30,
+          "min": 9.356,
+          "median": 10.678,
+          "p95": 13.567,
+          "max": 14.132,
+          "mean": 11.127
+        },
+        "unified inbox p1": {
+          "n": 30,
+          "min": 3.532,
+          "median": 4.363,
+          "p95": 7.496,
+          "max": 8.157,
+          "mean": 4.684
+        },
+        "label Archive p1": {
+          "n": 30,
+          "min": 3.419,
+          "median": 4.354,
+          "p95": 5.873,
+          "max": 8.648,
+          "mean": 4.561
+        },
+        "search rare": {
+          "n": 30,
+          "min": 4.849,
+          "median": 6.566,
+          "p95": 9.854,
+          "max": 10.225,
+          "mean": 6.819
+        },
+        "message open": {
+          "n": 30,
+          "min": 3.016,
+          "median": 3.932,
+          "p95": 8.363,
+          "max": 17.881,
+          "mean": 4.608
+        },
+        "labels list": {
+          "n": 30,
+          "min": 2.413,
+          "median": 3.432,
+          "p95": 4.687,
+          "max": 9.454,
+          "mean": 3.632
+        },
+        "unified count": {
+          "n": 30,
+          "min": 2.573,
+          "median": 3.218,
+          "p95": 4.886,
+          "max": 7.401,
+          "mean": 3.416
+        },
+        "unified inbox p2": {
+          "n": 30,
+          "min": 3.583,
+          "median": 4.494,
+          "p95": 7.003,
+          "max": 11.402,
+          "mean": 4.858
+        }
+      }
+    },
+    "initial-sync-10k": {
+      "requests": 1089,
+      "errors": 2,
+      "over100ms": 184,
+      "over1s": 107,
+      "all": {
+        "n": 1089,
+        "min": 2.046,
+        "median": 11.979,
+        "p95": 7329.256,
+        "max": 13857.381,
+        "mean": 757.823
+      },
+      "perEndpoint": {
+        "search medium": {
+          "n": 136,
+          "min": 9,
+          "median": 16.846,
+          "p95": 7452.105,
+          "max": 13304.97,
+          "mean": 743.995
+        },
+        "unified inbox p1": {
+          "n": 137,
+          "min": 2.917,
+          "median": 9.226,
+          "p95": 7329.256,
+          "max": 13180.989,
+          "mean": 724.148
+        },
+        "label Archive p1": {
+          "n": 136,
+          "min": 2.896,
+          "median": 15.057,
+          "p95": 7207.385,
+          "max": 13056.884,
+          "mean": 715.997
+        },
+        "search rare": {
+          "n": 136,
+          "min": 5.282,
+          "median": 11.196,
+          "p95": 8062.433,
+          "max": 13857.381,
+          "mean": 804.702
+        },
+        "message open": {
+          "n": 136,
+          "min": 2.552,
+          "median": 7.845,
+          "p95": 7940.107,
+          "max": 13733.743,
+          "mean": 789.034
+        },
+        "labels list": {
+          "n": 136,
+          "min": 2.212,
+          "median": 9.039,
+          "p95": 7815.267,
+          "max": 13616.071,
+          "mean": 774.289
+        },
+        "unified count": {
+          "n": 136,
+          "min": 2.046,
+          "median": 7.744,
+          "p95": 7692.684,
+          "max": 13491.672,
+          "mean": 758.973
+        },
+        "unified inbox p2": {
+          "n": 136,
+          "min": 3.103,
+          "median": 8.599,
+          "p95": 7568.273,
+          "max": 13369.377,
+          "mean": 751.692
+        }
+      }
+    },
+    "resync-0": {
+      "requests": 119,
+      "errors": 12,
+      "over100ms": 108,
+      "over1s": 100,
+      "all": {
+        "n": 119,
+        "min": 2.651,
+        "median": 5929.407,
+        "p95": 12531.909,
+        "max": 13161.378,
+        "mean": 6006.318
+      },
+      "perEndpoint": {
+        "search medium": {
+          "n": 15,
+          "min": 17.827,
+          "median": 6178.519,
+          "p95": 13036.365,
+          "max": 13036.365,
+          "mean": 6234.763
+        },
+        "unified inbox p1": {
+          "n": 14,
+          "min": 3.95,
+          "median": 6543.138,
+          "p95": 12907.094,
+          "max": 12907.094,
+          "mean": 6539.235
+        },
+        "label Archive p1": {
+          "n": 15,
+          "min": 7.245,
+          "median": 5929.407,
+          "p95": 12781.315,
+          "max": 12781.315,
+          "mean": 6017.73
+        },
+        "search rare": {
+          "n": 15,
+          "min": 15.134,
+          "median": 5806.42,
+          "p95": 12657.16,
+          "max": 12657.16,
+          "mean": 5909.895
+        },
+        "message open": {
+          "n": 15,
+          "min": 2.733,
+          "median": 5683.933,
+          "p95": 12531.909,
+          "max": 12531.909,
+          "mean": 5785.25
+        },
+        "labels list": {
+          "n": 15,
+          "min": 2.651,
+          "median": 5559.986,
+          "p95": 12407.686,
+          "max": 12407.686,
+          "mean": 5681.786
+        },
+        "unified count": {
+          "n": 15,
+          "min": 3.691,
+          "median": 5434.895,
+          "p95": 12280.647,
+          "max": 12280.647,
+          "mean": 5573.891
+        },
+        "unified inbox p2": {
+          "n": 15,
+          "min": 3.688,
+          "median": 6292.699,
+          "p95": 13161.378,
+          "max": 13161.378,
+          "mean": 6343.521
+        }
+      }
+    },
+    "resync-1": {
+      "requests": 115,
+      "errors": 3,
+      "over100ms": 106,
+      "over1s": 99,
+      "all": {
+        "n": 115,
+        "min": 3.683,
+        "median": 6046.755,
+        "p95": 12405.117,
+        "max": 12958.385,
+        "mean": 6071.018
+      },
+      "perEndpoint": {
+        "search medium": {
+          "n": 14,
+          "min": 14.021,
+          "median": 6171.828,
+          "p95": 12529.296,
+          "max": 12529.296,
+          "mean": 6171.695
+        },
+        "unified inbox p1": {
+          "n": 15,
+          "min": 3.683,
+          "median": 5558.959,
+          "p95": 12405.117,
+          "max": 12405.117,
+          "mean": 5673.561
+        },
+        "label Archive p1": {
+          "n": 15,
+          "min": 4.616,
+          "median": 5436.434,
+          "p95": 12280.685,
+          "max": 12280.685,
+          "mean": 5559.102
+        },
+        "search rare": {
+          "n": 15,
+          "min": 8.761,
+          "median": 5317.357,
+          "p95": 12157.446,
+          "max": 12157.446,
+          "mean": 5449.369
+        },
+        "message open": {
+          "n": 14,
+          "min": 5.29,
+          "median": 6659.379,
+          "p95": 12958.385,
+          "max": 12958.385,
+          "mean": 6627.298
+        },
+        "labels list": {
+          "n": 14,
+          "min": 7.723,
+          "median": 6535.325,
+          "p95": 12832.274,
+          "max": 12832.274,
+          "mean": 6511.994
+        },
+        "unified count": {
+          "n": 14,
+          "min": 6.987,
+          "median": 6412.739,
+          "p95": 12711.23,
+          "max": 12711.23,
+          "mean": 6397.517
+        },
+        "unified inbox p2": {
+          "n": 14,
+          "min": 5.657,
+          "median": 6288.214,
+          "p95": 12654.428,
+          "max": 12654.428,
+          "mean": 6286.965
+        }
+      }
+    },
+    "resync-2": {
+      "requests": 116,
+      "errors": 12,
+      "over100ms": 106,
+      "over1s": 99,
+      "all": {
+        "n": 116,
+        "min": 2.357,
+        "median": 5958.513,
+        "p95": 12299.656,
+        "max": 12925.998,
+        "mean": 5992.994
+      },
+      "perEndpoint": {
+        "search medium": {
+          "n": 14,
+          "min": 17.275,
+          "median": 6625.776,
+          "p95": 12925.998,
+          "max": 12925.998,
+          "mean": 6599.728
+        },
+        "unified inbox p1": {
+          "n": 14,
+          "min": 7.397,
+          "median": 6504.312,
+          "p95": 12801.821,
+          "max": 12801.821,
+          "mean": 6485.11
+        },
+        "label Archive p1": {
+          "n": 14,
+          "min": 3.994,
+          "median": 6381.46,
+          "p95": 12676.082,
+          "max": 12676.082,
+          "mean": 6370.661
+        },
+        "search rare": {
+          "n": 14,
+          "min": 14.855,
+          "median": 6263.204,
+          "p95": 12550.931,
+          "max": 12550.931,
+          "mean": 6260.377
+        },
+        "message open": {
+          "n": 15,
+          "min": 8.654,
+          "median": 5655.474,
+          "p95": 12424.938,
+          "max": 12424.938,
+          "mean": 5754.396
+        },
+        "labels list": {
+          "n": 15,
+          "min": 6.689,
+          "median": 5530.996,
+          "p95": 12299.656,
+          "max": 12299.656,
+          "mean": 5644.534
+        },
+        "unified count": {
+          "n": 15,
+          "min": 2.357,
+          "median": 5408.422,
+          "p95": 12174.621,
+          "max": 12174.621,
+          "mean": 5525.743
+        },
+        "unified inbox p2": {
+          "n": 15,
+          "min": 5.556,
+          "median": 5285.84,
+          "p95": 12049.307,
+          "max": 12049.307,
+          "mean": 5419.664
+        }
+      }
+    },
+    "resync-3": {
+      "requests": 122,
+      "errors": 3,
+      "over100ms": 111,
+      "over1s": 104,
+      "all": {
+        "n": 122,
+        "min": 2.67,
+        "median": 6210.955,
+        "p95": 12907.149,
+        "max": 13565.478,
+        "mean": 6264.522
+      },
+      "perEndpoint": {
+        "search medium": {
+          "n": 16,
+          "min": 16.394,
+          "median": 5906.753,
+          "p95": 13217.819,
+          "max": 13217.819,
+          "mean": 6044.831
+        },
+        "unified inbox p1": {
+          "n": 16,
+          "min": 6.896,
+          "median": 5782.784,
+          "p95": 13155.294,
+          "max": 13155.294,
+          "mean": 5932.033
+        },
+        "label Archive p1": {
+          "n": 15,
+          "min": 6.244,
+          "median": 6149.061,
+          "p95": 13030.254,
+          "max": 13030.254,
+          "mean": 6184.539
+        },
+        "search rare": {
+          "n": 15,
+          "min": 12.125,
+          "median": 6028.904,
+          "p95": 12907.149,
+          "max": 12907.149,
+          "mean": 6076.057
+        },
+        "message open": {
+          "n": 15,
+          "min": 2.67,
+          "median": 5904.364,
+          "p95": 12780.792,
+          "max": 12780.792,
+          "mean": 5967.739
+        },
+        "labels list": {
+          "n": 15,
+          "min": 9.853,
+          "median": 6761.096,
+          "p95": 13565.478,
+          "max": 13565.478,
+          "mean": 6765.231
+        },
+        "unified count": {
+          "n": 15,
+          "min": 9.405,
+          "median": 6635.008,
+          "p95": 13440.252,
+          "max": 13440.252,
+          "mean": 6648.986
+        },
+        "unified inbox p2": {
+          "n": 15,
+          "min": 6.863,
+          "median": 6512.219,
+          "p95": 13315.125,
+          "max": 13315.125,
+          "mean": 6533.571
+        }
+      }
+    },
+    "resync-4": {
+      "requests": 113,
+      "errors": 12,
+      "over100ms": 102,
+      "over1s": 95,
+      "all": {
+        "n": 113,
+        "min": 2.381,
+        "median": 5643.598,
+        "p95": 11838.215,
+        "max": 12464.563,
+        "mean": 5697.873
+      },
+      "perEndpoint": {
+        "search medium": {
+          "n": 14,
+          "min": 13.677,
+          "median": 6015.767,
+          "p95": 12340.966,
+          "max": 12340.966,
+          "mean": 6032.824
+        },
+        "unified inbox p1": {
+          "n": 14,
+          "min": 5.61,
+          "median": 5892.887,
+          "p95": 12214.515,
+          "max": 12214.515,
+          "mean": 5917.062
+        },
+        "label Archive p1": {
+          "n": 15,
+          "min": 6.424,
+          "median": 5285.646,
+          "p95": 12087.353,
+          "max": 12087.353,
+          "mean": 5434.38
+        },
+        "search rare": {
+          "n": 14,
+          "min": 8.803,
+          "median": 5651.444,
+          "p95": 11955.5,
+          "max": 11955.5,
+          "mean": 5684.29
+        },
+        "message open": {
+          "n": 14,
+          "min": 5.525,
+          "median": 5528.033,
+          "p95": 11838.215,
+          "max": 11838.215,
+          "mean": 5573.607
+        },
+        "labels list": {
+          "n": 14,
+          "min": 2.381,
+          "median": 5404.402,
+          "p95": 11713.966,
+          "max": 11713.966,
+          "mean": 5462.968
+        },
+        "unified count": {
+          "n": 14,
+          "min": 3.855,
+          "median": 5279.322,
+          "p95": 11588.932,
+          "max": 11588.932,
+          "mean": 5356.199
+        },
+        "unified inbox p2": {
+          "n": 14,
+          "min": 3.722,
+          "median": 6127.582,
+          "p95": 12464.563,
+          "max": 12464.563,
+          "mean": 6140.473
+        }
+      }
+    },
+    "post": {
+      "requests": 161,
+      "errors": 0,
+      "over100ms": 2,
+      "over1s": 0,
+      "all": {
+        "n": 161,
+        "min": 2.154,
+        "median": 3.917,
+        "p95": 12.188,
+        "max": 248.002,
+        "mean": 7.867
+      },
+      "perEndpoint": {
+        "search medium": {
+          "n": 20,
+          "min": 10.182,
+          "median": 11.13,
+          "p95": 14.039,
+          "max": 17.835,
+          "mean": 11.842
+        },
+        "unified inbox p1": {
+          "n": 20,
+          "min": 3.061,
+          "median": 3.799,
+          "p95": 4.462,
+          "max": 4.969,
+          "mean": 3.827
+        },
+        "label Archive p1": {
+          "n": 20,
+          "min": 3.151,
+          "median": 3.898,
+          "p95": 4.716,
+          "max": 4.782,
+          "mean": 3.896
+        },
+        "search rare": {
+          "n": 21,
+          "min": 6.522,
+          "median": 7.362,
+          "p95": 10.189,
+          "max": 248.002,
+          "mean": 19.196
+        },
+        "message open": {
+          "n": 20,
+          "min": 2.83,
+          "median": 3.562,
+          "p95": 9.418,
+          "max": 158.03,
+          "mean": 11.787
+        },
+        "labels list": {
+          "n": 20,
+          "min": 2.154,
+          "median": 2.726,
+          "p95": 4.865,
+          "max": 33.03,
+          "mean": 4.37
+        },
+        "unified count": {
+          "n": 20,
+          "min": 2.216,
+          "median": 2.634,
+          "p95": 3.347,
+          "max": 3.56,
+          "mean": 2.692
+        },
+        "unified inbox p2": {
+          "n": 20,
+          "min": 3.518,
+          "median": 4.398,
+          "p95": 7.567,
+          "max": 10.601,
+          "mean": 4.762
+        }
+      }
+    }
+  },
+  "resyncCombined": {
+    "n": 585,
+    "min": 2.357,
+    "median": 5929.407,
+    "p95": 12405.117,
+    "max": 13565.478,
+    "mean": 6010.662
+  },
+  "totalS": 263
+}

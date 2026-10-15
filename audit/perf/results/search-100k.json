@@ -1,0 +1,1214 @@
+{
+  "env": {
+    "at": "2026-10-15T11:48:54.643Z",
+    "nproc": 4,
+    "cpuModel": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+    "memTotalGB": 15.7,
+    "memFreeGB": 14.6,
+    "freeG": "Mem:              15           1           7           0           7          14",
+    "node": "v22.22.0",
+    "disk": "/dev/vda        252G   16G   24G  40% /",
+    "loadavg": [
+      1.04,
+      1.53,
+      2.05
+    ],
+    "uptime": "11:48:54 up 58 min,  0 user,  load average: 1.04, 1.53, 2.05"
+  },
+  "dir": "/tmp/stork-audit-perf/db-bulk-100k",
+  "messages": 100000,
+  "filesMB": {
+    "main": 1649.66,
+    "mainWal": 0,
+    "blobs": 30.4,
+    "blobsWal": 0
+  },
+  "expected": {
+    "rare": 10,
+    "medium": 1000,
+    "common": 30074,
+    "phrase": 500,
+    "prefix": 2000,
+    "sender": 2000,
+    "invoice": 3031
+  },
+  "iters": 15,
+  "rssMB": 420.31,
+  "warm": [
+    {
+      "name": "rare term (10 docs)",
+      "q": "xylorarium",
+      "offset": 0,
+      "rows": 10,
+      "ftsMatches": 10,
+      "firstMs": 4.06,
+      "n": 15,
+      "min": 1.524,
+      "median": 1.579,
+      "p95": 1.953,
+      "max": 1.953,
+      "mean": 1.626
+    },
+    {
+      "name": "medium term (1%)",
+      "q": "xylomedianta",
+      "offset": 0,
+      "rows": 50,
+      "ftsMatches": 1000,
+      "firstMs": 14.97,
+      "n": 15,
+      "min": 4.661,
+      "median": 4.912,
+      "p95": 9.781,
+      "max": 9.781,
+      "mean": 5.419
+    },
+    {
+      "name": "common term (30%)",
+      "q": "xylocommona",
+      "offset": 0,
+      "rows": 50,
+      "ftsMatches": 30074,
+      "firstMs": 52.68,
+      "n": 15,
+      "min": 44.701,
+      "median": 47.022,
+      "p95": 79.776,
+      "max": 79.776,
+      "mean": 51.245
+    },
+    {
+      "name": "stopword-like 'the' (~100%)",
+      "q": "the",
+      "offset": 0,
+      "rows": 50,
+      "ftsMatches": 99999,
+      "firstMs": 1214.12,
+      "n": 15,
+      "min": 840.036,
+      "median": 944.83,
+      "p95": 1090.508,
+      "max": 1090.508,
+      "mean": 946.272
+    },
+    {
+      "name": "two terms AND (1% & 30%)",
+      "q": "xylomedianta xylocommona",
+      "offset": 0,
+      "rows": 50,
+      "ftsMatches": 307,
+      "firstMs": 8.44,
+      "n": 15,
+      "min": 6.85,
+      "median": 7.648,
+      "p95": 9.107,
+      "max": 9.107,
+      "mean": 7.668
+    },
+    {
+      "name": "OR (1% | 30%)",
+      "q": "xylomedianta OR xylocommona",
+      "offset": 0,
+      "rows": 50,
+      "ftsMatches": 30767,
+      "firstMs": 49.28,
+      "n": 15,
+      "min": 48.017,
+      "median": 54.541,
+      "p95": 85.309,
+      "max": 85.309,
+      "mean": 56.647
+    },
+    {
+      "name": "phrase \"quantum harvest\" (0.5%)",
+      "q": "\"quantum harvest\"",
+      "offset": 0,
+      "rows": 50,
+      "ftsMatches": 500,
+      "firstMs": 7.88,
+      "n": 15,
+      "min": 4.615,
+      "median": 6.403,
+      "p95": 6.973,
+      "max": 6.973,
+      "mean": 6.076
+    },
+    {
+      "name": "prefix zqprefix* (2%)",
+      "q": "zqprefix*",
+      "offset": 0,
+      "rows": 50,
+      "ftsMatches": 2000,
+      "firstMs": 9.46,
+      "n": 15,
+      "min": 6.526,
+      "median": 8.384,
+      "p95": 9.33,
+      "max": 9.33,
+      "mean": 8.233
+    },
+    {
+      "name": "broad prefix pl* (many terms)",
+      "q": "pl*",
+      "offset": 0,
+      "rows": 50,
+      "ftsMatches": 99785,
+      "firstMs": 1396.79,
+      "n": 15,
+      "min": 1257.391,
+      "median": 1395.215,
+      "p95": 1750.464,
+      "max": 1750.464,
+      "mean": 1423.004
+    },
+    {
+      "name": "from: only (2%, LIKE scan)",
+      "q": "from:needle.sender@known-corp.example",
+      "offset": 0,
+      "rows": 50,
+      "ftsMatches": null,
+      "firstMs": 1502.84,
+      "n": 15,
+      "min": 1030.265,
+      "median": 1159.239,
+      "p95": 1333.233,
+      "max": 1333.233,
+      "mean": 1155.831
+    },
+    {
+      "name": "from: domain only (LIKE scan)",
+      "q": "from:example.org",
+      "offset": 0,
+      "rows": 50,
+      "ftsMatches": null,
+      "firstMs": 1308.29,
+      "n": 15,
+      "min": 1089.092,
+      "median": 1238.953,
+      "p95": 1426.493,
+      "max": 1426.493,
+      "mean": 1237.971
+    },
+    {
+      "name": "from: + common term",
+      "q": "from:needle.sender@known-corp.example xylocommona",
+      "offset": 0,
+      "rows": 50,
+      "ftsMatches": 30074,
+      "firstMs": 79.87,
+      "n": 15,
+      "min": 54.615,
+      "median": 61.144,
+      "p95": 75.331,
+      "max": 75.331,
+      "mean": 63.668
+    },
+    {
+      "name": "subject:Invoice only",
+      "q": "subject:Invoice",
+      "offset": 0,
+      "rows": 50,
+      "ftsMatches": null,
+      "firstMs": 975.36,
+      "n": 15,
+      "min": 988.423,
+      "median": 1153.091,
+      "p95": 1313.733,
+      "max": 1313.733,
+      "mean": 1150.054
+    },
+    {
+      "name": "subject: + medium term",
+      "q": "subject:Invoice xylomedianta",
+      "offset": 0,
+      "rows": 23,
+      "ftsMatches": 1000,
+      "firstMs": 18.64,
+      "n": 15,
+      "min": 8.294,
+      "median": 8.577,
+      "p95": 8.771,
+      "max": 8.771,
+      "mean": 8.547
+    },
+    {
+      "name": "has:attachment only",
+      "q": "has:attachment",
+      "offset": 0,
+      "rows": 50,
+      "ftsMatches": null,
+      "firstMs": 1033.11,
+      "n": 15,
+      "min": 1055.809,
+      "median": 1120.253,
+      "p95": 1254.583,
+      "max": 1254.583,
+      "mean": 1123.489
+    },
+    {
+      "name": "is:unread only",
+      "q": "is:unread",
+      "offset": 0,
+      "rows": 50,
+      "ftsMatches": null,
+      "firstMs": 5147.85,
+      "n": 15,
+      "min": 4252.43,
+      "median": 4746.508,
+      "p95": 5289.272,
+      "max": 5289.272,
+      "mean": 4822.657
+    },
+    {
+      "name": "label:INBOX only",
+      "q": "label:INBOX",
+      "offset": 0,
+      "rows": 50,
+      "ftsMatches": null,
+      "firstMs": 1295.84,
+      "n": 15,
+      "min": 1306.443,
+      "median": 1443.501,
+      "p95": 1678.119,
+      "max": 1678.119,
+      "mean": 1468.268
+    },
+    {
+      "name": "label:Lists/dev + common",
+      "q": "label:Lists/dev xylocommona",
+      "offset": 0,
+      "error": "fts5: syntax error near \"/\""
+    },
+    {
+      "name": "label:INBOX + common",
+      "q": "label:INBOX xylocommona",
+      "offset": 0,
+      "rows": 0,
+      "ftsMatches": 30074,
+      "firstMs": 1.55,
+      "n": 15,
+      "min": 0.218,
+      "median": 0.26,
+      "p95": 0.374,
+      "max": 0.374,
+      "mean": 0.271
+    },
+    {
+      "name": "label:INBOX + from: (no text)",
+      "q": "label:INBOX from:needle.sender@known-corp.example",
+      "offset": 0,
+      "rows": 50,
+      "ftsMatches": null,
+      "firstMs": 100.08,
+      "n": 15,
+      "min": 51.913,
+      "median": 63.88,
+      "p95": 80.952,
+      "max": 80.952,
+      "mean": 64.11
+    },
+    {
+      "name": "from: + label:INBOX (order swapped)",
+      "q": "from:needle.sender@known-corp.example label:INBOX",
+      "offset": 0,
+      "rows": 0,
+      "ftsMatches": null,
+      "firstMs": 0.47,
+      "n": 15,
+      "min": 0.186,
+      "median": 0.22,
+      "p95": 0.334,
+      "max": 0.334,
+      "mean": 0.235
+    },
+    {
+      "name": "date range only (6 months)",
+      "q": "after:2025-01-01 before:2025-07-01",
+      "offset": 0,
+      "rows": 50,
+      "ftsMatches": null,
+      "firstMs": 3.09,
+      "n": 15,
+      "min": 0.441,
+      "median": 0.509,
+      "p95": 5.643,
+      "max": 5.643,
+      "mean": 0.89
+    },
+    {
+      "name": "date range + common",
+      "q": "after:2025-01-01 before:2025-07-01 xylocommona",
+      "offset": 0,
+      "rows": 50,
+      "ftsMatches": 30074,
+      "firstMs": 73.02,
+      "n": 15,
+      "min": 48.621,
+      "median": 50.476,
+      "p95": 57.314,
+      "max": 57.314,
+      "mean": 50.843
+    },
+    {
+      "name": "combined: common+from:domain+has:att+after+is:unread",
+      "q": "xylocommona from:example.org has:attachment after:2023-01-01 is:unread",
+      "offset": 0,
+      "rows": 15,
+      "ftsMatches": 30074,
+      "firstMs": 446.85,
+      "n": 15,
+      "min": 118.232,
+      "median": 127.869,
+      "p95": 158.205,
+      "max": 158.205,
+      "mean": 129.714
+    },
+    {
+      "name": "common term, offset 5000 (page 101)",
+      "q": "xylocommona",
+      "offset": 5000,
+      "rows": 50,
+      "ftsMatches": 30074,
+      "firstMs": 61.65,
+      "n": 15,
+      "min": 57.994,
+      "median": 74.227,
+      "p95": 93.726,
+      "max": 93.726,
+      "mean": 73.006
+    },
+    {
+      "name": "'the', offset 5000",
+      "q": "the",
+      "offset": 5000,
+      "rows": 50,
+      "ftsMatches": 99999,
+      "firstMs": 828.17,
+      "n": 15,
+      "min": 627.337,
+      "median": 727.296,
+      "p95": 909.768,
+      "max": 909.768,
+      "mean": 747.079
+    },
+    {
+      "name": "is:unread, offset 5000",
+      "q": "is:unread",
+      "offset": 5000,
+      "rows": 50,
+      "ftsMatches": null,
+      "firstMs": 4857.48,
+      "n": 15,
+      "min": 4662.328,
+      "median": 5057.753,
+      "p95": 5310.1,
+      "max": 5310.1,
+      "mean": 5048.617
+    },
+    {
+      "name": "has:attachment, offset 5000",
+      "q": "has:attachment",
+      "offset": 5000,
+      "rows": 2,
+      "ftsMatches": null,
+      "firstMs": 1326.55,
+      "n": 15,
+      "min": 1173.936,
+      "median": 1345.691,
+      "p95": 1544.935,
+      "max": 1544.935,
+      "mean": 1329.496
+    },
+    {
+      "name": "zero-hit term",
+      "q": "zzznotawordqqq",
+      "offset": 0,
+      "rows": 0,
+      "ftsMatches": 0,
+      "firstMs": 1.37,
+      "n": 15,
+      "min": 0.131,
+      "median": 0.158,
+      "p95": 0.319,
+      "max": 0.319,
+      "mean": 0.175
+    }
+  ],
+  "crash": [
+    {
+      "q": "user@example.com",
+      "ok": false,
+      "error": "fts5: syntax error near \"@\""
+    },
+    {
+      "q": "AT&T",
+      "ok": false,
+      "error": "fts5: syntax error near \"&\""
+    },
+    {
+      "q": "a-b",
+      "ok": false,
+      "error": "no such column: b"
+    },
+    {
+      "q": "foo:bar",
+      "ok": false,
+      "error": "no such column: foo"
+    },
+    {
+      "q": "c++",
+      "ok": false,
+      "error": "fts5: syntax error near \"+\""
+    },
+    {
+      "q": "\"unterminated",
+      "ok": false,
+      "error": "unterminated string"
+    },
+    {
+      "q": "(",
+      "ok": false,
+      "error": "fts5: syntax error near \"\""
+    },
+    {
+      "q": "*",
+      "ok": false,
+      "error": "unknown special query: "
+    },
+    {
+      "q": "NOT",
+      "ok": false,
+      "error": "fts5: syntax error near \"NOT\""
+    },
+    {
+      "q": "-foo",
+      "ok": false,
+      "error": "no such column: foo"
+    },
+    {
+      "q": "alice.perf",
+      "ok": false,
+      "error": "fts5: syntax error near \".\""
+    },
+    {
+      "q": "e-mail",
+      "ok": false,
+      "error": "no such column: mail"
+    },
+    {
+      "q": "don't",
+      "ok": false,
+      "error": "fts5: syntax error near \"'\""
+    },
+    {
+      "q": "50%",
+      "ok": false,
+      "error": "fts5: syntax error near \"%\""
+    },
+    {
+      "q": "re:",
+      "ok": false,
+      "error": "no such column: re"
+    }
+  ],
+  "cold": [
+    {
+      "name": "rare term (10 docs)",
+      "openDb": {
+        "n": 5,
+        "min": 1.236,
+        "median": 1.443,
+        "p95": 4.496,
+        "max": 4.496,
+        "mean": 2.007
+      },
+      "firstQuery": {
+        "n": 5,
+        "min": 3.402,
+        "median": 3.464,
+        "p95": 4.263,
+        "max": 4.263,
+        "mean": 3.625
+      }
+    },
+    {
+      "name": "medium term (1%)",
+      "openDb": {
+        "n": 5,
+        "min": 1.2,
+        "median": 1.533,
+        "p95": 1.69,
+        "max": 1.69,
+        "mean": 1.5
+      },
+      "firstQuery": {
+        "n": 5,
+        "min": 14.928,
+        "median": 15.055,
+        "p95": 15.29,
+        "max": 15.29,
+        "mean": 15.082
+      }
+    },
+    {
+      "name": "common term (30%)",
+      "openDb": {
+        "n": 5,
+        "min": 1.317,
+        "median": 1.489,
+        "p95": 1.577,
+        "max": 1.577,
+        "mean": 1.481
+      },
+      "firstQuery": {
+        "n": 5,
+        "min": 57.832,
+        "median": 58.975,
+        "p95": 64.541,
+        "max": 64.541,
+        "mean": 60.281
+      }
+    },
+    {
+      "name": "from: only (2%, LIKE scan)",
+      "openDb": {
+        "n": 5,
+        "min": 1.537,
+        "median": 1.784,
+        "p95": 2.193,
+        "max": 2.193,
+        "mean": 1.812
+      },
+      "firstQuery": {
+        "n": 5,
+        "min": 1419.188,
+        "median": 1505.24,
+        "p95": 1562.423,
+        "max": 1562.423,
+        "mean": 1501.558
+      }
+    },
+    {
+      "name": "is:unread only",
+      "openDb": {
+        "n": 5,
+        "min": 1.593,
+        "median": 1.914,
+        "p95": 2.76,
+        "max": 2.76,
+        "mean": 2.099
+      },
+      "firstQuery": {
+        "n": 5,
+        "min": 4600.869,
+        "median": 4842.141,
+        "p95": 5410.314,
+        "max": 5410.314,
+        "mean": 4907.639
+      }
+    },
+    {
+      "name": "label:INBOX only",
+      "openDb": {
+        "n": 5,
+        "min": 1.608,
+        "median": 1.705,
+        "p95": 1.968,
+        "max": 1.968,
+        "mean": 1.729
+      },
+      "firstQuery": {
+        "n": 5,
+        "min": 1474.233,
+        "median": 1584.701,
+        "p95": 1672.999,
+        "max": 1672.999,
+        "mean": 1574.121
+      }
+    },
+    {
+      "name": "combined: common+from:domain+has:att+after+is:unread",
+      "openDb": {
+        "n": 5,
+        "min": 1.64,
+        "median": 1.732,
+        "p95": 2.494,
+        "max": 2.494,
+        "mean": 1.901
+      },
+      "firstQuery": {
+        "n": 5,
+        "min": 684.555,
+        "median": 704.219,
+        "p95": 759.884,
+        "max": 759.884,
+        "mean": 720.95
+      }
+    },
+    {
+      "name": "common term, offset 5000 (page 101)",
+      "openDb": {
+        "n": 5,
+        "min": 1.587,
+        "median": 1.646,
+        "p95": 2.742,
+        "max": 2.742,
+        "mean": 1.955
+      },
+      "firstQuery": {
+        "n": 5,
+        "min": 160.67,
+        "median": 166.972,
+        "p95": 197.51,
+        "max": 197.51,
+        "mean": 176.323
+      }
+    }
+  ],
+  "http": [
+    {
+      "name": "rare term (10 docs)",
+      "q": "xylorarium",
+      "status": 200,
+      "bytes": 5259,
+      "n": 7,
+      "min": 4.067,
+      "median": 5.437,
+      "p95": 8.607,
+      "max": 8.607,
+      "mean": 5.854
+    },
+    {
+      "name": "medium term (1%)",
+      "q": "xylomedianta",
+      "status": 200,
+      "bytes": 26852,
+      "n": 7,
+      "min": 7.864,
+      "median": 8.811,
+      "p95": 10.713,
+      "max": 10.713,
+      "mean": 9.16
+    },
+    {
+      "name": "common term (30%)",
+      "q": "xylocommona",
+      "status": 200,
+      "bytes": 26602,
+      "n": 7,
+      "min": 54.138,
+      "median": 62.848,
+      "p95": 71.929,
+      "max": 71.929,
+      "mean": 62.587
+    },
+    {
+      "name": "stopword-like 'the' (~100%)",
+      "q": "the",
+      "status": 200,
+      "bytes": 30691,
+      "n": 7,
+      "min": 1028.228,
+      "median": 1153.537,
+      "p95": 1267.432,
+      "max": 1267.432,
+      "mean": 1155.374
+    },
+    {
+      "name": "two terms AND (1% & 30%)",
+      "q": "xylomedianta xylocommona",
+      "status": 200,
+      "bytes": 26695,
+      "n": 7,
+      "min": 10.461,
+      "median": 11.907,
+      "p95": 12.723,
+      "max": 12.723,
+      "mean": 11.722
+    },
+    {
+      "name": "OR (1% | 30%)",
+      "q": "xylomedianta OR xylocommona",
+      "status": 200,
+      "bytes": 26822,
+      "n": 7,
+      "min": 53.322,
+      "median": 57.112,
+      "p95": 75.992,
+      "max": 75.992,
+      "mean": 60.23
+    },
+    {
+      "name": "phrase \"quantum harvest\" (0.5%)",
+      "q": "\"quantum harvest\"",
+      "status": 200,
+      "bytes": 25825,
+      "n": 7,
+      "min": 7.328,
+      "median": 7.881,
+      "p95": 9.452,
+      "max": 9.452,
+      "mean": 7.988
+    },
+    {
+      "name": "prefix zqprefix* (2%)",
+      "q": "zqprefix*",
+      "status": 200,
+      "bytes": 26430,
+      "n": 7,
+      "min": 9.371,
+      "median": 9.75,
+      "p95": 10.354,
+      "max": 10.354,
+      "mean": 9.816
+    },
+    {
+      "name": "broad prefix pl* (many terms)",
+      "q": "pl*",
+      "status": 200,
+      "bytes": 28837,
+      "n": 7,
+      "min": 1214.416,
+      "median": 1327.232,
+      "p95": 1480.533,
+      "max": 1480.533,
+      "mean": 1342.316
+    },
+    {
+      "name": "from: only (2%, LIKE scan)",
+      "q": "from:needle.sender@known-corp.example",
+      "status": 200,
+      "bytes": 21206,
+      "n": 7,
+      "min": 1051.878,
+      "median": 1172.748,
+      "p95": 1205.979,
+      "max": 1205.979,
+      "mean": 1144.868
+    },
+    {
+      "name": "from: domain only (LIKE scan)",
+      "q": "from:example.org",
+      "status": 200,
+      "bytes": 20734,
+      "n": 7,
+      "min": 1229.207,
+      "median": 1283.481,
+      "p95": 1487.291,
+      "max": 1487.291,
+      "mean": 1329.859
+    },
+    {
+      "name": "from: + common term",
+      "q": "from:needle.sender@known-corp.example xylocommona",
+      "status": 200,
+      "bytes": 26692,
+      "n": 7,
+      "min": 60.67,
+      "median": 88.804,
+      "p95": 99.802,
+      "max": 99.802,
+      "mean": 81.544
+    },
+    {
+      "name": "subject:Invoice only",
+      "q": "subject:Invoice",
+      "status": 200,
+      "bytes": 21609,
+      "n": 7,
+      "min": 1066.806,
+      "median": 1174.371,
+      "p95": 1374.086,
+      "max": 1374.086,
+      "mean": 1170.634
+    },
+    {
+      "name": "subject: + medium term",
+      "q": "subject:Invoice xylomedianta",
+      "status": 200,
+      "bytes": 12552,
+      "n": 7,
+      "min": 15.925,
+      "median": 17.215,
+      "p95": 39.544,
+      "max": 39.544,
+      "mean": 20.51
+    },
+    {
+      "name": "has:attachment only",
+      "q": "has:attachment",
+      "status": 200,
+      "bytes": 20748,
+      "n": 7,
+      "min": 1050.497,
+      "median": 1118.276,
+      "p95": 1238.524,
+      "max": 1238.524,
+      "mean": 1132.912
+    },
+    {
+      "name": "is:unread only",
+      "q": "is:unread",
+      "status": 200,
+      "bytes": 20695,
+      "n": 7,
+      "min": 4411.216,
+      "median": 4746.026,
+      "p95": 5007.09,
+      "max": 5007.09,
+      "mean": 4780.05
+    },
+    {
+      "name": "label:INBOX only",
+      "q": "label:INBOX",
+      "status": 200,
+      "bytes": 20799,
+      "n": 7,
+      "min": 1364.32,
+      "median": 1477.116,
+      "p95": 1718.23,
+      "max": 1718.23,
+      "mean": 1501.931
+    },
+    {
+      "name": "label:Lists/dev + common",
+      "q": "label:Lists/dev xylocommona",
+      "status": 500,
+      "bytes": 21,
+      "body": "Internal Server Error",
+      "n": 7,
+      "min": 2.857,
+      "median": 3.154,
+      "p95": 4.167,
+      "max": 4.167,
+      "mean": 3.344
+    },
+    {
+      "name": "label:INBOX + common",
+      "q": "label:INBOX xylocommona",
+      "status": 200,
+      "bytes": 2,
+      "n": 7,
+      "min": 1.946,
+      "median": 2.5,
+      "p95": 4.223,
+      "max": 4.223,
+      "mean": 2.669
+    },
+    {
+      "name": "label:INBOX + from: (no text)",
+      "q": "label:INBOX from:needle.sender@known-corp.example",
+      "status": 200,
+      "bytes": 21146,
+      "n": 7,
+      "min": 53.412,
+      "median": 55.89,
+      "p95": 64.64,
+      "max": 64.64,
+      "mean": 57.334
+    },
+    {
+      "name": "from: + label:INBOX (order swapped)",
+      "q": "from:needle.sender@known-corp.example label:INBOX",
+      "status": 200,
+      "bytes": 2,
+      "n": 7,
+      "min": 1.208,
+      "median": 1.424,
+      "p95": 2.543,
+      "max": 2.543,
+      "mean": 1.682
+    },
+    {
+      "name": "date range only (6 months)",
+      "q": "after:2025-01-01 before:2025-07-01",
+      "status": 200,
+      "bytes": 20738,
+      "n": 7,
+      "min": 1.903,
+      "median": 2.106,
+      "p95": 2.935,
+      "max": 2.935,
+      "mean": 2.175
+    },
+    {
+      "name": "date range + common",
+      "q": "after:2025-01-01 before:2025-07-01 xylocommona",
+      "status": 200,
+      "bytes": 25702,
+      "n": 7,
+      "min": 56.696,
+      "median": 58.536,
+      "p95": 62.576,
+      "max": 62.576,
+      "mean": 58.886
+    },
+    {
+      "name": "combined: common+from:domain+has:att+after+is:unread",
+      "q": "xylocommona from:example.org has:attachment after:2023-01-01 is:unread",
+      "status": 200,
+      "bytes": 7713,
+      "n": 7,
+      "min": 123.541,
+      "median": 160.494,
+      "p95": 173.62,
+      "max": 173.62,
+      "mean": 153.454
+    },
+    {
+      "name": "common term, offset 5000 (page 101)",
+      "q": "xylocommona",
+      "status": 200,
+      "bytes": 26432,
+      "n": 7,
+      "min": 71.935,
+      "median": 115.156,
+      "p95": 119.215,
+      "max": 119.215,
+      "mean": 107.441
+    },
+    {
+      "name": "'the', offset 5000",
+      "q": "the",
+      "status": 200,
+      "bytes": 29363,
+      "n": 7,
+      "min": 648.561,
+      "median": 680.856,
+      "p95": 814.658,
+      "max": 814.658,
+      "mean": 691.501
+    },
+    {
+      "name": "is:unread, offset 5000",
+      "q": "is:unread",
+      "status": 200,
+      "bytes": 20799,
+      "n": 7,
+      "min": 4699.188,
+      "median": 5067.524,
+      "p95": 5804.125,
+      "max": 5804.125,
+      "mean": 5109.059
+    },
+    {
+      "name": "has:attachment, offset 5000",
+      "q": "has:attachment",
+      "status": 200,
+      "bytes": 836,
+      "n": 7,
+      "min": 1182.179,
+      "median": 1328.758,
+      "p95": 1378.679,
+      "max": 1378.679,
+      "mean": 1304.267
+    },
+    {
+      "name": "zero-hit term",
+      "q": "zzznotawordqqq",
+      "status": 200,
+      "bytes": 2,
+      "n": 7,
+      "min": 1.241,
+      "median": 1.343,
+      "p95": 2.872,
+      "max": 2.872,
+      "mean": 1.592
+    },
+    {
+      "name": "crash? user@example.com",
+      "q": "user@example.com",
+      "status": 500,
+      "bytes": 21,
+      "body": "Internal Server Error",
+      "n": 2,
+      "min": 2.027,
+      "median": 2.296,
+      "p95": 2.565,
+      "max": 2.565,
+      "mean": 2.296
+    },
+    {
+      "name": "crash? AT&T",
+      "q": "AT&T",
+      "status": 500,
+      "bytes": 21,
+      "body": "Internal Server Error",
+      "n": 2,
+      "min": 1.424,
+      "median": 1.517,
+      "p95": 1.609,
+      "max": 1.609,
+      "mean": 1.517
+    },
+    {
+      "name": "crash? a-b",
+      "q": "a-b",
+      "status": 500,
+      "bytes": 21,
+      "body": "Internal Server Error",
+      "n": 2,
+      "min": 1.407,
+      "median": 1.492,
+      "p95": 1.576,
+      "max": 1.576,
+      "mean": 1.492
+    },
+    {
+      "name": "crash? foo:bar",
+      "q": "foo:bar",
+      "status": 500,
+      "bytes": 21,
+      "body": "Internal Server Error",
+      "n": 2,
+      "min": 1.365,
+      "median": 1.837,
+      "p95": 2.308,
+      "max": 2.308,
+      "mean": 1.837
+    },
+    {
+      "name": "crash? c++",
+      "q": "c++",
+      "status": 500,
+      "bytes": 21,
+      "body": "Internal Server Error",
+      "n": 2,
+      "min": 1.306,
+      "median": 1.336,
+      "p95": 1.366,
+      "max": 1.366,
+      "mean": 1.336
+    },
+    {
+      "name": "crash? \"unterminated",
+      "q": "\"unterminated",
+      "status": 500,
+      "bytes": 21,
+      "body": "Internal Server Error",
+      "n": 2,
+      "min": 1.36,
+      "median": 1.369,
+      "p95": 1.379,
+      "max": 1.379,
+      "mean": 1.369
+    },
+    {
+      "name": "crash? (",
+      "q": "(",
+      "status": 500,
+      "bytes": 21,
+      "body": "Internal Server Error",
+      "n": 2,
+      "min": 1.357,
+      "median": 1.412,
+      "p95": 1.467,
+      "max": 1.467,
+      "mean": 1.412
+    },
+    {
+      "name": "crash? *",
+      "q": "*",
+      "status": 500,
+      "bytes": 21,
+      "body": "Internal Server Error",
+      "n": 2,
+      "min": 1.34,
+      "median": 1.74,
+      "p95": 2.139,
+      "max": 2.139,
+      "mean": 1.74
+    },
+    {
+      "name": "crash? NOT",
+      "q": "NOT",
+      "status": 500,
+      "bytes": 21,
+      "body": "Internal Server Error",
+      "n": 2,
+      "min": 1.354,
+      "median": 1.439,
+      "p95": 1.524,
+      "max": 1.524,
+      "mean": 1.439
+    },
+    {
+      "name": "crash? -foo",
+      "q": "-foo",
+      "status": 500,
+      "bytes": 21,
+      "body": "Internal Server Error",
+      "n": 2,
+      "min": 1.538,
+      "median": 1.704,
+      "p95": 1.87,
+      "max": 1.87,
+      "mean": 1.704
+    },
+    {
+      "name": "crash? alice.perf",
+      "q": "alice.perf",
+      "status": 500,
+      "bytes": 21,
+      "body": "Internal Server Error",
+      "n": 2,
+      "min": 1.623,
+      "median": 2.019,
+      "p95": 2.415,
+      "max": 2.415,
+      "mean": 2.019
+    },
+    {
+      "name": "crash? e-mail",
+      "q": "e-mail",
+      "status": 500,
+      "bytes": 21,
+      "body": "Internal Server Error",
+      "n": 2,
+      "min": 1.456,
+      "median": 1.513,
+      "p95": 1.57,
+      "max": 1.57,
+      "mean": 1.513
+    },
+    {
+      "name": "crash? don't",
+      "q": "don't",
+      "status": 500,
+      "bytes": 21,
+      "body": "Internal Server Error",
+      "n": 2,
+      "min": 1.407,
+      "median": 1.456,
+      "p95": 1.504,
+      "max": 1.504,
+      "mean": 1.456
+    },
+    {
+      "name": "crash? 50%",
+      "q": "50%",
+      "status": 500,
+      "bytes": 21,
+      "body": "Internal Server Error",
+      "n": 2,
+      "min": 1.319,
+      "median": 1.83,
+      "p95": 2.341,
+      "max": 2.341,
+      "mean": 1.83
+    },
+    {
+      "name": "crash? re:",
+      "q": "re:",
+      "status": 500,
+      "bytes": 21,
+      "body": "Internal Server Error",
+      "n": 2,
+      "min": 1.697,
+      "median": 1.838,
+      "p95": 1.978,
+      "max": 1.978,
+      "mean": 1.838
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "env": {
+    "at": "2026-10-15T11:30:06.377Z",
+    "nproc": 4,
+    "cpuModel": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+    "memTotalGB": 15.7,
+    "memFreeGB": 14.3,
+    "freeG": "Mem:              15           1          10           0           3          14",
+    "node": "v22.22.0",
+    "disk": "/dev/vda        252G   13G   27G  32% /",
+    "loadavg": [
+      2.15,
+      2.58,
+      2.15
+    ],
+    "uptime": "11:30:06 up 39 min,  0 user,  load average: 2.15, 2.58, 2.15"
+  },
+  "count": 3000,
+  "runs": 5,
+  "sqliteInsert": {
+    "enc+autocommit+fts (real sync)": {
+      "perMsgMs": {
+        "n": 5,
+        "min": 2.826,
+        "median": 2.926,
+        "p95": 3.156,
+        "max": 3.156,
+        "mean": 2.958
+      },
+      "msgsPerSec": {
+        "n": 5,
+        "min": 316.857,
+        "median": 341.731,
+        "p95": 353.813,
+        "max": 353.813,
+        "mean": 338.472
+      },
+      "ftsDataRows": 3587
+    },
+    "enc+txn100+fts": {
+      "perMsgMs": {
+        "n": 5,
+        "min": 1.297,
+        "median": 1.36,
+        "p95": 1.437,
+        "max": 1.437,
+        "mean": 1.366
+      },
+      "msgsPerSec": {
+        "n": 5,
+        "min": 695.951,
+        "median": 735.18,
+        "p95": 771.217,
+        "max": 771.217,
+        "mean": 732.817
+      },
+      "ftsDataRows": 3587
+    },
+    "enc+autocommit+nofts": {
+      "perMsgMs": {
+        "n": 5,
+        "min": 0.755,
+        "median": 0.822,
+        "p95": 0.903,
+        "max": 0.903,
+        "mean": 0.82
+      },
+      "msgsPerSec": {
+        "n": 5,
+        "min": 1107.237,
+        "median": 1217.249,
+        "p95": 1324.141,
+        "max": 1324.141,
+        "mean": 1223.632
+      },
+      "ftsDataRows": 2
+    },
+    "plain+autocommit+fts": {
+      "perMsgMs": {
+        "n": 5,
+        "min": 1.672,
+        "median": 1.794,
+        "p95": 1.948,
+        "max": 1.948,
+        "mean": 1.805
+      },
+      "msgsPerSec": {
+        "n": 5,
+        "min": 513.251,
+        "median": 557.311,
+        "p95": 598.17,
+        "max": 598.17,
+        "mean": 555.878
+      },
+      "ftsDataRows": 3587
+    }
+  },
+  "cpuPerMsgMs": {
+    "parse": {
+      "n": 5,
+      "min": 2.854,
+      "median": 3.005,
+      "p95": 3.109,
+      "max": 3.109,
+      "mean": 2.988
+    },
+    "html": {
+      "n": 5,
+      "min": 0.045,
+      "median": 0.047,
+      "p95": 0.049,
+      "max": 0.049,
+      "mean": 0.047
+    },
+    "compress": {
+      "n": 5,
+      "min": 0.169,
+      "median": 0.18,
+      "p95": 0.187,
+      "max": 0.187,
+      "mean": 0.18
+    },
+    "attach": {
+      "n": 5,
+      "min": 0.852,
+      "median": 0.887,
+      "p95": 0.912,
+      "max": 0.912,
+      "mean": 0.883
+    }
+  },
+  "attachmentNote": {
+    "messagesWithAttachments": 157,
+    "avgAttachmentKB": 506
+  }
+}

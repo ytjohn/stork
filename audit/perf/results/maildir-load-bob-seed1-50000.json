@@ -1,0 +1,9 @@
+{
+  "n": 50000,
+  "seed": 1,
+  "user": "bob",
+  "bytes": 2405598843,
+  "genMs": 94517.837176,
+  "doveadmIndexMs": 3445.2922519999993,
+  "status": "Trash messages=1475 vsize=65814115\nArchive messages=27218 vsize=1316213979\nSent messages=5736 vsize=275017333\nLists/dev messages=2416 vsize=119684684\nINBOX messages=13155 vsize=628868732\n"
+}

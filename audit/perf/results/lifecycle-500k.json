@@ -1,0 +1,191 @@
+{
+  "env": {
+    "at": "2026-10-15T14:47:37.827Z",
+    "nproc": 4,
+    "cpuModel": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+    "memTotalGB": 15.7,
+    "memFreeGB": 14.9,
+    "freeG": "Mem:              15           0           4           0          10          14",
+    "node": "v22.22.0",
+    "disk": "/dev/vda        252G   25G   15G  63% /",
+    "loadavg": [
+      0.74,
+      0.98,
+      1.05
+    ],
+    "uptime": "14:47:37 up  3:57,  0 user,  load average: 0.74, 0.98, 1.05"
+  },
+  "size": "500k",
+  "src": "/tmp/stork-audit-perf/db-bulk-500k",
+  "runs": 5,
+  "kdf": {
+    "initializeEncryptionMs": 5339.604672,
+    "setPasswordMs": 5317.737775,
+    "unlockWithPasswordMs": {
+      "n": 5,
+      "min": 5035.771,
+      "median": 5254.443,
+      "p95": 5685.249,
+      "max": 5685.249,
+      "mean": 5254.247
+    },
+    "note": "synchronous on the event loop (blocks all requests while it runs)"
+  },
+  "open": {
+    "openDatabaseMs": {
+      "n": 5,
+      "min": 1.224,
+      "median": 1.915,
+      "p95": 3.774,
+      "max": 3.774,
+      "mean": 2.089
+    },
+    "firstInboxQueryMs": {
+      "n": 5,
+      "min": 1.101,
+      "median": 1.153,
+      "p95": 2,
+      "max": 2,
+      "mean": 1.363
+    },
+    "files": {
+      "main": 8909905920,
+      "mainWal": 0,
+      "blobs": 291794944,
+      "blobsWal": 0
+    }
+  },
+  "server": {
+    "runs": [
+      {
+        "spawnToHealthyMs": 640.5289010000051,
+        "unlockMs": 4945.498692000001,
+        "firstInboxMs": 12.952975000000151,
+        "secondInboxMs": 5.570620999998937,
+        "firstSearchMs": 74.55440500000259,
+        "readyTotalMs": 5732.393891,
+        "rssAfterUnlockMB": 175.640625,
+        "idleShutdownMs": 68968.60482800001,
+        "exitCode": 0
+      },
+      {
+        "spawnToHealthyMs": 457.1632149999932,
+        "unlockMs": 4733.809806999998,
+        "firstInboxMs": 10.548232000001008,
+        "secondInboxMs": 4.497849999999744,
+        "firstSearchMs": 66.8790549999976,
+        "readyTotalMs": 5296.213121000008,
+        "rssAfterUnlockMB": 174.765625,
+        "idleShutdownMs": 3032.6549039999954,
+        "exitCode": 0
+      },
+      {
+        "spawnToHealthyMs": 466.64410799999314,
+        "unlockMs": 4807.519316000005,
+        "firstInboxMs": 16.815442000006442,
+        "secondInboxMs": 15.88955100000021,
+        "firstSearchMs": 91.76135400000203,
+        "readyTotalMs": 5418.886131000007,
+        "rssAfterUnlockMB": 179.51171875,
+        "idleShutdownMs": 2909.1965039999923,
+        "exitCode": 0
+      },
+      {
+        "spawnToHealthyMs": 492.9851139999955,
+        "unlockMs": 4751.640308999995,
+        "firstInboxMs": 13.10698599999887,
+        "secondInboxMs": 9.707327999989502,
+        "firstSearchMs": 64.89242099999683,
+        "readyTotalMs": 5359.588170000017,
+        "rssAfterUnlockMB": 179.046875,
+        "idleShutdownMs": 67041.013909,
+        "exitCode": 0
+      },
+      {
+        "spawnToHealthyMs": 515.5054649999947,
+        "unlockMs": 4426.1717770000105,
+        "firstInboxMs": 11.774766000016825,
+        "secondInboxMs": 9.788843999995152,
+        "firstSearchMs": 64.55221699998947,
+        "readyTotalMs": 5053.724345999974,
+        "rssAfterUnlockMB": 178.16796875,
+        "idleShutdownMs": 3037.3118250000116,
+        "exitCode": 0
+      }
+    ],
+    "summary": {
+      "spawnToHealthyMs": {
+        "n": 5,
+        "min": 457.163,
+        "median": 492.985,
+        "p95": 640.529,
+        "max": 640.529,
+        "mean": 514.565
+      },
+      "unlockMs": {
+        "n": 5,
+        "min": 4426.172,
+        "median": 4751.64,
+        "p95": 4945.499,
+        "max": 4945.499,
+        "mean": 4732.928
+      },
+      "firstInboxMs": {
+        "n": 5,
+        "min": 10.548,
+        "median": 12.953,
+        "p95": 16.815,
+        "max": 16.815,
+        "mean": 13.04
+      },
+      "secondInboxMs": {
+        "n": 5,
+        "min": 4.498,
+        "median": 9.707,
+        "p95": 15.89,
+        "max": 15.89,
+        "mean": 9.091
+      },
+      "firstSearchMs": {
+        "n": 5,
+        "min": 64.552,
+        "median": 66.879,
+        "p95": 91.761,
+        "max": 91.761,
+        "mean": 72.528
+      },
+      "readyTotalMs": {
+        "n": 5,
+        "min": 5053.724,
+        "median": 5359.588,
+        "p95": 5732.394,
+        "max": 5732.394,
+        "mean": 5372.161
+      },
+      "rssAfterUnlockMB": {
+        "n": 5,
+        "min": 174.766,
+        "median": 178.168,
+        "p95": 179.512,
+        "max": 179.512,
+        "mean": 177.427
+      },
+      "idleShutdownMs": {
+        "n": 5,
+        "min": 2909.197,
+        "median": 3037.312,
+        "p95": 68968.605,
+        "max": 68968.605,
+        "mean": 28997.756
+      },
+      "exitCode": {
+        "n": 5,
+        "min": 0,
+        "median": 0,
+        "p95": 0,
+        "max": 0,
+        "mean": 0
+      }
+    }
+  }
+}

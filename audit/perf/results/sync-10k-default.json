@@ -1,0 +1,429 @@
+{
+  "summary": {
+    "size": "10k",
+    "variant": "default",
+    "dovecot": {
+      "messages": 10000,
+      "vsize": 460451193
+    },
+    "runs": 5,
+    "wallMs": {
+      "n": 5,
+      "min": 97203,
+      "median": 99011,
+      "p95": 107425,
+      "max": 107425,
+      "mean": 100801.6
+    },
+    "msgsPerSec": {
+      "n": 5,
+      "min": 93.1,
+      "median": 101,
+      "p95": 102.9,
+      "max": 102.9,
+      "mean": 99.34
+    },
+    "mbPerSec": {
+      "n": 5,
+      "min": 4.09,
+      "median": 4.44,
+      "p95": 4.52,
+      "max": 4.52,
+      "mean": 4.364
+    },
+    "peakRssMB": {
+      "n": 5,
+      "min": 400.92,
+      "median": 403.35,
+      "p95": 415.54,
+      "max": 415.54,
+      "mean": 406.726
+    },
+    "coresUsed": {
+      "n": 5,
+      "min": 1,
+      "median": 1.05,
+      "p95": 1.06,
+      "max": 1.06,
+      "mean": 1.04
+    },
+    "dovecotCpuS": {
+      "n": 5,
+      "min": 0.76,
+      "median": 0.78,
+      "p95": 0.8,
+      "max": 0.8,
+      "mean": 0.776
+    }
+  },
+  "results": [
+    {
+      "run": 0,
+      "env": {
+        "at": "2026-10-15T11:17:23.808Z",
+        "nproc": 4,
+        "cpuModel": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+        "memTotalGB": 15.7,
+        "memFreeGB": 14.6,
+        "freeG": "Mem:              15           1          13           0           1          14",
+        "node": "v22.22.0",
+        "disk": "/dev/vda        252G   11G   29G  27% /",
+        "loadavg": [
+          2.19,
+          2.47,
+          1.52
+        ],
+        "uptime": "11:17:23 up 27 min,  0 user,  load average: 2.19, 2.47, 1.52"
+      },
+      "wallMs": 107425,
+      "messages": 10000,
+      "withAttachments": 472,
+      "imapBytes": 460451193,
+      "msgsPerSec": 93.1,
+      "mbPerSec": 4.09,
+      "cpuUserS": 106.35,
+      "cpuSysS": 7.78,
+      "coresUsed": 1.06,
+      "dovecotCpuS": 0.78,
+      "peakRssMB": 400.92,
+      "endRssMB": 400.92,
+      "eventLoopDelayMs": {
+        "p50": 10.428415,
+        "p99": 103.415807,
+        "max": 196.083711
+      },
+      "errors": 0,
+      "filesBeforeCheckpointMB": {
+        "main": 168.6,
+        "mainWal": 6.55,
+        "blobs": 247.89,
+        "blobsWal": 0
+      },
+      "filesAfterCheckpointMB": {
+        "main": 170.16,
+        "mainWal": 0,
+        "blobs": 247.89,
+        "blobsWal": 0
+      },
+      "checkpointMs": 68,
+      "progress": [
+        {
+          "t": 54.05020800000011,
+          "n": 0
+        },
+        {
+          "t": 44000.036026,
+          "n": 3989,
+          "folder": "Sent"
+        },
+        {
+          "t": 102557.42079100001,
+          "n": 9557,
+          "folder": "Trash"
+        }
+      ]
+    },
+    {
+      "run": 1,
+      "env": {
+        "at": "2026-10-15T11:19:12.614Z",
+        "nproc": 4,
+        "cpuModel": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+        "memTotalGB": 15.7,
+        "memFreeGB": 14.7,
+        "freeG": "Mem:              15           1          13           0           1          14",
+        "node": "v22.22.0",
+        "disk": "/dev/vda        252G   11G   29G  27% /",
+        "loadavg": [
+          1.8,
+          2.23,
+          1.54
+        ],
+        "uptime": "11:19:12 up 28 min,  0 user,  load average: 1.80, 2.23, 1.54"
+      },
+      "wallMs": 98491,
+      "messages": 10000,
+      "withAttachments": 472,
+      "imapBytes": 460451193,
+      "msgsPerSec": 101.5,
+      "mbPerSec": 4.46,
+      "cpuUserS": 96.53,
+      "cpuSysS": 6.99,
+      "coresUsed": 1.05,
+      "dovecotCpuS": 0.78,
+      "peakRssMB": 410.5,
+      "endRssMB": 410.5,
+      "eventLoopDelayMs": {
+        "p50": 10.346495,
+        "p99": 96.337919,
+        "max": 195.821567
+      },
+      "errors": 0,
+      "filesBeforeCheckpointMB": {
+        "main": 168.6,
+        "mainWal": 6.55,
+        "blobs": 247.89,
+        "blobsWal": 0
+      },
+      "filesAfterCheckpointMB": {
+        "main": 170.16,
+        "mainWal": 0,
+        "blobs": 247.89,
+        "blobsWal": 0
+      },
+      "checkpointMs": 51,
+      "progress": [
+        {
+          "t": 35.472426000007545,
+          "n": 0
+        },
+        {
+          "t": 38656.68265799999,
+          "n": 3989,
+          "folder": "Sent"
+        },
+        {
+          "t": 94046.409905,
+          "n": 9557,
+          "folder": "Trash"
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "env": {
+        "at": "2026-10-15T11:20:52.472Z",
+        "nproc": 4,
+        "cpuModel": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+        "memTotalGB": 15.7,
+        "memFreeGB": 14.6,
+        "freeG": "Mem:              15           1          13           0           1          14",
+        "node": "v22.22.0",
+        "disk": "/dev/vda        252G   11G   29G  27% /",
+        "loadavg": [
+          2.87,
+          2.42,
+          1.68
+        ],
+        "uptime": "11:20:52 up 30 min,  0 user,  load average: 2.87, 2.42, 1.68"
+      },
+      "wallMs": 99011,
+      "messages": 10000,
+      "withAttachments": 472,
+      "imapBytes": 460451193,
+      "msgsPerSec": 101,
+      "mbPerSec": 4.44,
+      "cpuUserS": 94.15,
+      "cpuSysS": 8.2,
+      "coresUsed": 1.03,
+      "dovecotCpuS": 0.76,
+      "peakRssMB": 403.35,
+      "endRssMB": 402.61,
+      "eventLoopDelayMs": {
+        "p50": 10.387455,
+        "p99": 102.170623,
+        "max": 413.401087
+      },
+      "errors": 0,
+      "filesBeforeCheckpointMB": {
+        "main": 168.6,
+        "mainWal": 6.55,
+        "blobs": 247.89,
+        "blobsWal": 0
+      },
+      "filesAfterCheckpointMB": {
+        "main": 170.16,
+        "mainWal": 0,
+        "blobs": 247.89,
+        "blobsWal": 0
+      },
+      "checkpointMs": 209,
+      "progress": [
+        {
+          "t": 26.655961999989813,
+          "n": 0
+        },
+        {
+          "t": 36578.22650999998,
+          "n": 3989,
+          "folder": "Sent"
+        },
+        {
+          "t": 93519.94005599999,
+          "n": 9557,
+          "folder": "Trash"
+        }
+      ]
+    },
+    {
+      "run": 3,
+      "env": {
+        "at": "2026-10-15T11:22:33.045Z",
+        "nproc": 4,
+        "cpuModel": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+        "memTotalGB": 15.7,
+        "memFreeGB": 14.8,
+        "freeG": "Mem:              15           0          12           0           2          14",
+        "node": "v22.22.0",
+        "disk": "/dev/vda        252G   12G   28G  30% /",
+        "loadavg": [
+          3.15,
+          2.61,
+          1.82
+        ],
+        "uptime": "11:22:33 up 32 min,  0 user,  load average: 3.15, 2.61, 1.82"
+      },
+      "wallMs": 101878,
+      "messages": 10000,
+      "withAttachments": 472,
+      "imapBytes": 460451193,
+      "msgsPerSec": 98.2,
+      "mbPerSec": 4.31,
+      "cpuUserS": 94.41,
+      "cpuSysS": 7.7,
+      "coresUsed": 1,
+      "dovecotCpuS": 0.76,
+      "peakRssMB": 403.32,
+      "endRssMB": 403.32,
+      "eventLoopDelayMs": {
+        "p50": 10.444799,
+        "p99": 103.284735,
+        "max": 553.123839
+      },
+      "errors": 0,
+      "filesBeforeCheckpointMB": {
+        "main": 168.6,
+        "mainWal": 6.55,
+        "blobs": 247.89,
+        "blobsWal": 0
+      },
+      "filesAfterCheckpointMB": {
+        "main": 170.16,
+        "mainWal": 0,
+        "blobs": 247.89,
+        "blobsWal": 0
+      },
+      "checkpointMs": 49,
+      "progress": [
+        {
+          "t": 26.587037999997847,
+          "n": 0
+        },
+        {
+          "t": 44125.491882,
+          "n": 3989,
+          "folder": "Sent"
+        },
+        {
+          "t": 97271.46004600002,
+          "n": 9557,
+          "folder": "Trash"
+        }
+      ]
+    },
+    {
+      "run": 4,
+      "env": {
+        "at": "2026-10-15T11:24:16.195Z",
+        "nproc": 4,
+        "cpuModel": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+        "memTotalGB": 15.7,
+        "memFreeGB": 14.6,
+        "freeG": "Mem:              15           1          11           0           2          14",
+        "node": "v22.22.0",
+        "disk": "/dev/vda        252G   12G   28G  30% /",
+        "loadavg": [
+          2.89,
+          2.8,
+          1.99
+        ],
+        "uptime": "11:24:16 up 34 min,  0 user,  load average: 2.89, 2.80, 1.99"
+      },
+      "wallMs": 97203,
+      "messages": 10000,
+      "withAttachments": 472,
+      "imapBytes": 460451193,
+      "msgsPerSec": 102.9,
+      "mbPerSec": 4.52,
+      "cpuUserS": 95.81,
+      "cpuSysS": 6.88,
+      "coresUsed": 1.06,
+      "dovecotCpuS": 0.8,
+      "peakRssMB": 415.54,
+      "endRssMB": 415.54,
+      "eventLoopDelayMs": {
+        "p50": 10.330111,
+        "p99": 96.403455,
+        "max": 178.913279
+      },
+      "errors": 0,
+      "filesBeforeCheckpointMB": {
+        "main": 168.6,
+        "mainWal": 6.55,
+        "blobs": 247.89,
+        "blobsWal": 0
+      },
+      "filesAfterCheckpointMB": {
+        "main": 170.16,
+        "mainWal": 0,
+        "blobs": 247.89,
+        "blobsWal": 0
+      },
+      "checkpointMs": 50,
+      "progress": [
+        {
+          "t": 39.53781999996863,
+          "n": 0
+        },
+        {
+          "t": 36878.516570999986,
+          "n": 3989,
+          "folder": "Sent"
+        },
+        {
+          "t": 91944.27265499998,
+          "n": 9557,
+          "folder": "Trash"
+        }
+      ],
+      "dbstat": {
+        "totalMB": 170.16,
+        "bucketsMB": {
+          "messages_table": 113.82,
+          "fts": 51.14,
+          "message_labels": 2.82,
+          "messages_indexes": 2.16,
+          "other": 0.22
+        },
+        "ftsShare": 0.301,
+        "objectsMB": {
+          "messages": 113.82,
+          "messages_fts_data": 50.82,
+          "message_labels": 1.09,
+          "idx_message_labels_label_date": 1,
+          "idx_messages_message_id": 0.48,
+          "idx_messages_inbound_connector_date": 0.46,
+          "idx_messages_date": 0.44,
+          "sqlite_autoindex_message_labels_1": 0.33,
+          "idx_messages_in_reply_to": 0.25,
+          "idx_message_labels_label_v15": 0.2,
+          "idx_message_labels_label": 0.2,
+          "messages_fts_idx": 0.16,
+          "messages_fts_docsize": 0.15,
+          "sqlite_autoindex_messages_1": 0.13,
+          "idx_messages_pending_archive": 0.11,
+          "idx_messages_folder": 0.1,
+          "idx_messages_inbound_connector": 0.09,
+          "idx_messages_identity": 0.09,
+          "attachments": 0.06,
+          "idx_attachments_content_hash": 0.04,
+          "sqlite_schema": 0.02,
+          "idx_attachments_message": 0.01,
+          "sync_state": 0,
+          "sync_errors": 0,
+          "sqlite_sequence": 0
+        }
+      }
+    }
+  ]
+}

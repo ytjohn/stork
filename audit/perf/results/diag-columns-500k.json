@@ -1,0 +1,139 @@
+{
+  "env": {
+    "at": "2026-10-15T12:48:24.327Z",
+    "nproc": 4,
+    "cpuModel": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+    "memTotalGB": 15.7,
+    "memFreeGB": 14.8,
+    "freeG": "Mem:              15           0           5           0           9          14",
+    "node": "v22.22.0",
+    "disk": "/dev/vda        252G   24G   16G  60% /",
+    "loadavg": [
+      1.33,
+      1.11,
+      1.31
+    ],
+    "uptime": "12:48:24 up  1:58,  0 user,  load average: 1.33, 1.11, 1.31"
+  },
+  "dir": "/tmp/stork-audit-perf/db-bulk-500k",
+  "columnOrder": [
+    "id",
+    "identity_id",
+    "inbound_connector_id",
+    "folder_id",
+    "uid",
+    "message_id",
+    "in_reply_to",
+    "references",
+    "subject",
+    "from_address",
+    "from_name",
+    "to_addresses",
+    "cc_addresses",
+    "bcc_addresses",
+    "date",
+    "text_body",
+    "html_body",
+    "flags",
+    "size",
+    "has_attachments",
+    "raw_headers",
+    "deleted_from_server",
+    "created_at",
+    "pending_archive",
+    "html_text_body"
+  ],
+  "COUNT(*) (covering index)": {
+    "n": 5,
+    "min": 0.142,
+    "median": 0.215,
+    "p95": 0.535,
+    "max": 0.535,
+    "mean": 0.302
+  },
+  "SUM(uid)  (col #5, before bodies)": {
+    "n": 5,
+    "min": 19.988,
+    "median": 20.935,
+    "p95": 21.726,
+    "max": 21.726,
+    "mean": 20.945
+  },
+  "SUM(length(subject)) (col #9)": {
+    "n": 5,
+    "min": 6169.764,
+    "median": 6398.98,
+    "p95": 7835.289,
+    "max": 7835.289,
+    "mean": 6768.149
+  },
+  "COUNT flags NOT LIKE Seen (col after text_body/html_body)": {
+    "n": 5,
+    "min": 19863.74,
+    "median": 20048.324,
+    "p95": 20612.91,
+    "max": 20612.91,
+    "mean": 20156.192
+  },
+  "SUM(has_attachments) (after bodies)": {
+    "n": 5,
+    "min": 6196.404,
+    "median": 6296.4,
+    "p95": 6626.736,
+    "max": 6626.736,
+    "mean": 6353.845
+  },
+  "refreshLabelCounts query 1 (GROUP BY label)": {
+    "n": 5,
+    "min": 43358.451,
+    "median": 44460.344,
+    "p95": 45991.258,
+    "max": 45991.258,
+    "mean": 44621.537
+  },
+  "applyFolderLabelsToMessages SELECT part (no-op)": {
+    "n": 5,
+    "min": 6536.196,
+    "median": 6959.538,
+    "p95": 7431.913,
+    "max": 7431.913,
+    "mean": 6995.585
+  },
+  "search from: filter-only, as shipped (JOIN folders)": {
+    "n": 5,
+    "min": 8037.209,
+    "median": 8070.572,
+    "p95": 11231.762,
+    "max": 11231.762,
+    "mean": 8846.587
+  },
+  "search from: filter-only, without JOIN folders": {
+    "n": 5,
+    "min": 5.502,
+    "median": 5.877,
+    "p95": 5.922,
+    "max": 5.922,
+    "mean": 5.783
+  },
+  "plans": {
+    "refresh": [
+      "SCAN ml USING INDEX idx_message_labels_label_v15",
+      "SEARCH m USING INTEGER PRIMARY KEY (rowid=?)"
+    ],
+    "apply": [
+      "SEARCH m USING INDEX idx_messages_inbound_connector (inbound_connector_id=?)",
+      "SEARCH f USING INTEGER PRIMARY KEY (rowid=?)",
+      "SEARCH l USING COVERING INDEX sqlite_autoindex_labels_1 (name=?)",
+      "SEARCH ml USING COVERING INDEX sqlite_autoindex_message_labels_1 (message_id=? AND label_id=?) LEFT-JOIN",
+      "SEARCH lo USING COVERING INDEX sqlite_autoindex_label_overrides_1 (message_id=? AND label_id=?) LEFT-JOIN"
+    ],
+    "searchFilterOnlyShipped": [
+      "SCAN f",
+      "SEARCH m USING INDEX idx_messages_pending_archive (folder_id=?)",
+      "USE TEMP B-TREE FOR ORDER BY"
+    ],
+    "searchFilterOnlyNoFolderJoin": [
+      "SCAN m USING INDEX idx_messages_date"
+    ]
+  }
+}

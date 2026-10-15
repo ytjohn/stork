@@ -1,0 +1,761 @@
+{
+  "env": {
+    "at": "2026-10-15T13:58:37.598Z",
+    "nproc": 4,
+    "cpuModel": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+    "memTotalGB": 15.7,
+    "memFreeGB": 14.9,
+    "freeG": "Mem:              15           0           2           0          12          14",
+    "node": "v22.22.0",
+    "disk": "/dev/vda        252G   26G   13G  67% /",
+    "loadavg": [
+      1.02,
+      1.36,
+      1.57
+    ],
+    "uptime": "13:58:37 up  3:08,  0 user,  load average: 1.02, 1.36, 1.57"
+  },
+  "size": "100k",
+  "src": "/tmp/stork-audit-perf/db-bulk-100k",
+  "runs": 5,
+  "server": {
+    "runs": [
+      {
+        "spawnToHealthyMs": 521.201138999997,
+        "unlockMs": 5314.551949000001,
+        "firstInboxMs": 13.269311000000016,
+        "secondInboxMs": 6.008875999999873,
+        "firstSearchMs": 34.93382600000041,
+        "readyTotalMs": 5940.492023999999,
+        "rssAfterUnlockMB": 167.15625,
+        "idleShutdownMs": 2951.704905999999,
+        "exitCode": 0
+      },
+      {
+        "spawnToHealthyMs": 506.3409580000007,
+        "unlockMs": 5102.036647000001,
+        "firstInboxMs": 14.45414200000232,
+        "secondInboxMs": 6.14584399999876,
+        "firstSearchMs": 30.609856999999465,
+        "readyTotalMs": 5695.528848000002,
+        "rssAfterUnlockMB": 167.4609375,
+        "idleShutdownMs": 2962.295909999997,
+        "exitCode": 0
+      },
+      {
+        "spawnToHealthyMs": 613.8574010000011,
+        "unlockMs": 5960.122774000003,
+        "firstInboxMs": 9.342479999999341,
+        "secondInboxMs": 6.92434399999911,
+        "firstSearchMs": 30.112457999995968,
+        "readyTotalMs": 6645.1573810000045,
+        "rssAfterUnlockMB": 170.9296875,
+        "idleShutdownMs": 2973.195716999995,
+        "exitCode": 0
+      },
+      {
+        "spawnToHealthyMs": 653.0063369999989,
+        "unlockMs": 6195.447275999999,
+        "firstInboxMs": 8.789996999999858,
+        "secondInboxMs": 3.932845000002999,
+        "firstSearchMs": 22.060871000001498,
+        "readyTotalMs": 6903.997087999989,
+        "rssAfterUnlockMB": 169.734375,
+        "idleShutdownMs": 2983.3654339999994,
+        "exitCode": 0
+      },
+      {
+        "spawnToHealthyMs": 542.2566120000047,
+        "unlockMs": 4622.554795999997,
+        "firstInboxMs": 8.481975000002421,
+        "secondInboxMs": 3.3092019999967306,
+        "firstSearchMs": 20.922796999999264,
+        "readyTotalMs": 5218.366336000006,
+        "rssAfterUnlockMB": 167.28515625,
+        "idleShutdownMs": 2985.9289869999993,
+        "exitCode": 0
+      }
+    ],
+    "summary": {
+      "spawnToHealthyMs": {
+        "n": 5,
+        "min": 506.341,
+        "median": 542.257,
+        "p95": 653.006,
+        "max": 653.006,
+        "mean": 567.332
+      },
+      "unlockMs": {
+        "n": 5,
+        "min": 4622.555,
+        "median": 5314.552,
+        "p95": 6195.447,
+        "max": 6195.447,
+        "mean": 5438.943
+      },
+      "firstInboxMs": {
+        "n": 5,
+        "min": 8.482,
+        "median": 9.342,
+        "p95": 14.454,
+        "max": 14.454,
+        "mean": 10.868
+      },
+      "secondInboxMs": {
+        "n": 5,
+        "min": 3.309,
+        "median": 6.009,
+        "p95": 6.924,
+        "max": 6.924,
+        "mean": 5.264
+      },
+      "firstSearchMs": {
+        "n": 5,
+        "min": 20.923,
+        "median": 30.112,
+        "p95": 34.934,
+        "max": 34.934,
+        "mean": 27.728
+      },
+      "readyTotalMs": {
+        "n": 5,
+        "min": 5218.366,
+        "median": 5940.492,
+        "p95": 6903.997,
+        "max": 6903.997,
+        "mean": 6080.708
+      },
+      "rssAfterUnlockMB": {
+        "n": 5,
+        "min": 167.156,
+        "median": 167.461,
+        "p95": 170.93,
+        "max": 170.93,
+        "mean": 168.513
+      },
+      "idleShutdownMs": {
+        "n": 5,
+        "min": 2951.705,
+        "median": 2973.196,
+        "p95": 2985.929,
+        "max": 2985.929,
+        "mean": 2971.298
+      },
+      "exitCode": {
+        "n": 5,
+        "min": 0,
+        "median": 0,
+        "p95": 0,
+        "max": 0,
+        "mean": 0
+      }
+    }
+  },
+  "sigterm": [
+    {
+      "kind": "SIGTERM",
+      "killAtTarget": 2000,
+      "progressAtKill": 2861,
+      "syncMsBeforeKill": 37384,
+      "shutdownMs": 13039,
+      "exit": {
+        "code": 0,
+        "signal": null
+      },
+      "logTail": [
+        "Shutting down...",
+        "14:00:50 Sync interrupted for connector 2: 2861 new (aborted)"
+      ],
+      "afterKill": {
+        "quick": "ok",
+        "integrity": "ok",
+        "ftsIntegrity": "ok",
+        "messages": 2861,
+        "dupFolderUid": 0,
+        "dupMessageId": 0,
+        "ftsRowsVsMessages": "102861 docsize rows / 102861 messages",
+        "syncStateVsMax": [
+          {
+            "folder": "Archive",
+            "last_uid": 0,
+            "max_uid": null
+          },
+          {
+            "folder": "INBOX",
+            "last_uid": 2861,
+            "max_uid": 2861
+          },
+          {
+            "folder": "Lists/dev",
+            "last_uid": 0,
+            "max_uid": null
+          },
+          {
+            "folder": "Sent",
+            "last_uid": 0,
+            "max_uid": null
+          },
+          {
+            "folder": "Trash",
+            "last_uid": 0,
+            "max_uid": null
+          }
+        ],
+        "walMB": 0
+      },
+      "restart": {
+        "healthMs": 748,
+        "unlockMs": 5896,
+        "readyMs": 6697,
+        "resumeSyncToCompleteMs": 115508,
+        "lastError": null
+      },
+      "final": {
+        "quick": "ok",
+        "integrity": "ok",
+        "ftsIntegrity": "ok",
+        "messages": 10000,
+        "dupFolderUid": 0,
+        "dupMessageId": 0,
+        "ftsRowsVsMessages": "110000 docsize rows / 110000 messages",
+        "syncStateVsMax": [
+          {
+            "folder": "Archive",
+            "last_uid": 5290,
+            "max_uid": 5290
+          },
+          {
+            "folder": "INBOX",
+            "last_uid": 2861,
+            "max_uid": 2861
+          },
+          {
+            "folder": "Lists/dev",
+            "last_uid": 443,
+            "max_uid": 443
+          },
+          {
+            "folder": "Sent",
+            "last_uid": 1128,
+            "max_uid": 1128
+          },
+          {
+            "folder": "Trash",
+            "last_uid": 278,
+            "max_uid": 278
+          }
+        ],
+        "walMB": 0
+      },
+      "statusPollErrors": 0,
+      "loadavg": [
+        1,
+        1.08,
+        1.35
+      ]
+    },
+    {
+      "kind": "SIGTERM",
+      "killAtTarget": 5000,
+      "progressAtKill": 9279,
+      "syncMsBeforeKill": 122516,
+      "shutdownMs": 15190,
+      "exit": {
+        "code": 0,
+        "signal": null
+      },
+      "logTail": [
+        "Shutting down...",
+        "14:08:26 Sync interrupted for connector 2: 9279 new (aborted)"
+      ],
+      "afterKill": {
+        "quick": "ok",
+        "integrity": "ok",
+        "ftsIntegrity": "ok",
+        "messages": 9279,
+        "dupFolderUid": 0,
+        "dupMessageId": 0,
+        "ftsRowsVsMessages": "109279 docsize rows / 109279 messages",
+        "syncStateVsMax": [
+          {
+            "folder": "Archive",
+            "last_uid": 5290,
+            "max_uid": 5290
+          },
+          {
+            "folder": "INBOX",
+            "last_uid": 2861,
+            "max_uid": 2861
+          },
+          {
+            "folder": "Lists/dev",
+            "last_uid": 0,
+            "max_uid": null
+          },
+          {
+            "folder": "Sent",
+            "last_uid": 1128,
+            "max_uid": 1128
+          },
+          {
+            "folder": "Trash",
+            "last_uid": 0,
+            "max_uid": null
+          }
+        ],
+        "walMB": 0
+      },
+      "restart": {
+        "healthMs": 559,
+        "unlockMs": 5368,
+        "readyMs": 5968,
+        "resumeSyncToCompleteMs": 36975,
+        "lastError": null
+      },
+      "final": {
+        "quick": "ok",
+        "integrity": "ok",
+        "ftsIntegrity": "ok",
+        "messages": 10000,
+        "dupFolderUid": 0,
+        "dupMessageId": 0,
+        "ftsRowsVsMessages": "110000 docsize rows / 110000 messages",
+        "syncStateVsMax": [
+          {
+            "folder": "Archive",
+            "last_uid": 5290,
+            "max_uid": 5290
+          },
+          {
+            "folder": "INBOX",
+            "last_uid": 2861,
+            "max_uid": 2861
+          },
+          {
+            "folder": "Lists/dev",
+            "last_uid": 443,
+            "max_uid": 443
+          },
+          {
+            "folder": "Sent",
+            "last_uid": 1128,
+            "max_uid": 1128
+          },
+          {
+            "folder": "Trash",
+            "last_uid": 278,
+            "max_uid": 278
+          }
+        ],
+        "walMB": 0
+      },
+      "statusPollErrors": 0,
+      "loadavg": [
+        1,
+        1.1,
+        1.28
+      ]
+    },
+    {
+      "kind": "SIGTERM",
+      "killAtTarget": 8000,
+      "progressAtKill": 9279,
+      "syncMsBeforeKill": 117420,
+      "shutdownMs": 14388,
+      "exit": {
+        "code": 0,
+        "signal": null
+      },
+      "logTail": [
+        "Shutting down...",
+        "14:14:41 Sync interrupted for connector 2: 9281 new (aborted)"
+      ],
+      "afterKill": {
+        "quick": "ok",
+        "integrity": "ok",
+        "ftsIntegrity": "ok",
+        "messages": 9281,
+        "dupFolderUid": 0,
+        "dupMessageId": 0,
+        "ftsRowsVsMessages": "109281 docsize rows / 109281 messages",
+        "syncStateVsMax": [
+          {
+            "folder": "Archive",
+            "last_uid": 5290,
+            "max_uid": 5290
+          },
+          {
+            "folder": "INBOX",
+            "last_uid": 2861,
+            "max_uid": 2861
+          },
+          {
+            "folder": "Lists/dev",
+            "last_uid": 0,
+            "max_uid": null
+          },
+          {
+            "folder": "Sent",
+            "last_uid": 1128,
+            "max_uid": 1128
+          },
+          {
+            "folder": "Trash",
+            "last_uid": 2,
+            "max_uid": 2
+          }
+        ],
+        "walMB": 0
+      },
+      "restart": {
+        "healthMs": 478,
+        "unlockMs": 5465,
+        "readyMs": 5994,
+        "resumeSyncToCompleteMs": 32231,
+        "lastError": null
+      },
+      "final": {
+        "quick": "ok",
+        "integrity": "ok",
+        "ftsIntegrity": "ok",
+        "messages": 10000,
+        "dupFolderUid": 0,
+        "dupMessageId": 0,
+        "ftsRowsVsMessages": "110000 docsize rows / 110000 messages",
+        "syncStateVsMax": [
+          {
+            "folder": "Archive",
+            "last_uid": 5290,
+            "max_uid": 5290
+          },
+          {
+            "folder": "INBOX",
+            "last_uid": 2861,
+            "max_uid": 2861
+          },
+          {
+            "folder": "Lists/dev",
+            "last_uid": 443,
+            "max_uid": 443
+          },
+          {
+            "folder": "Sent",
+            "last_uid": 1128,
+            "max_uid": 1128
+          },
+          {
+            "folder": "Trash",
+            "last_uid": 278,
+            "max_uid": 278
+          }
+        ],
+        "walMB": 0
+      },
+      "statusPollErrors": 0,
+      "loadavg": [
+        1.07,
+        1.12,
+        1.23
+      ]
+    }
+  ],
+  "sigkill": [
+    {
+      "kind": "SIGKILL",
+      "killAtTarget": 2000,
+      "progressAtKill": 2861,
+      "syncMsBeforeKill": 35460,
+      "shutdownMs": 51,
+      "exit": {
+        "code": null,
+        "signal": "SIGKILL"
+      },
+      "logTail": [],
+      "afterKill": {
+        "quick": "ok",
+        "integrity": "ok",
+        "ftsIntegrity": "ok",
+        "messages": 2861,
+        "dupFolderUid": 0,
+        "dupMessageId": 0,
+        "ftsRowsVsMessages": "102861 docsize rows / 102861 messages",
+        "syncStateVsMax": [
+          {
+            "folder": "Archive",
+            "last_uid": 0,
+            "max_uid": null
+          },
+          {
+            "folder": "INBOX",
+            "last_uid": 2861,
+            "max_uid": 2861
+          },
+          {
+            "folder": "Lists/dev",
+            "last_uid": 0,
+            "max_uid": null
+          },
+          {
+            "folder": "Sent",
+            "last_uid": 0,
+            "max_uid": null
+          },
+          {
+            "folder": "Trash",
+            "last_uid": 0,
+            "max_uid": null
+          }
+        ],
+        "walMB": 7.6
+      },
+      "restart": {
+        "healthMs": 508,
+        "unlockMs": 4758,
+        "readyMs": 5318,
+        "resumeSyncToCompleteMs": 105334,
+        "lastError": null
+      },
+      "final": {
+        "quick": "ok",
+        "integrity": "ok",
+        "ftsIntegrity": "ok",
+        "messages": 10000,
+        "dupFolderUid": 0,
+        "dupMessageId": 0,
+        "ftsRowsVsMessages": "110000 docsize rows / 110000 messages",
+        "syncStateVsMax": [
+          {
+            "folder": "Archive",
+            "last_uid": 5290,
+            "max_uid": 5290
+          },
+          {
+            "folder": "INBOX",
+            "last_uid": 2861,
+            "max_uid": 2861
+          },
+          {
+            "folder": "Lists/dev",
+            "last_uid": 443,
+            "max_uid": 443
+          },
+          {
+            "folder": "Sent",
+            "last_uid": 1128,
+            "max_uid": 1128
+          },
+          {
+            "folder": "Trash",
+            "last_uid": 278,
+            "max_uid": 278
+          }
+        ],
+        "walMB": 0
+      },
+      "statusPollErrors": 0,
+      "loadavg": [
+        1.03,
+        1.12,
+        1.2
+      ]
+    },
+    {
+      "kind": "SIGKILL",
+      "killAtTarget": 5000,
+      "progressAtKill": 9279,
+      "syncMsBeforeKill": 109397,
+      "shutdownMs": 58,
+      "exit": {
+        "code": null,
+        "signal": "SIGKILL"
+      },
+      "logTail": [],
+      "afterKill": {
+        "quick": "ok",
+        "integrity": "ok",
+        "ftsIntegrity": "ok",
+        "messages": 9280,
+        "dupFolderUid": 0,
+        "dupMessageId": 0,
+        "ftsRowsVsMessages": "109280 docsize rows / 109280 messages",
+        "syncStateVsMax": [
+          {
+            "folder": "Archive",
+            "last_uid": 5290,
+            "max_uid": 5290
+          },
+          {
+            "folder": "INBOX",
+            "last_uid": 2861,
+            "max_uid": 2861
+          },
+          {
+            "folder": "Lists/dev",
+            "last_uid": 0,
+            "max_uid": null
+          },
+          {
+            "folder": "Sent",
+            "last_uid": 1128,
+            "max_uid": 1128
+          },
+          {
+            "folder": "Trash",
+            "last_uid": 0,
+            "max_uid": 1
+          }
+        ],
+        "walMB": 11.92
+      },
+      "restart": {
+        "healthMs": 582,
+        "unlockMs": 4822,
+        "readyMs": 5452,
+        "resumeSyncToCompleteMs": 31709,
+        "lastError": null
+      },
+      "final": {
+        "quick": "ok",
+        "integrity": "ok",
+        "ftsIntegrity": "ok",
+        "messages": 10000,
+        "dupFolderUid": 0,
+        "dupMessageId": 0,
+        "ftsRowsVsMessages": "110000 docsize rows / 110000 messages",
+        "syncStateVsMax": [
+          {
+            "folder": "Archive",
+            "last_uid": 5290,
+            "max_uid": 5290
+          },
+          {
+            "folder": "INBOX",
+            "last_uid": 2861,
+            "max_uid": 2861
+          },
+          {
+            "folder": "Lists/dev",
+            "last_uid": 443,
+            "max_uid": 443
+          },
+          {
+            "folder": "Sent",
+            "last_uid": 1128,
+            "max_uid": 1128
+          },
+          {
+            "folder": "Trash",
+            "last_uid": 278,
+            "max_uid": 278
+          }
+        ],
+        "walMB": 0
+      },
+      "statusPollErrors": 0,
+      "loadavg": [
+        1,
+        1.05,
+        1.14
+      ]
+    },
+    {
+      "kind": "SIGKILL",
+      "killAtTarget": 8000,
+      "progressAtKill": 9279,
+      "syncMsBeforeKill": 114719,
+      "shutdownMs": 58,
+      "exit": {
+        "code": null,
+        "signal": "SIGKILL"
+      },
+      "logTail": [],
+      "afterKill": {
+        "quick": "ok",
+        "integrity": "ok",
+        "ftsIntegrity": "ok",
+        "messages": 9279,
+        "dupFolderUid": 0,
+        "dupMessageId": 0,
+        "ftsRowsVsMessages": "109279 docsize rows / 109279 messages",
+        "syncStateVsMax": [
+          {
+            "folder": "Archive",
+            "last_uid": 5290,
+            "max_uid": 5290
+          },
+          {
+            "folder": "INBOX",
+            "last_uid": 2861,
+            "max_uid": 2861
+          },
+          {
+            "folder": "Lists/dev",
+            "last_uid": 0,
+            "max_uid": null
+          },
+          {
+            "folder": "Sent",
+            "last_uid": 1128,
+            "max_uid": 1128
+          },
+          {
+            "folder": "Trash",
+            "last_uid": 0,
+            "max_uid": null
+          }
+        ],
+        "walMB": 11.92
+      },
+      "restart": {
+        "healthMs": 499,
+        "unlockMs": 4428,
+        "readyMs": 4986,
+        "resumeSyncToCompleteMs": 33787,
+        "lastError": null
+      },
+      "final": {
+        "quick": "ok",
+        "integrity": "ok",
+        "ftsIntegrity": "ok",
+        "messages": 10000,
+        "dupFolderUid": 0,
+        "dupMessageId": 0,
+        "ftsRowsVsMessages": "110000 docsize rows / 110000 messages",
+        "syncStateVsMax": [
+          {
+            "folder": "Archive",
+            "last_uid": 5290,
+            "max_uid": 5290
+          },
+          {
+            "folder": "INBOX",
+            "last_uid": 2861,
+            "max_uid": 2861
+          },
+          {
+            "folder": "Lists/dev",
+            "last_uid": 443,
+            "max_uid": 443
+          },
+          {
+            "folder": "Sent",
+            "last_uid": 1128,
+            "max_uid": 1128
+          },
+          {
+            "folder": "Trash",
+            "last_uid": 278,
+            "max_uid": 278
+          }
+        ],
+        "walMB": 0
+      },
+      "statusPollErrors": 0,
+      "loadavg": [
+        1.01,
+        1.07,
+        1.12
+      ]
+    }
+  ]
+}

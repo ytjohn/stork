@@ -1,0 +1,932 @@
+{
+  "env": {
+    "at": "2026-10-15T12:02:10.732Z",
+    "nproc": 4,
+    "cpuModel": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+    "memTotalGB": 15.7,
+    "memFreeGB": 14.3,
+    "freeG": "Mem:              15           1           2           0          12          14",
+    "node": "v22.22.0",
+    "disk": "/dev/vda        252G   21G   19G  52% /",
+    "loadavg": [
+      2.16,
+      2.03,
+      2
+    ],
+    "uptime": "12:02:10 up  1:11,  0 user,  load average: 2.16, 2.03, 2.00"
+  },
+  "size": "100k",
+  "inplace": false,
+  "messages": 100000,
+  "count": 10000,
+  "runs": 5,
+  "before": {
+    "fts": {
+      "ftsDataRows": 112520,
+      "ftsDataMB": 422.37
+    },
+    "dbstat": {
+      "totalMB": 1649.66,
+      "bucketsMB": {
+        "messages_table": 1109.59,
+        "fts": 483.2,
+        "message_labels": 29.86,
+        "messages_indexes": 25.86,
+        "other": 1.16
+      },
+      "ftsShare": 0.293,
+      "objectsMB": {
+        "messages": 1109.59,
+        "messages_fts_data": 480.89,
+        "message_labels": 11.17,
+        "idx_message_labels_label_date": 10.44,
+        "idx_messages_inbound_connector_date": 6.55,
+        "idx_messages_date": 6.33,
+        "idx_messages_message_id": 4.93,
+        "sqlite_autoindex_message_labels_1": 4.11,
+        "idx_messages_in_reply_to": 2.54,
+        "idx_message_labels_label_v15": 2.07,
+        "idx_message_labels_label": 2.07,
+        "messages_fts_docsize": 1.55,
+        "sqlite_autoindex_messages_1": 1.4,
+        "idx_messages_pending_archive": 1.16,
+        "idx_messages_folder": 1.04,
+        "idx_messages_inbound_connector": 0.96,
+        "idx_messages_identity": 0.96,
+        "messages_fts_idx": 0.74,
+        "attachments": 0.57,
+        "idx_attachments_content_hash": 0.41,
+        "idx_attachments_message": 0.06,
+        "sqlite_schema": 0.02,
+        "sync_state": 0,
+        "sync_errors": 0,
+        "sqlite_stat4": 0
+      }
+    },
+    "probeSearchMs": 54.105
+  },
+  "afterChurn": {
+    "fts": {
+      "ftsDataRows": 174647,
+      "ftsDataMB": 655.71
+    },
+    "probeSearchMs": 70.622
+  },
+  "optimize": {
+    "ms": 25828,
+    "bytesWrittenMB": 1515.36,
+    "walAfterMB": 757.67,
+    "fts": {
+      "ftsDataRows": 111833,
+      "ftsDataMB": 420.12
+    },
+    "probeSearchMs": 66.311
+  },
+  "ftsIntegrityAfter": "ok",
+  "summary": {
+    "A route PATCH /api/messages/:id/flags": {
+      "totalMs": {
+        "n": 5,
+        "min": 40043,
+        "median": 40646,
+        "p95": 47623,
+        "max": 47623,
+        "mean": 42938.4
+      },
+      "updatesPerSec": {
+        "n": 5,
+        "min": 210,
+        "median": 246,
+        "p95": 250,
+        "max": 250,
+        "mean": 234.2
+      },
+      "bytesWrittenPerUpdateKB": {
+        "n": 5,
+        "min": 220.6,
+        "median": 221.6,
+        "p95": 263.6,
+        "max": 263.6,
+        "mean": 231.9
+      }
+    },
+    "B sync-path UPDATE autocommit": {
+      "totalMs": {
+        "n": 5,
+        "min": 27911,
+        "median": 38060,
+        "p95": 46115,
+        "max": 46115,
+        "mean": 37112
+      },
+      "updatesPerSec": {
+        "n": 5,
+        "min": 217,
+        "median": 263,
+        "p95": 358,
+        "max": 358,
+        "mean": 276.8
+      },
+      "bytesWrittenPerUpdateKB": {
+        "n": 5,
+        "min": 165.9,
+        "median": 221.5,
+        "p95": 273.8,
+        "max": 273.8,
+        "mean": 216.14
+      }
+    },
+    "C sync-path UPDATE single txn": {
+      "totalMs": {
+        "n": 5,
+        "min": 14896,
+        "median": 16753,
+        "p95": 19587,
+        "max": 19587,
+        "mean": 16860.2
+      },
+      "updatesPerSec": {
+        "n": 5,
+        "min": 511,
+        "median": 597,
+        "p95": 671,
+        "max": 671,
+        "mean": 598.4
+      },
+      "bytesWrittenPerUpdateKB": {
+        "n": 5,
+        "min": 38.9,
+        "median": 42.1,
+        "p95": 46.3,
+        "max": 46.3,
+        "mean": 42.64
+      }
+    },
+    "D sync-path UPDATE autocommit, column-scoped trigger": {
+      "totalMs": {
+        "n": 5,
+        "min": 898,
+        "median": 5951,
+        "p95": 6298,
+        "max": 6298,
+        "mean": 5040.6
+      },
+      "updatesPerSec": {
+        "n": 5,
+        "min": 1588,
+        "median": 1680,
+        "p95": 11138,
+        "max": 11138,
+        "mean": 3544.8
+      },
+      "bytesWrittenPerUpdateKB": {
+        "n": 5,
+        "min": 0,
+        "median": 43.7,
+        "p95": 44,
+        "max": 44,
+        "mean": 35.04
+      }
+    }
+  },
+  "results": [
+    {
+      "variant": "A route PATCH /api/messages/:id/flags",
+      "run": 0,
+      "op": "add \\Seen",
+      "count": 10000,
+      "totalMs": 45992,
+      "perUpdateMs": {
+        "n": 10000,
+        "min": 0.375,
+        "median": 1.269,
+        "p95": 6.783,
+        "max": 1874.84,
+        "mean": 4.597
+      },
+      "updatesPerSec": 217,
+      "bytesWrittenMB": 2272.86,
+      "bytesWrittenPerUpdateKB": 232.7,
+      "walFileMB": {
+        "before": 0,
+        "after": 12.55
+      },
+      "fts": {
+        "before": {
+          "ftsDataRows": 112520,
+          "ftsDataMB": 422.37
+        },
+        "after": {
+          "ftsDataRows": 122892,
+          "ftsDataMB": 458.95
+        }
+      },
+      "loadavg": [
+        2.77,
+        2.21,
+        2.07
+      ]
+    },
+    {
+      "variant": "A route PATCH /api/messages/:id/flags",
+      "run": 1,
+      "op": "remove \\Seen",
+      "count": 10000,
+      "totalMs": 47623,
+      "perUpdateMs": {
+        "n": 10000,
+        "min": 0.393,
+        "median": 1.173,
+        "p95": 6.059,
+        "max": 618.87,
+        "mean": 4.761
+      },
+      "updatesPerSec": 210,
+      "bytesWrittenMB": 2573.88,
+      "bytesWrittenPerUpdateKB": 263.6,
+      "walFileMB": {
+        "before": 12.55,
+        "after": 22.29
+      },
+      "fts": {
+        "before": {
+          "ftsDataRows": 122892,
+          "ftsDataMB": 458.95
+        },
+        "after": {
+          "ftsDataRows": 131660,
+          "ftsDataMB": 494.31
+        }
+      },
+      "loadavg": [
+        3.01,
+        2.36,
+        2.13
+      ]
+    },
+    {
+      "variant": "A route PATCH /api/messages/:id/flags",
+      "run": 2,
+      "op": "add \\Seen",
+      "count": 10000,
+      "totalMs": 40388,
+      "perUpdateMs": {
+        "n": 10000,
+        "min": 0.401,
+        "median": 1.136,
+        "p95": 5.965,
+        "max": 491.675,
+        "mean": 4.037
+      },
+      "updatesPerSec": 248,
+      "bytesWrittenMB": 2157.73,
+      "bytesWrittenPerUpdateKB": 221,
+      "walFileMB": {
+        "before": 22.29,
+        "after": 22.29
+      },
+      "fts": {
+        "before": {
+          "ftsDataRows": 131660,
+          "ftsDataMB": 494.31
+        },
+        "after": {
+          "ftsDataRows": 139243,
+          "ftsDataMB": 522.73
+        }
+      },
+      "loadavg": [
+        2.56,
+        2.33,
+        2.13
+      ]
+    },
+    {
+      "variant": "A route PATCH /api/messages/:id/flags",
+      "run": 3,
+      "op": "remove \\Seen",
+      "count": 10000,
+      "totalMs": 40043,
+      "perUpdateMs": {
+        "n": 10000,
+        "min": 0.413,
+        "median": 1.193,
+        "p95": 6.112,
+        "max": 265.291,
+        "mean": 4.003
+      },
+      "updatesPerSec": 250,
+      "bytesWrittenMB": 2153.98,
+      "bytesWrittenPerUpdateKB": 220.6,
+      "walFileMB": {
+        "before": 22.29,
+        "after": 22.29
+      },
+      "fts": {
+        "before": {
+          "ftsDataRows": 139243,
+          "ftsDataMB": 522.73
+        },
+        "after": {
+          "ftsDataRows": 147077,
+          "ftsDataMB": 552.1
+        }
+      },
+      "loadavg": [
+        2.29,
+        2.29,
+        2.12
+      ]
+    },
+    {
+      "variant": "A route PATCH /api/messages/:id/flags",
+      "run": 4,
+      "op": "add \\Seen",
+      "count": 10000,
+      "totalMs": 40646,
+      "perUpdateMs": {
+        "n": 10000,
+        "min": 0.4,
+        "median": 1.196,
+        "p95": 6.207,
+        "max": 497.564,
+        "mean": 4.063
+      },
+      "updatesPerSec": 246,
+      "bytesWrittenMB": 2164.06,
+      "bytesWrittenPerUpdateKB": 221.6,
+      "walFileMB": {
+        "before": 22.29,
+        "after": 22.29
+      },
+      "fts": {
+        "before": {
+          "ftsDataRows": 147077,
+          "ftsDataMB": 552.1
+        },
+        "after": {
+          "ftsDataRows": 154978,
+          "ftsDataMB": 581.68
+        }
+      },
+      "loadavg": [
+        2.21,
+        2.27,
+        2.12
+      ]
+    },
+    {
+      "variant": "B sync-path UPDATE autocommit",
+      "run": 0,
+      "op": "add \\Seen",
+      "count": 10000,
+      "totalMs": 27911,
+      "perUpdateMs": {
+        "n": 10000,
+        "min": 0.199,
+        "median": 0.814,
+        "p95": 5.089,
+        "max": 194.752,
+        "mean": 2.781
+      },
+      "updatesPerSec": 358,
+      "bytesWrittenMB": 1619.96,
+      "bytesWrittenPerUpdateKB": 165.9,
+      "walFileMB": {
+        "before": 22.29,
+        "after": 22.29
+      },
+      "fts": {
+        "before": {
+          "ftsDataRows": 154978,
+          "ftsDataMB": 581.68
+        },
+        "after": {
+          "ftsDataRows": 166963,
+          "ftsDataMB": 626.91
+        }
+      },
+      "loadavg": [
+        2.13,
+        2.24,
+        2.11
+      ]
+    },
+    {
+      "variant": "B sync-path UPDATE autocommit",
+      "run": 1,
+      "op": "remove \\Seen",
+      "count": 10000,
+      "totalMs": 46115,
+      "perUpdateMs": {
+        "n": 10000,
+        "min": 0.208,
+        "median": 0.911,
+        "p95": 5.716,
+        "max": 526.306,
+        "mean": 4.6
+      },
+      "updatesPerSec": 217,
+      "bytesWrittenMB": 2674.21,
+      "bytesWrittenPerUpdateKB": 273.8,
+      "walFileMB": {
+        "before": 22.29,
+        "after": 22.29
+      },
+      "fts": {
+        "before": {
+          "ftsDataRows": 166963,
+          "ftsDataMB": 626.91
+        },
+        "after": {
+          "ftsDataRows": 139671,
+          "ftsDataMB": 524.34
+        }
+      },
+      "loadavg": [
+        2.14,
+        2.22,
+        2.11
+      ]
+    },
+    {
+      "variant": "B sync-path UPDATE autocommit",
+      "run": 2,
+      "op": "add \\Seen",
+      "count": 10000,
+      "totalMs": 38060,
+      "perUpdateMs": {
+        "n": 10000,
+        "min": 0.22,
+        "median": 0.921,
+        "p95": 5.624,
+        "max": 207.186,
+        "mean": 3.797
+      },
+      "updatesPerSec": 263,
+      "bytesWrittenMB": 2163.22,
+      "bytesWrittenPerUpdateKB": 221.5,
+      "walFileMB": {
+        "before": 22.29,
+        "after": 22.29
+      },
+      "fts": {
+        "before": {
+          "ftsDataRows": 139671,
+          "ftsDataMB": 524.34
+        },
+        "after": {
+          "ftsDataRows": 147263,
+          "ftsDataMB": 552.77
+        }
+      },
+      "loadavg": [
+        2.12,
+        2.21,
+        2.1
+      ]
+    },
+    {
+      "variant": "B sync-path UPDATE autocommit",
+      "run": 3,
+      "op": "remove \\Seen",
+      "count": 10000,
+      "totalMs": 38508,
+      "perUpdateMs": {
+        "n": 10000,
+        "min": 0.17,
+        "median": 0.925,
+        "p95": 5.861,
+        "max": 210.149,
+        "mean": 3.841
+      },
+      "updatesPerSec": 260,
+      "bytesWrittenMB": 2169.87,
+      "bytesWrittenPerUpdateKB": 222.2,
+      "walFileMB": {
+        "before": 22.29,
+        "after": 22.29
+      },
+      "fts": {
+        "before": {
+          "ftsDataRows": 147263,
+          "ftsDataMB": 552.77
+        },
+        "after": {
+          "ftsDataRows": 155081,
+          "ftsDataMB": 582.04
+        }
+      },
+      "loadavg": [
+        2.06,
+        2.18,
+        2.1
+      ]
+    },
+    {
+      "variant": "B sync-path UPDATE autocommit",
+      "run": 4,
+      "op": "add \\Seen",
+      "count": 10000,
+      "totalMs": 34966,
+      "perUpdateMs": {
+        "n": 10000,
+        "min": 0.211,
+        "median": 0.932,
+        "p95": 5.641,
+        "max": 222.421,
+        "mean": 3.487
+      },
+      "updatesPerSec": 286,
+      "bytesWrittenMB": 1926.73,
+      "bytesWrittenPerUpdateKB": 197.3,
+      "walFileMB": {
+        "before": 22.29,
+        "after": 22.29
+      },
+      "fts": {
+        "before": {
+          "ftsDataRows": 155081,
+          "ftsDataMB": 582.04
+        },
+        "after": {
+          "ftsDataRows": 167055,
+          "ftsDataMB": 627.24
+        }
+      },
+      "loadavg": [
+        2.03,
+        2.16,
+        2.09
+      ]
+    },
+    {
+      "variant": "C sync-path UPDATE single txn",
+      "run": 0,
+      "op": "add \\Seen",
+      "count": 10000,
+      "totalMs": 19587,
+      "updatesPerSec": 511,
+      "bytesWrittenMB": 452.23,
+      "bytesWrittenPerUpdateKB": 46.3,
+      "walFileMB": {
+        "before": 22.29,
+        "after": 229.27
+      },
+      "fts": {
+        "before": {
+          "ftsDataRows": 167055,
+          "ftsDataMB": 627.24
+        },
+        "after": {
+          "ftsDataRows": 139773,
+          "ftsDataMB": 524.74
+        }
+      },
+      "loadavg": [
+        2.02,
+        2.15,
+        2.09
+      ]
+    },
+    {
+      "variant": "C sync-path UPDATE single txn",
+      "run": 1,
+      "op": "remove \\Seen",
+      "count": 10000,
+      "totalMs": 17385,
+      "updatesPerSec": 575,
+      "bytesWrittenMB": 410.94,
+      "bytesWrittenPerUpdateKB": 42.1,
+      "walFileMB": {
+        "before": 229.27,
+        "after": 229.27
+      },
+      "fts": {
+        "before": {
+          "ftsDataRows": 139773,
+          "ftsDataMB": 524.74
+        },
+        "after": {
+          "ftsDataRows": 147275,
+          "ftsDataMB": 552.83
+        }
+      },
+      "loadavg": [
+        2.02,
+        2.14,
+        2.09
+      ]
+    },
+    {
+      "variant": "C sync-path UPDATE single txn",
+      "run": 2,
+      "op": "add \\Seen",
+      "count": 10000,
+      "totalMs": 15680,
+      "updatesPerSec": 638,
+      "bytesWrittenMB": 393.2,
+      "bytesWrittenPerUpdateKB": 40.3,
+      "walFileMB": {
+        "before": 229.27,
+        "after": 229.27
+      },
+      "fts": {
+        "before": {
+          "ftsDataRows": 147275,
+          "ftsDataMB": 552.83
+        },
+        "after": {
+          "ftsDataRows": 155083,
+          "ftsDataMB": 582.08
+        }
+      },
+      "loadavg": [
+        2.08,
+        2.15,
+        2.09
+      ]
+    },
+    {
+      "variant": "C sync-path UPDATE single txn",
+      "run": 3,
+      "op": "remove \\Seen",
+      "count": 10000,
+      "totalMs": 14896,
+      "updatesPerSec": 671,
+      "bytesWrittenMB": 380.04,
+      "bytesWrittenPerUpdateKB": 38.9,
+      "walFileMB": {
+        "before": 229.27,
+        "after": 229.27
+      },
+      "fts": {
+        "before": {
+          "ftsDataRows": 155083,
+          "ftsDataMB": 582.08
+        },
+        "after": {
+          "ftsDataRows": 166989,
+          "ftsDataMB": 627.01
+        }
+      },
+      "loadavg": [
+        2.06,
+        2.14,
+        2.09
+      ]
+    },
+    {
+      "variant": "C sync-path UPDATE single txn",
+      "run": 4,
+      "op": "add \\Seen",
+      "count": 10000,
+      "totalMs": 16753,
+      "updatesPerSec": 597,
+      "bytesWrittenMB": 445.42,
+      "bytesWrittenPerUpdateKB": 45.6,
+      "walFileMB": {
+        "before": 229.27,
+        "after": 229.27
+      },
+      "fts": {
+        "before": {
+          "ftsDataRows": 166989,
+          "ftsDataMB": 627.01
+        },
+        "after": {
+          "ftsDataRows": 174647,
+          "ftsDataMB": 655.71
+        }
+      },
+      "loadavg": [
+        2.05,
+        2.13,
+        2.09
+      ]
+    },
+    {
+      "variant": "D sync-path UPDATE autocommit, column-scoped trigger",
+      "run": 0,
+      "op": "add \\Seen",
+      "count": 10000,
+      "totalMs": 898,
+      "perUpdateMs": {
+        "n": 10000,
+        "min": 0.012,
+        "median": 0.065,
+        "p95": 0.199,
+        "max": 2.095,
+        "mean": 0.087
+      },
+      "updatesPerSec": 11138,
+      "bytesWrittenMB": 0,
+      "bytesWrittenPerUpdateKB": 0,
+      "walFileMB": {
+        "before": 0.02,
+        "after": 0.02
+      },
+      "fts": {
+        "before": {
+          "ftsDataRows": 111833,
+          "ftsDataMB": 420.12
+        },
+        "after": {
+          "ftsDataRows": 111833,
+          "ftsDataMB": 420.12
+        }
+      },
+      "loadavg": [
+        2.15,
+        2.15,
+        2.09
+      ]
+    },
+    {
+      "variant": "D sync-path UPDATE autocommit, column-scoped trigger",
+      "run": 1,
+      "op": "remove \\Seen",
+      "count": 10000,
+      "totalMs": 6126,
+      "perUpdateMs": {
+        "n": 10000,
+        "min": 0.032,
+        "median": 0.158,
+        "p95": 0.52,
+        "max": 118.983,
+        "mean": 0.608
+      },
+      "updatesPerSec": 1632,
+      "bytesWrittenMB": 428.19,
+      "bytesWrittenPerUpdateKB": 43.8,
+      "walFileMB": {
+        "before": 0.02,
+        "after": 4.07
+      },
+      "fts": {
+        "before": {
+          "ftsDataRows": 111833,
+          "ftsDataMB": 420.12
+        },
+        "after": {
+          "ftsDataRows": 111833,
+          "ftsDataMB": 420.12
+        }
+      },
+      "loadavg": [
+        2.14,
+        2.15,
+        2.09
+      ]
+    },
+    {
+      "variant": "D sync-path UPDATE autocommit, column-scoped trigger",
+      "run": 2,
+      "op": "add \\Seen",
+      "count": 10000,
+      "totalMs": 6298,
+      "perUpdateMs": {
+        "n": 10000,
+        "min": 0.031,
+        "median": 0.164,
+        "p95": 0.532,
+        "max": 103.857,
+        "mean": 0.625
+      },
+      "updatesPerSec": 1588,
+      "bytesWrittenMB": 426.86,
+      "bytesWrittenPerUpdateKB": 43.7,
+      "walFileMB": {
+        "before": 4.07,
+        "after": 4.07
+      },
+      "fts": {
+        "before": {
+          "ftsDataRows": 111833,
+          "ftsDataMB": 420.12
+        },
+        "after": {
+          "ftsDataRows": 111833,
+          "ftsDataMB": 420.12
+        }
+      },
+      "loadavg": [
+        2.19,
+        2.16,
+        2.1
+      ]
+    },
+    {
+      "variant": "D sync-path UPDATE autocommit, column-scoped trigger",
+      "run": 3,
+      "op": "remove \\Seen",
+      "count": 10000,
+      "totalMs": 5930,
+      "perUpdateMs": {
+        "n": 10000,
+        "min": 0.031,
+        "median": 0.155,
+        "p95": 0.502,
+        "max": 101.421,
+        "mean": 0.589
+      },
+      "updatesPerSec": 1686,
+      "bytesWrittenMB": 429.34,
+      "bytesWrittenPerUpdateKB": 44,
+      "walFileMB": {
+        "before": 4.07,
+        "after": 4.29
+      },
+      "fts": {
+        "before": {
+          "ftsDataRows": 111833,
+          "ftsDataMB": 420.12
+        },
+        "after": {
+          "ftsDataRows": 111833,
+          "ftsDataMB": 420.12
+        }
+      },
+      "loadavg": [
+        2.18,
+        2.16,
+        2.1
+      ]
+    },
+    {
+      "variant": "D sync-path UPDATE autocommit, column-scoped trigger",
+      "run": 4,
+      "op": "add \\Seen",
+      "count": 10000,
+      "totalMs": 5951,
+      "perUpdateMs": {
+        "n": 10000,
+        "min": 0.032,
+        "median": 0.156,
+        "p95": 0.521,
+        "max": 93.154,
+        "mean": 0.591
+      },
+      "updatesPerSec": 1680,
+      "bytesWrittenMB": 426.73,
+      "bytesWrittenPerUpdateKB": 43.7,
+      "walFileMB": {
+        "before": 4.29,
+        "after": 4.29
+      },
+      "fts": {
+        "before": {
+          "ftsDataRows": 111833,
+          "ftsDataMB": 420.12
+        },
+        "after": {
+          "ftsDataRows": 111833,
+          "ftsDataMB": 420.12
+        }
+      },
+      "loadavg": [
+        2.24,
+        2.17,
+        2.1
+      ]
+    }
+  ],
+  "finalDbstat": {
+    "totalMB": 1646.82,
+    "bucketsMB": {
+      "messages_table": 1109.63,
+      "fts": 480.32,
+      "message_labels": 29.86,
+      "messages_indexes": 25.86,
+      "other": 1.16
+    },
+    "ftsShare": 0.292,
+    "objectsMB": {
+      "messages": 1109.63,
+      "messages_fts_data": 478.32,
+      "message_labels": 11.17,
+      "idx_message_labels_label_date": 10.44,
+      "idx_messages_inbound_connector_date": 6.55,
+      "idx_messages_date": 6.33,
+      "idx_messages_message_id": 4.93,
+      "sqlite_autoindex_message_labels_1": 4.11,
+      "idx_messages_in_reply_to": 2.54,
+      "idx_message_labels_label_v15": 2.07,
+      "idx_message_labels_label": 2.07,
+      "messages_fts_docsize": 1.55,
+      "sqlite_autoindex_messages_1": 1.4,
+      "idx_messages_pending_archive": 1.16,
+      "idx_messages_folder": 1.04,
+      "idx_messages_inbound_connector": 0.96,
+      "idx_messages_identity": 0.96,
+      "attachments": 0.57,
+      "messages_fts_idx": 0.45,
+      "idx_attachments_content_hash": 0.41,
+      "idx_attachments_message": 0.06,
+      "sqlite_schema": 0.02,
+      "sync_state": 0,
+      "sync_errors": 0,
+      "sqlite_stat4": 0
+    }
+  }
+}

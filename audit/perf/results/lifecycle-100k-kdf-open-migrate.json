@@ -1,0 +1,138 @@
+{
+  "env": {
+    "at": "2026-10-15T12:16:33.325Z",
+    "nproc": 4,
+    "cpuModel": "Intel(R) Xeon(R) Processor @ 2.80GHz",
+    "memTotalGB": 15.7,
+    "memFreeGB": 14.4,
+    "freeG": "Mem:              15           1           1           0          13          14",
+    "node": "v22.22.0",
+    "disk": "/dev/vda        252G   25G   15G  62% /",
+    "loadavg": [
+      1.39,
+      1.65,
+      1.89
+    ],
+    "uptime": "12:16:33 up  1:26,  0 user,  load average: 1.39, 1.65, 1.89"
+  },
+  "size": "100k",
+  "src": "/tmp/stork-audit-perf/db-bulk-100k",
+  "runs": 5,
+  "kdf": {
+    "initializeEncryptionMs": 4123.400591,
+    "setPasswordMs": 4002.6394450000007,
+    "unlockWithPasswordMs": {
+      "n": 5,
+      "min": 3936.006,
+      "median": 4102.175,
+      "p95": 4729.735,
+      "max": 4729.735,
+      "mean": 4274.095
+    },
+    "note": "synchronous on the event loop (blocks all requests while it runs)"
+  },
+  "open": {
+    "openDatabaseMs": {
+      "n": 5,
+      "min": 1.195,
+      "median": 1.365,
+      "p95": 1.537,
+      "max": 1.537,
+      "mean": 1.361
+    },
+    "firstInboxQueryMs": {
+      "n": 5,
+      "min": 0.942,
+      "median": 1.031,
+      "p95": 1.112,
+      "max": 1.112,
+      "mean": 1.018
+    },
+    "files": {
+      "main": 1729794048,
+      "mainWal": 0,
+      "blobs": 31875072,
+      "blobsWal": 0
+    }
+  },
+  "migrate": {
+    "v29_run0": {
+      "ms": 3,
+      "walMB": 0,
+      "schemaVersionAfter": 29,
+      "error": "no such column: date"
+    },
+    "v29_run1": {
+      "ms": 3,
+      "walMB": 0,
+      "schemaVersionAfter": 29,
+      "error": "no such column: date"
+    },
+    "v29_run2": {
+      "ms": 2,
+      "walMB": 0,
+      "schemaVersionAfter": 29,
+      "error": "no such column: date"
+    },
+    "v29_run3": {
+      "ms": 2,
+      "walMB": 0,
+      "schemaVersionAfter": 29,
+      "error": "no such column: date"
+    },
+    "v29_run4": {
+      "ms": 2,
+      "walMB": 0,
+      "schemaVersionAfter": 29,
+      "error": "no such column: date"
+    },
+    "v29->v30": {
+      "openWithMigrationMs": {
+        "n": 5,
+        "min": 1.648,
+        "median": 2.465,
+        "p95": 3.336,
+        "max": 3.336,
+        "mean": 2.341
+      },
+      "quick_check": ""
+    },
+    "v24_run0": {
+      "ms": 105830,
+      "walMB": 492.29,
+      "schemaVersionAfter": 24,
+      "error": "no such column: date"
+    },
+    "v24_run1": {
+      "ms": 104249,
+      "walMB": 492.29,
+      "schemaVersionAfter": 24,
+      "error": "no such column: date"
+    },
+    "v24_run2": {
+      "ms": 100971,
+      "walMB": 492.29,
+      "schemaVersionAfter": 24,
+      "error": "no such column: date"
+    },
+    "v24->v30": {
+      "openWithMigrationMs": {
+        "n": 3,
+        "min": 100970.694,
+        "median": 104249.057,
+        "p95": 105829.808,
+        "max": 105829.808,
+        "mean": 103683.186
+      },
+      "quick_check": ""
+    },
+    "ftsRebuildMs": {
+      "n": 3,
+      "min": 79740.052,
+      "median": 81544.567,
+      "p95": 82150.082,
+      "max": 82150.082,
+      "mean": 81144.901
+    }
+  }
+}
